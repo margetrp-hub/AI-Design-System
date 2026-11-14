@@ -24,6 +24,6 @@ UiWordSwitch 和 UiFoldedNote 分别吸收文字切换、纸张折角与渐进�
 
 ## 许可
 
-自有代码与本仓库新写 skill 使用根目录 MIT。Magic UI 改编保留 MIT notice。Vue、React、Reka、Lucide 以及 Fontsource 依赖保留各自声明。字体使用 SIL OFL；分发构建后的字体时仍需保留许可，见 packages/ui/THIRD_PARTY_NOTICES.md。
+自有代码与本仓库新写 skill 使用根目录 MIT。Magic UI 改编保留 MIT notice。Vue、React、Reka、Lucide 以及 Fontsource 依赖保留各自声明。字体使用 SIL OFL；分发构建后的字体时仍需保留许可，见 packages/ui/THIRD_PARTY_NOTICES.md。静态站构建自动附带八个字体包的实际版权/OFL全文，可从[在线许可页](https://margetrp-hub.github.io/AI-Design-System/licenses/)查阅。
 
 不包含商标、官方私有字体、付费模板、内部业务数据或用户提供的私有视频。任何后续直接改编，需记录实际文件、版本、许可及修改范围。
