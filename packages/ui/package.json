@@ -1,0 +1,52 @@
+{
+  "name": "@ai-design-system/ui",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Local shared Vue controls and scoped multi-style CSS",
+  "type": "module",
+  "main": "./dist/design-ui.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/design-ui.js"
+    },
+    "./style.css": "./src/style.css",
+    "./tokens.css": "./src/tokens.css",
+    "./components.css": "./src/components.css",
+    "./fonts.css": "./src/fonts.css"
+  },
+  "files": [
+    "dist",
+    "src/*.css",
+    "THIRD_PARTY_NOTICES.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "dependencies": {
+    "@ai-design-system/effects": "0.1.0",
+    "@fontsource-variable/fraunces": "5.3.0",
+    "@fontsource-variable/geist": "5.3.0",
+    "@fontsource-variable/manrope": "5.3.0",
+    "@fontsource-variable/noto-sans-sc": "5.3.1",
+    "@fontsource-variable/noto-serif-sc": "5.3.1",
+    "@fontsource-variable/space-grotesk": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/lxgw-wenkai": "5.3.0",
+    "@ai-design-system/tokens": "0.4.0",
+    "@ai-design-system/styles": "0.4.0",
+    "@ai-design-system/stream": "0.1.0"
+  },
+  "peerDependencies": {
+    "reka-ui": "^2.11.0",
+    "vue": "^3.5.32"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/margetrp-hub/AI-Design-System.git",
+    "directory": "packages/ui"
+  }
+}

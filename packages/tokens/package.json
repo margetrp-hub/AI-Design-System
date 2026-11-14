@@ -1,0 +1,33 @@
+{
+  "name": "@ai-design-system/tokens",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Framework-neutral design values, scoped web CSS and native token mapping",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./runtime.js"
+    },
+    "./tokens.css": "./tokens.css",
+    "./tokens.json": "./tokens.json"
+  },
+  "files": [
+    "tokens.json",
+    "tokens.css",
+    "definitions.js",
+    "runtime.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/margetrp-hub/AI-Design-System.git",
+    "directory": "packages/tokens"
+  }
+}

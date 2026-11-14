@@ -1,0 +1,49 @@
+{
+  "name": "ai-design-system",
+  "private": true,
+  "version": "0.4.0",
+  "type": "module",
+  "workspaces": [
+    "packages/tokens",
+    "packages/ui",
+    "packages/styles",
+    "packages/react",
+    "packages/effects",
+    "packages/stream"
+  ],
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4318 --strictPort",
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "build:ui": "npm run build:tokens && vite build --config packages/ui/vite.config.ts && vue-tsc -p packages/ui/tsconfig.json --declaration --emitDeclarationOnly",
+    "build:react": "tsc -p packages/react/tsconfig.json",
+    "build:registry": "npm run build:ui && npm run build:react && node scripts/build-registry.mjs",
+    "ui": "node scripts/ui.mjs",
+    "dev:examples": "vite --config examples/vite.config.ts",
+    "build:examples": "vue-tsc --noEmit -p examples/tsconfig.json && vite build --config examples/vite.config.ts",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "build": "npm run build:ui && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4318 --strictPort",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "check:packages": "node scripts/check-packages.mjs",
+    "check": "npm run build:tokens && npm run typecheck && npm test && npm run build && npm run build:react && npm run build:examples && node scripts/build-registry.mjs --check",
+    "pack:ui": "npm run build:ui && npm pack --workspace @ai-design-system/tokens --workspace @ai-design-system/styles --workspace @ai-design-system/effects --workspace @ai-design-system/stream --pack-destination . && npm pack --workspace @ai-design-system/ui --pack-destination .",
+    "pack:react": "npm run build:tokens && npm run build:react && npm pack --workspace @ai-design-system/tokens --workspace @ai-design-system/styles --workspace @ai-design-system/effects --workspace @ai-design-system/stream --workspace @ai-design-system/react --pack-destination ."
+  },
+  "dependencies": {
+    "@lucide/vue": "1.70.0",
+    "reka-ui": "2.11.0",
+    "vue": "3.5.35"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "24.10.1",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-vue": "6.0.7",
+    "prettier": "3.10.1",
+    "react-dom": "19.3.1",
+    "typescript": "6.0.3",
+    "vite": "8.0.16",
+    "vue-tsc": "3.3.3"
+  }
+}

@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: system-ui, "Microsoft YaHei", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.integration-page {
+  min-height: 100svh;
+  padding: clamp(18px, 4vw, 56px);
+  background: var(--ui-canvas);
+  color: var(--ui-text);
+}
+.integration-header {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto 24px;
+  max-width: 1200px;
+}
+.integration-header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+.integration-page > .ui-auth-layout {
+  max-width: 1200px;
+  margin: auto;
+}
+.integration-stack {
+  display: grid;
+  gap: 18px;
+}
+.integration-stack label {
+  font-size: 13px;
+  font-weight: 500;
+  display: grid;
+  gap: 8px;
+}
+.integration-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.integration-visual-title {
+  font: 500 32px/1.35 var(--ui-font-heading);
+  letter-spacing: -0.03em;
+}
+.integration-muted {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ui-muted);
+}
+.integration-message {
+  padding: 14px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.integration-message[data-error="true"] {
+  border-color: var(--ui-danger);
+  background: var(--ui-danger-soft);
+  color: var(--ui-danger);
+}
+.integration-native-dialog {
+  width: min(90vw, 480px);
+  padding: 28px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-panel-radius);
+  background: var(--ui-surface);
+  color: var(--ui-text);
+  box-shadow: var(--ui-overlay-shadow);
+}
+.integration-native-dialog::backdrop {
+  background: #0007;
+}
+.integration-native-dialog h2 {
+  font-family: var(--ui-font-heading);
+  margin-top: 0;
+}
+.integration-native-dialog p {
+  line-height: 1.7;
+}

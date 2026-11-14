@@ -1,0 +1,27 @@
+{
+  "name": "@ai-design-system/stream",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fetch SSE parser for host-owned AI runs; explicit cancellation and resume cursor",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "task.js",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/margetrp-hub/AI-Design-System.git",
+    "directory": "packages/stream"
+  }
+}

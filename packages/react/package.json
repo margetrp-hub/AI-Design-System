@@ -1,0 +1,43 @@
+{
+  "name": "@ai-design-system/react",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Owned React primitives using the same CSS and tokens as the Vue library",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./style.css": "./style.css"
+  },
+  "files": [
+    "dist",
+    "style.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@ai-design-system/tokens": "0.4.0",
+    "@ai-design-system/styles": "0.4.0",
+    "@ai-design-system/effects": "0.1.0",
+    "@radix-ui/react-slot": "1.2.4",
+    "@ai-design-system/stream": "0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/margetrp-hub/AI-Design-System.git",
+    "directory": "packages/react"
+  }
+}

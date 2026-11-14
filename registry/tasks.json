@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "tasks": [
+    { "id": "task-console", "frameworks": ["vue", "react"], "components": ["UiTaskLog", "UiToolActivity"], "example": "apps/catalog/src/TaskLogExamples.vue", "note": "Browser simulation; real cancellation belongs to the consuming service." },
+    { "id": "inline-assistant", "frameworks": ["vue", "react"], "components": ["UiAiComposer", "UiAiSuggestion", "UiToolActivity"], "example": "apps/catalog/src/AiExamples.vue", "note": "Preserve drafts and review changes before applying." },
+    { "id": "auth-entry", "frameworks": ["vue", "react"], "components": ["UiAuthLayout", "UiBackdrop", "UiAuthCharacters"], "example": "apps/catalog/src/AssetExamples.vue", "note": "Authentication stays in the host app." },
+    { "id": "creative-studio", "frameworks": ["vue"], "components": ["UiStudioScene", "UiStudioAvatar", "UiStudioWorkbench", "UiWordSwitch", "UiFoldedNote"], "example": "apps/catalog/src/StudioExamples.vue", "note": "Original geometry; stable IDs preserve member drafts." },
+    { "id": "compose-page", "frameworks": ["vue"], "components": ["UiTheme", "UiLayout", "UiSurface"], "example": "apps/catalog/src/DesignComposer.vue", "note": "Choose layout, language, palette, font, material and motion independently." }
+  ]
+}

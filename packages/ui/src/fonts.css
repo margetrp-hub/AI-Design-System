@@ -1,0 +1,10 @@
+/* Optional font assets. Each upstream package retains its OFL license. */
+@import '@fontsource-variable/geist/wght.css';
+@import '@fontsource-variable/noto-sans-sc/index.css';
+@import '@fontsource-variable/noto-serif-sc/index.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-600.css';
+@import '@fontsource-variable/manrope/index.css';
+@import '@fontsource-variable/space-grotesk/index.css';
+@import '@fontsource-variable/fraunces/index.css';
+@import '@fontsource/lxgw-wenkai/index.css';

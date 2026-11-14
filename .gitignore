@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tgz
+catalog/*.tmp
+test-results/
+playwright-report/
+.consumer-check/
+test-results-file-picker/
+.publication/
+.playwright-cli/

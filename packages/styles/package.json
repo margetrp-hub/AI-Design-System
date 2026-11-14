@@ -1,0 +1,31 @@
+{
+  "name": "@ai-design-system/styles",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared web component CSS for the owned Vue and React adapters",
+  "exports": {
+    "./style.css": "./style.css",
+    "./components.css": "./components.css",
+    "./composition.css": "./composition.css",
+    "./expressive-motion.css": "./expressive-motion.css"
+  },
+  "files": [
+    "*.css",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@ai-design-system/tokens": "0.4.0"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/margetrp-hub/AI-Design-System.git",
+    "directory": "packages/styles"
+  }
+}

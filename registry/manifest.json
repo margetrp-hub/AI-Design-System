@@ -1,0 +1,6136 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "npm run build:registry",
+  "packages": {
+    "vue": {
+      "name": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "dependencies": {
+        "@ai-design-system/effects": "0.1.0",
+        "@fontsource-variable/fraunces": "5.3.0",
+        "@fontsource-variable/geist": "5.3.0",
+        "@fontsource-variable/manrope": "5.3.0",
+        "@fontsource-variable/noto-sans-sc": "5.3.1",
+        "@fontsource-variable/noto-serif-sc": "5.3.1",
+        "@fontsource-variable/space-grotesk": "5.3.0",
+        "@fontsource/ibm-plex-mono": "5.3.0",
+        "@fontsource/lxgw-wenkai": "5.3.0",
+        "@ai-design-system/tokens": "0.4.0",
+        "@ai-design-system/styles": "0.4.0",
+        "@ai-design-system/stream": "0.1.0"
+      },
+      "peerDependencies": {
+        "reka-ui": "^2.11.0",
+        "vue": "^3.5.32"
+      },
+      "styles": "@ai-design-system/ui/style.css",
+      "optionalFonts": "@ai-design-system/ui/fonts.css"
+    },
+    "react": {
+      "name": "@ai-design-system/react",
+      "version": "0.2.0",
+      "dependencies": {
+        "@ai-design-system/tokens": "0.4.0",
+        "@ai-design-system/styles": "0.4.0",
+        "@ai-design-system/effects": "0.1.0",
+        "@radix-ui/react-slot": "1.2.4",
+        "@ai-design-system/stream": "0.1.0"
+      },
+      "peerDependencies": {
+        "react": "^18.3.0 || ^19.0.0"
+      },
+      "styles": "@ai-design-system/react/style.css"
+    }
+  },
+  "platforms": {
+    "vue": {
+      "implementation": "vue",
+      "runtime": "Web",
+      "status": "implemented",
+      "evidence": "docs/verification.md"
+    },
+    "react": {
+      "implementation": "react",
+      "runtime": "Web",
+      "status": "partial",
+      "evidence": "packages/react/README.md"
+    },
+    "next": {
+      "implementation": "react",
+      "status": "runtime-unverified",
+      "requires": [
+        "client/server boundary",
+        "SSR/hydration verification"
+      ]
+    },
+    "electron": {
+      "implementation": null,
+      "status": "host-dependent",
+      "requires": [
+        "choose Vue or React renderer",
+        "verify window/IPC integration"
+      ]
+    },
+    "uni-app": {
+      "implementation": null,
+      "status": "tokens-only",
+      "requires": [
+        "target-specific controls and runtime checks"
+      ]
+    },
+    "react-native": {
+      "implementation": null,
+      "status": "tokens-only",
+      "requires": [
+        "native controls, fonts, keyboard and safe areas"
+      ]
+    }
+  },
+  "optionalPacks": [],
+  "usageGuide": "docs/ai.md",
+  "inputs": {
+    "apps/catalog/src/AdditionalExamples.vue": "8b8cbfd47d0ff03532df5dca794112f22e792666930c2a1116dc5d70866f26f7",
+    "apps/catalog/src/AiExamples.vue": "35fcae37eb6ba854b9b37c662c9d594d122391e5a83e0d9664bcaa4bffdf99fd",
+    "apps/catalog/src/App.vue": "e42fb4f19211e2c9b9826c0c88defbfd9083e258f7588ee2abbca688d0c83426",
+    "apps/catalog/src/AssetExamples.vue": "94c18ba967f226c8e772601e7adfa73e6f1351eafe6aa0c46a2b60597ba9bbe2",
+    "apps/catalog/src/ColorExamples.vue": "0deb81eb474684f3829fd46784a8d0d5ddb479a28014007bb3030eef8032c3de",
+    "apps/catalog/src/ComponentExamples.vue": "54c907d65baf85ec28b50a930dfbf7e1ba91e806b6a2ebfb3d6304103cad7a97",
+    "apps/catalog/src/DemoCard.vue": "7744557862f572eec3e5b07751a2188937240027505218e9781efec6fac01faa",
+    "apps/catalog/src/DesignComposer.vue": "d346629302f7f464d7892f0be7d2a59e1463883b989309ea7013e0b6e39b49a6",
+    "apps/catalog/src/GlassExamples.vue": "aa67a86974b7bbc6d3a96b178d124a7f061f546acd2b3334805e93809d3ef8d8",
+    "apps/catalog/src/LanguagePicker.vue": "14beab49ba368d6f301efd096dbd30f7ae3bda87df1bcc75521cc105b9906630",
+    "apps/catalog/src/MotionExamples.vue": "ba421263e0378f604d48ef1d97d89bb9f695a0d0b85f4b5819f56a2cd59ce478",
+    "apps/catalog/src/PatternPreview.vue": "f97f14ee36cfb4020c6ba42024b0fdc9bf4e9c6aa9305476fbd17a4d72af1263",
+    "apps/catalog/src/StudioExamples.vue": "f7416228ef8e0986f0fa3fb0195bce23d874439c7e885d2b34492163385cebe8",
+    "apps/catalog/src/TaskLogExamples.vue": "2d4d00e6d0095ed0073d6575d26def49cb43a0c27d181d6bfa0c9cc36eb3180b",
+    "apps/catalog/src/assets.css": "de571fe93b46c97b09945b772d2e308aada0afd00ad4e2e29bb4ae5d904e77f1",
+    "apps/catalog/src/composer.css": "656d13ca68f2aa86a79f2e701dd79d8511c81234806b0db87d8915691340ebce",
+    "apps/catalog/src/data.ts": "4ab3cdfe6061404c5a9daf9f15e99d69c1503cde529649545355dfce33a898f0",
+    "apps/catalog/src/library.css": "b25299d4c80efeea21601d162279e573f620552737bf4fd7570b77ca3ecebbb4",
+    "apps/catalog/src/library.ts": "137b320f130bcf8e4690cc3f12be0f2d9f8f29380805a963310cdf060fba8f1c",
+    "apps/catalog/src/main.ts": "688608fba04e3e8047096ed995076778b2a715597ce56c8ad9946c95cf8f8dc3",
+    "apps/catalog/src/platforms.ts": "d45008fd0fdd2dc639e86132e53e51c304b1f8d35b9b5308cee61b4b4ed3420b",
+    "apps/catalog/src/studio.css": "d6e44d4506ca6360b95662ce1671689ed8259574dbea5e38db0e772f04fd415f",
+    "examples/README.md": "e2d315a33b73dfdf3bc256ca34c482fdaed0a7a3d3185c4c7bccb3174e38dda3",
+    "examples/react/App.tsx": "fd7b915fd17c5f04e19b0f73d0a54f49c8b158a58c82b30cc88e3fc41ef1b95d",
+    "examples/react/TaskExample.tsx": "1a92a06212e6aa463b3dbe6230bf8ecdfb10154609c10411fa1e4e1fcd7a5561",
+    "examples/react/index.html": "70fc41dc9b1ead455f67d67fea5fb716f8fae2c53583766a1b1c0f7d9ad37345",
+    "examples/react/main.tsx": "dea4910e6891905ad76e1bac8921eaab8b02759912c6048f8b0f08d82efbc026",
+    "examples/shared/demo-stream.ts": "b920242483e871834af17d51bd213cf2574d97f8da139faadc8325392ec61595",
+    "examples/shared/settings.ts": "10021d858322a60b3f8781619a218c4341de7f554d263ea34393e3608bb33990",
+    "examples/shared/style.css": "bc5ae1755ec6dd9f895fb3c1f83eb964c3aa4d863558d2beb1a389fc34eddeda",
+    "examples/tsconfig.json": "6271fbd01924ed6e1f205bfdb133be6ef686865203f1fc6b3ce67d1f59f69504",
+    "examples/vite.config.ts": "6e65f968e5e1d9ee4e7948b8e8dd2a86c65f3daf52c59946ed4f01b012223753",
+    "examples/vue/App.vue": "33001728aff7c102a5326acab6141f6c3c90509599ba43c1539bb3ef438924b9",
+    "examples/vue/index.html": "20ea5836f7faa6e33bf7b1f77a20518017008abe4a739d954c43a699ce073157",
+    "examples/vue/main.ts": "59d4afd7e1fa41b509cd7893f2ac8c39a9b00fc293b733be74a83d9c1673470d",
+    "packages/effects/README.md": "1896bd8ecaac3eac5b292395577e13c684ce5cccab150bf21c2a882e2183e9a9",
+    "packages/effects/index.d.ts": "d23f08b8177a5e8a104efdc32257cab5c894578ac592481f012c706556993551",
+    "packages/effects/index.js": "90943c1924a5a0bc36390f4ec8773587c0388bbe2c2bc7bca87a4d3a96372730",
+    "packages/effects/package.json": "2879d5bb3db83b5a9f0812c1881af8e43db6ae0572a085e3bb1b8d763f2e50fc",
+    "packages/effects/shaders.js": "71f68d491e118635ef68a3841704ae9c3c36cb305e80aef10e18b5021005512d",
+    "packages/react/README.md": "433b3bd5a6734c5d12f2d9c50a0cb3d8aacfa935713c76589960c6625d82b357",
+    "packages/react/package.json": "44c83cf43fde14fd0e4db6ebe1dcda076b6961f740335139ef479329e0e96b01",
+    "packages/react/src/ai.tsx": "81ebf6865fbc3106b507efd249c65d07bbfdbeaa3f87e2afc90494d2986ecebd",
+    "packages/react/src/effects.tsx": "b337743e307026bf3fab39fa954ea629563ef640275e48f7f89fe643f08418b0",
+    "packages/react/src/index.tsx": "718c978c78e1243c6828c9556859efa5448585f13aec63dbee950b47d8c47a1a",
+    "packages/react/src/showcase.tsx": "918e2872e9378f182ab2136bde6deb6d04f5e8d75dd1c320f2494be9b68b6d19",
+    "packages/react/src/task-log.tsx": "2c0f68713f123df0ed7e2f809f2127f7e807611e22a67e56cfb2e8c654872a96",
+    "packages/react/style.css": "739b59cd93b45c4ba312802a8da56784be3cfe8ad78395f7021da4379b2c5f1c",
+    "packages/react/tsconfig.json": "42b1700887f58e360f661a3b5aee855c35c5c7b832a0d099ea9a68d9efc87d86",
+    "packages/stream/README.md": "207348a0fbeffebe795700581d9c972fe4359ed06a0b07b3a249288717e2da56",
+    "packages/stream/index.d.ts": "9cb10e10d18b2c10c6c1d863a1346d8212bf9038b26dcc85cf37cd166d9a4ee6",
+    "packages/stream/index.js": "f38142b8b78584ca67afeff8408bf3b6c2423560ffe91f92095cb4c47ca13b88",
+    "packages/stream/package.json": "9c731de81934dbe4e303386d25ae2c81991681dd31e716e77a025b4c457adbe1",
+    "packages/stream/task.js": "f175d0d9702527d2148fa743cee126487d50241bcf8146ca5cd89e3440eb6439",
+    "packages/styles/README.md": "d9500c9174f98415d436b160b690005177b900ac5e17a2c9422d2b9aed0594e9",
+    "packages/styles/THIRD_PARTY_NOTICES.md": "bc080ca893235a93880b98d8b927431b307bc927ae0eeaaf9b1a7a77187439c0",
+    "packages/styles/ai.css": "5c8ff3192bef4ff06af4279d67794cb7a8d453bc1a6b131088317a38d516d814",
+    "packages/styles/assets.css": "d26cd11b19f7ffb84961719b0d048f6c1eeab4722a3690aadbf581f6efa79034",
+    "packages/styles/components.css": "9522ab19d6559d23ac4913fb86617ca7c7248bac158df64f87daaa5c671724cf",
+    "packages/styles/composition.css": "a1dd43c69d5c139f829c9facb99955cf83bb4b0b0e537c8e1d23063c2f4cffcb",
+    "packages/styles/expressive-motion.css": "115da6042a25bdf61b76762555cdf660aebbe7c5bddf2e01e8e8c143d71926f2",
+    "packages/styles/languages.css": "67208b98c50de3512d7d1cfff62ce1fafef30e213c700a31b97f137422b8f44f",
+    "packages/styles/package.json": "3fc405d09897e366723ab4a5fccfba328677a680c22c1ff130ec8c28c5b7f163",
+    "packages/styles/showcase.css": "17aacf8d5a44737503ec2eff8bbe76d2a2ea5a98ff5d95814891f5f87e734ac1",
+    "packages/styles/studio.css": "a66265503a75d9c52e11581e9c5d9a389e260d396a0fef43d6eab68d9ce1a664",
+    "packages/styles/style.css": "a51016c060741e4de82cfe27cbd8f64bcc74b5b5f1edba537246e4a8d78460eb",
+    "packages/styles/task-log.css": "ca9a1ab18c33450ca591ee27bf69f812ecf3af06b9d426f37bdfaf48c35c3ee7",
+    "packages/tokens/README.md": "395a794d065d65dd26214fe0bff5fa25f60b48e4c63b92ffdefaa69ca8437df0",
+    "packages/tokens/definitions.js": "6911f805f24d3671d3727d10251b351248a777d88462474f0557ef8433424b65",
+    "packages/tokens/index.d.ts": "50166c5c111e57daf4932d04dd51970f5e8ea1d572a2cbc0aa335a0756cd7184",
+    "packages/tokens/package.json": "6c5c67bef8ca588a84b4b12ceec78dd592f2fef28d169062451b36025bb74bcb",
+    "packages/tokens/runtime.js": "718747211e3eae187192768b360eb2bcb79e2e91840dcfb7ceb4453121c973a3",
+    "packages/tokens/tokens.css": "6930ed9762ba6de895ec5d56ee8ef08da1d99a9e8ea81ea55839046c8315417e",
+    "packages/tokens/tokens.json": "ab751404bf9060f85a785556e6aed43c9ceb61cbb41d1ed9d110ef9fab00fd2e",
+    "packages/ui/THIRD_PARTY_NOTICES.md": "c16487bf05d87389b4f6c153a7b59e074e96d77bc5eada55c5d2b46c5025f78e",
+    "packages/ui/package.json": "cba588141f7e03151c83891b24cf1d6cd19c4b5039a0af08ed4fb0fdf8d2459e",
+    "packages/ui/src/UiAccordion.vue": "a3cec983944af15c34fee70e7d957739517dda0794829e76f65ba81c4b625e68",
+    "packages/ui/src/UiAiComposer.vue": "e4a78c56ba911857873bd1844898a12a7b68b3dd24e6f188b56cfa8e5b89a365",
+    "packages/ui/src/UiAiSuggestion.vue": "364ee0ab2c317754c696ca474ed9c1aa8b822e3032a63ed97be9eb1920b4f976",
+    "packages/ui/src/UiAlert.vue": "829d93a8e3a684bcc0d895ae76ccdfaad958c926ffcb017a6c0fdd0d3c6c0fac",
+    "packages/ui/src/UiAsyncState.vue": "820aed8ac675e6b5bf9b804a848aa62d64c777abfab27b162d445ce9a513d50e",
+    "packages/ui/src/UiAuthCharacters.vue": "4c5030d4cbef6e8ed75c8b364c7bdd3972a0e4e1563abb28a9322941f34bdd00",
+    "packages/ui/src/UiAuthLayout.vue": "0831ae2f4e1e13a15686bf334f3de2c3c62babb4249341676ed99d067b61f106",
+    "packages/ui/src/UiAvatar.vue": "3fb2685d4130989c57385d4b596dadd633a7f44f04b89ccdc614ea979403824d",
+    "packages/ui/src/UiBackdrop.vue": "510286fc53c88e5358d82d6737563a5869317c74d51c33ae915a258c78408f36",
+    "packages/ui/src/UiBadge.vue": "1b215e7885e401a99eaf77d9bcd1671f3e7c43c45b23b836d48d50a19064ef73",
+    "packages/ui/src/UiBreadcrumbs.vue": "59c0a69c3eab7ede57438409c42ea9873f2d1a8c115619f68d711178c23c1811",
+    "packages/ui/src/UiButton.vue": "c89f24da588400bf445cc5634cb94522089b1a1b7498f49a30fc692034410262",
+    "packages/ui/src/UiCheckbox.vue": "0add3f084812744b1a7bece80474a95c5b96f3925bf00aea2aa7505cf6f2f5eb",
+    "packages/ui/src/UiCombobox.vue": "05a8c285554b552f0978696029c8947c3b1f478922d6e2a2e95100c920cb86eb",
+    "packages/ui/src/UiCommand.vue": "d0cd856ddcf93a238be2367081ce24af4ce699b6b32ce5d91d7d3dd1cffdbc6f",
+    "packages/ui/src/UiCommandDock.vue": "e3edccee520e34ed8f169e2686e961704bc12e6ed6f4da1f3f44e21e244694ed",
+    "packages/ui/src/UiCopyButton.vue": "50d3d52bbd22a8e0e15189f053da2801f0f906f96eef117bdcf4e7b6a760bb5e",
+    "packages/ui/src/UiDataTable.vue": "1e7ca40103b502b119f83ddc90a4a49117f33a3ab075fb4734fb60c9b6a4d795",
+    "packages/ui/src/UiDialog.vue": "524e291692b2978d9aec5ba2ebb3dc2bfae8c242d42cdbc3c93b0d394de9d859",
+    "packages/ui/src/UiDrawer.vue": "01118ab11538e804c0aadd9bb211d333c5c187723c4efc253412a6b6adacc107",
+    "packages/ui/src/UiDropdownMenu.vue": "1ae3b022db8248069ec30cd1a67818b3b2eb97391e60e081725f0ebe5096397a",
+    "packages/ui/src/UiEmptyState.vue": "64ecb59971a922e81ab939a0b01d7f8c3aae9bf8efb5fd7556702f49a6bd62f3",
+    "packages/ui/src/UiField.vue": "e42c50ab36a6cfeadcff0966a656c1bf10ea8b2c13da99253462cc8b2d347818",
+    "packages/ui/src/UiFilePicker.vue": "e70830d1f76e886f0db8395056b93e5af0b7628c7431a47f90824a2bf426a814",
+    "packages/ui/src/UiFoldedNote.vue": "e359aa6417a0564fe1c2a25cf1238983afc907df7a065cf00466daac3e150685",
+    "packages/ui/src/UiGlowBorder.vue": "f9fff7d4b3ba37c40022d02c348a5a533495e24be1441f95cb42f1b2f0d8807a",
+    "packages/ui/src/UiInput.vue": "47ee147daa1df5f76b8344734adbac2f692f67b2498eb0ea5ffb8bae72c35631",
+    "packages/ui/src/UiLayout.vue": "fc7c849c4c2b3ce6c89c585324cce1ee0f2cff243b19e3e0484e291b7e752860",
+    "packages/ui/src/UiLens.vue": "f2948d16d1492155e1823430926a96fe9e37c0e09d7f91c84ad8310bb9bd0b59",
+    "packages/ui/src/UiMarquee.vue": "9134dada32ce5792235aee0360fdf26ba44c25044bf5e7d9e5893364c76616f3",
+    "packages/ui/src/UiNumberTicker.vue": "04ba41bee4f77bebf650cfcf0c042df2493f0dff200ab8d4b1fbbe1defbd84d6",
+    "packages/ui/src/UiPagination.vue": "6765b95d8b22927e3b566fa4c69159e85905c41524318952f52808cb9d36500c",
+    "packages/ui/src/UiPanel.vue": "0cd349a88c2ee83b5454173244ca228c6302656d7e306f62a6077a4d96e53c41",
+    "packages/ui/src/UiPinInput.vue": "f8c79335ee5d2272124ff5a575ad6293f8066ff4c4e596877f6925ba26331bbd",
+    "packages/ui/src/UiPopover.vue": "67dde6cbcf79b456c4a1267eef7091a0fe0f41c46e03f8036927bc941d40e81d",
+    "packages/ui/src/UiProgress.vue": "2f1cd010f20f4f4d6eefed594544c7836eafd2b2f2ffa46b5754c87200493c22",
+    "packages/ui/src/UiRadioGroup.vue": "85d5c8ff04e7ed74dc285d0ffd457cde253f1c615de2242faaa712bf418118a8",
+    "packages/ui/src/UiResizable.vue": "45d57c557a10b30f88248fd3776d8e13c88bf5378b6c126d673d3ee19caff412",
+    "packages/ui/src/UiSelect.vue": "4195a08e97e6af3ade52520f5ee36d32e132f15422853674f8c7591b9085932d",
+    "packages/ui/src/UiSeparator.vue": "87225edc75b71436ee25fbd9cb7bd2a9cf96921173ca5bf22a209d513b326385",
+    "packages/ui/src/UiSignalOrbit.vue": "34b5ca5058386d6086fc2843952dd3ef48df3f108bc3b56bb3f259119edc2c78",
+    "packages/ui/src/UiSkeleton.vue": "d0f89e61fb9075f5c9a40188d5c3aee9d64f06afac71b862bc3c62883d64b886",
+    "packages/ui/src/UiSlider.vue": "13f716c0dc5bca702536b13eba92fc0b7123caae8f0ad782d01ba15178a4f839",
+    "packages/ui/src/UiSpotlight.vue": "af1af1e725c627835da477b06705a46dfa4e7ba64be2a8f1d45bbba6c343fde9",
+    "packages/ui/src/UiStudioAvatar.vue": "ad99aea0baff8bac56408a6b2f8373701ae3ddcfb45e8019b2ede958b9319215",
+    "packages/ui/src/UiStudioScene.vue": "5be9c45ee0d32c02c9845163236e1bea9157d1b1e527338aabb76d7800e7ca7a",
+    "packages/ui/src/UiStudioWorkbench.vue": "3b56d1a5b28d4a75a7d8532c809aee01b3ff2e160ddbe797fb6a91891b0264d8",
+    "packages/ui/src/UiSurface.vue": "e55319a9668bf8cc1a6fede7657d639ec58b84f06c72447fafe46a0c774a1662",
+    "packages/ui/src/UiSwitch.vue": "6c1646889e37df84542bee2b9ab27a61ee01186e42b4e5d64b22f28bb8b8349b",
+    "packages/ui/src/UiTable.vue": "b6ee281fbd0244c2893e51e6d8cf1c6f3ac6956fce488644723729ff8d92e87c",
+    "packages/ui/src/UiTabs.vue": "404b74921ec5d77fbee65d80395e723b05fd7cb1252bbdc7d9ef04301eb71c4d",
+    "packages/ui/src/UiTagsInput.vue": "e81f59186aed48039b5e3239eeccb580d3d35a7e2d879539e2e96349dff431e7",
+    "packages/ui/src/UiTaskLog.vue": "51d548377acbb3b955f658a29005f2f764b8a5f9e16fc26511a70a483ecaa148",
+    "packages/ui/src/UiTerminal.vue": "5b25b0133530947c01b935890e84c5f130ac012bfe97c44951533eb09ffb1e2d",
+    "packages/ui/src/UiTextReveal.vue": "751e2d87c772d33701a3992704034e79f811440a3677492bfb37aec6dbf65d26",
+    "packages/ui/src/UiTextarea.vue": "c521e55733d74178c725050bec98abed9d94d44719fef0026bb5f7dd87f8becf",
+    "packages/ui/src/UiTheme.vue": "126fb16f68423725ac6fc59f2f048b82179fe5729f60afe5ed4971c2326df575",
+    "packages/ui/src/UiTimeline.vue": "ab533abdabed510aceac0c44d12d4ed653310bdb773ff20e26c2e11f879d75cf",
+    "packages/ui/src/UiToastProvider.vue": "b2b0c42164ef991ada3fff5a64162f44ea4569bff5848e1d17e47cd5675752f4",
+    "packages/ui/src/UiToolActivity.vue": "77de952217ad57803e2412baf348289a58bd14f8386b77de7c94919f5660f9fa",
+    "packages/ui/src/UiTooltip.vue": "df660f540592049cb01c9364845d60bb72be2d832a3f2fda618cb8cf31623065",
+    "packages/ui/src/UiTransition.vue": "da7e5731b55ae5ca67d0e42b16783bcbeb5347a41a63eec7d3c3f52be063c667",
+    "packages/ui/src/UiWordSwitch.vue": "98dddee6a945f758136981d922410682c1180b428866e16346952f7c69ad8e29",
+    "packages/ui/src/components.css": "0fb0749f9bf2d274d1791b14946b82598f48f9e668f9aad2212c0ed3c266f7c7",
+    "packages/ui/src/composition.css": "f4cf4606841c64971280e7e8ad70d50a853370d9da6dd4ef0e75f952607733fb",
+    "packages/ui/src/composition.ts": "3de3dc6d3befb93ffad0faa57b0a32495b806c3b999d886b74ef2af40c79d3cd",
+    "packages/ui/src/expressive-motion.css": "275fa77de4c028fb8a32e6a5ed0af2b45fac7c1f23b895c3b137e62ddcf2f473",
+    "packages/ui/src/files.ts": "8ef21052178cfe2145f889d5b19dd6f47e120162d88b7c87f33629d41ff8dd2e",
+    "packages/ui/src/fonts.css": "c5cf2a46bf56c3380988aee013bb6c3f0435035a4bfe196233880e37807783d4",
+    "packages/ui/src/index.ts": "92448660939efcfe7d44ca64a389a1f969044ff965583f9f17b0fc6330520671",
+    "packages/ui/src/motion-preference.ts": "c5869b247b4088838c640685bd855c93def75bf8b87e9d98b62c001fc8a5a6a4",
+    "packages/ui/src/style.css": "05305cfcc18ffe1ba34889db83aa93f0f206a2029c547894b0c6dfb249b0a839",
+    "packages/ui/src/table-model.ts": "3622cf535cf8f0abb1ea4b2d683aeafdc491314cb19e224aaf22ffcfc9af6558",
+    "packages/ui/src/theme.ts": "bdf7aebf1ea647175fe89efb9f48f7e10ec77b1f57ed8a3463c20eb1c7829fe3",
+    "packages/ui/src/toast.ts": "80850cf2145d59b321451e72b4fdd0169c02dc612670d84f08473070af6e2750",
+    "packages/ui/src/tokens.css": "8664383453d407939a7bd44b436d3b0c905e8ff930dd3c64482497cf4c054bc1",
+    "packages/ui/src/types.ts": "0298d0fbb5215a017f896707241b778c7e3ea8220f09a309e6a30aa9fce10709",
+    "packages/ui/tsconfig.json": "0cc7086fe78ec8400d1d373da7470fa39ff7a6ef245127718a9c9861a8b507c5",
+    "packages/ui/vite.config.ts": "73217a3b66116839947e9117045c7660091cb6c47cc37688c10476809d262024",
+    "registry/tasks.json": "085d803296633b70585930e7a79a1d54acbed20ae14b6696cf8cb41d13585999",
+    "registry/usage.mjs": "d0babf2c50b390b4d0f4a7b148a4bd1cadfbcf9ee484f11b48cf539825c38bb6",
+    "scripts/build-registry.mjs": "0567f0261ee97ee384e3784d0a62712b580ef427430836283cbc900d70c8927e"
+  },
+  "items": [
+    {
+      "id": "vue:BackdropKind",
+      "framework": "vue",
+      "name": "BackdropKind",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "BackdropKind"
+    },
+    {
+      "id": "vue:ButtonFeel",
+      "framework": "vue",
+      "name": "ButtonFeel",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "ButtonFeel"
+    },
+    {
+      "id": "vue:CategoryColor",
+      "framework": "vue",
+      "name": "CategoryColor",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "CategoryColor"
+    },
+    {
+      "id": "vue:CharacterMode",
+      "framework": "vue",
+      "name": "CharacterMode",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "CharacterMode"
+    },
+    {
+      "id": "vue:compositionChoices",
+      "framework": "vue",
+      "name": "compositionChoices",
+      "kind": "utility",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/composition.d.ts",
+      "signatures": [],
+      "purpose": "compositionChoices"
+    },
+    {
+      "id": "vue:DataColumn",
+      "framework": "vue",
+      "name": "DataColumn",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/types.d.ts",
+      "signatures": [],
+      "purpose": "DataColumn"
+    },
+    {
+      "id": "vue:Decoration",
+      "framework": "vue",
+      "name": "Decoration",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "Decoration"
+    },
+    {
+      "id": "vue:Density",
+      "framework": "vue",
+      "name": "Density",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/theme.d.ts",
+      "signatures": [],
+      "purpose": "Density"
+    },
+    {
+      "id": "vue:DesignRecipe",
+      "framework": "vue",
+      "name": "DesignRecipe",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/composition.d.ts",
+      "signatures": [],
+      "purpose": "DesignRecipe"
+    },
+    {
+      "id": "vue:designRecipes",
+      "framework": "vue",
+      "name": "designRecipes",
+      "kind": "utility",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/composition.d.ts",
+      "signatures": [],
+      "purpose": "designRecipes"
+    },
+    {
+      "id": "vue:DesignStyle",
+      "framework": "vue",
+      "name": "DesignStyle",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "DesignStyle"
+    },
+    {
+      "id": "vue:DockItem",
+      "framework": "vue",
+      "name": "DockItem",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "DockItem"
+    },
+    {
+      "id": "vue:EffectState",
+      "framework": "vue",
+      "name": "EffectState",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "EffectState"
+    },
+    {
+      "id": "vue:FontFamily",
+      "framework": "vue",
+      "name": "FontFamily",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "FontFamily"
+    },
+    {
+      "id": "vue:layoutGuides",
+      "framework": "vue",
+      "name": "layoutGuides",
+      "kind": "utility",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/composition.d.ts",
+      "signatures": [],
+      "purpose": "layoutGuides"
+    },
+    {
+      "id": "vue:LayoutPattern",
+      "framework": "vue",
+      "name": "LayoutPattern",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/composition.d.ts",
+      "signatures": [],
+      "purpose": "LayoutPattern"
+    },
+    {
+      "id": "vue:Material",
+      "framework": "vue",
+      "name": "Material",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "Material"
+    },
+    {
+      "id": "vue:Mode",
+      "framework": "vue",
+      "name": "Mode",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/theme.d.ts",
+      "signatures": [],
+      "purpose": "Mode"
+    },
+    {
+      "id": "vue:MotionPreset",
+      "framework": "vue",
+      "name": "MotionPreset",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "MotionPreset"
+    },
+    {
+      "id": "vue:OrbitNode",
+      "framework": "vue",
+      "name": "OrbitNode",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "OrbitNode"
+    },
+    {
+      "id": "vue:Palette",
+      "framework": "vue",
+      "name": "Palette",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/tokens/index.d.ts",
+      "signatures": [],
+      "purpose": "Palette"
+    },
+    {
+      "id": "vue:parseDesignRecipe",
+      "framework": "vue",
+      "name": "parseDesignRecipe",
+      "kind": "utility",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/composition.d.ts",
+      "signatures": [
+        "(input: unknown): DesignRecipe"
+      ],
+      "purpose": "parseDesignRecipe"
+    },
+    {
+      "id": "vue:RowId",
+      "framework": "vue",
+      "name": "RowId",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/types.d.ts",
+      "signatures": [],
+      "purpose": "RowId"
+    },
+    {
+      "id": "vue:Skin",
+      "framework": "vue",
+      "name": "Skin",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/theme.d.ts",
+      "signatures": [],
+      "purpose": "Skin"
+    },
+    {
+      "id": "vue:SortState",
+      "framework": "vue",
+      "name": "SortState",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/types.d.ts",
+      "signatures": [],
+      "purpose": "SortState"
+    },
+    {
+      "id": "vue:StudioMember",
+      "framework": "vue",
+      "name": "StudioMember",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/UiStudioScene.vue.d.ts",
+      "signatures": [],
+      "purpose": "StudioMember"
+    },
+    {
+      "id": "vue:TaskConnection",
+      "framework": "vue",
+      "name": "TaskConnection",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskConnection"
+    },
+    {
+      "id": "vue:TaskLogEntry",
+      "framework": "vue",
+      "name": "TaskLogEntry",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskLogEntry"
+    },
+    {
+      "id": "vue:TaskLogSnapshot",
+      "framework": "vue",
+      "name": "TaskLogSnapshot",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskLogSnapshot"
+    },
+    {
+      "id": "vue:TaskStatus",
+      "framework": "vue",
+      "name": "TaskStatus",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskStatus"
+    },
+    {
+      "id": "vue:TerminalLine",
+      "framework": "vue",
+      "name": "TerminalLine",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "TerminalLine"
+    },
+    {
+      "id": "vue:Theme",
+      "framework": "vue",
+      "name": "Theme",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/theme.d.ts",
+      "signatures": [],
+      "purpose": "Theme"
+    },
+    {
+      "id": "vue:TimelineStep",
+      "framework": "vue",
+      "name": "TimelineStep",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "TimelineStep"
+    },
+    {
+      "id": "vue:ToastApi",
+      "framework": "vue",
+      "name": "ToastApi",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/toast.d.ts",
+      "signatures": [],
+      "purpose": "ToastApi"
+    },
+    {
+      "id": "vue:ToastOptions",
+      "framework": "vue",
+      "name": "ToastOptions",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/toast.d.ts",
+      "signatures": [],
+      "purpose": "ToastOptions"
+    },
+    {
+      "id": "vue:UiAccordion",
+      "framework": "vue",
+      "name": "UiAccordion",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAccordion.vue",
+      "declaration": "packages/ui/dist/UiAccordion.vue.d.ts",
+      "purpose": "按需展开分组内容",
+      "keywords": [
+        "accordion",
+        "折叠",
+        "展开"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "required": true,
+          "type": "readonly UiAccordionItem[]"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string[] | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string[]) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "[dynamic name]",
+          "required": false,
+          "type": "(Slot<any> & ((props: { item: UiAccordionItem; }) => any)) | undefined"
+        }
+      ],
+      "defaults": {
+        "modelValue": "() => []"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/MotionExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiAccordionItem",
+      "framework": "vue",
+      "name": "UiAccordionItem",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/types.d.ts",
+      "signatures": [],
+      "purpose": "UiAccordionItem"
+    },
+    {
+      "id": "vue:UiAiComposer",
+      "framework": "vue",
+      "name": "UiAiComposer",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAiComposer.vue",
+      "declaration": "packages/ui/dist/UiAiComposer.vue.d.ts",
+      "purpose": "支持上下文、IME和停止动作的AI输入器",
+      "keywords": [
+        "ai",
+        "composer",
+        "AI",
+        "助手",
+        "输入",
+        "SSE",
+        "对话"
+      ],
+      "props": [
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "context",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "suggestions",
+          "required": false,
+          "type": "string[] | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "stop",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "submit",
+          "type": "((text: string) => any) | undefined"
+        },
+        {
+          "name": "update:modelValue",
+          "type": "((value: string) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "attachments",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "context",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "tools",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "label": "\"向助手提问\"",
+        "placeholder": "\"描述你想完成的事…\"",
+        "busy": "false",
+        "disabled": "false",
+        "suggestions": "() => []",
+        "modelValue": "\"\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [
+        "不连接模型，不自动清空草稿；submit/stop由宿主拥有，SSE示例使用真实流但固定演示内容。"
+      ],
+      "examples": [
+        "apps/catalog/src/AiExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiAiSuggestion",
+      "framework": "vue",
+      "name": "UiAiSuggestion",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAiSuggestion.vue",
+      "declaration": "packages/ui/dist/UiAiSuggestion.vue.d.ts",
+      "purpose": "修改前后对比与建议应用、放弃和重试",
+      "keywords": [
+        "ai",
+        "suggestion",
+        "AI",
+        "建议",
+        "diff",
+        "修改",
+        "审阅"
+      ],
+      "props": [
+        {
+          "name": "after",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "before",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "apply",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "dismiss",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "retry",
+          "type": "(() => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "meta",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "title": "\"修改建议\"",
+        "busy": "false"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AiExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiAlert",
+      "framework": "vue",
+      "name": "UiAlert",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAlert.vue",
+      "declaration": "packages/ui/dist/UiAlert.vue.d.ts",
+      "purpose": "持续展示错误、提示与恢复动作",
+      "keywords": [
+        "alert",
+        "提示",
+        "错误",
+        "重试"
+      ],
+      "props": [
+        {
+          "name": "description",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "live",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "tone",
+          "required": false,
+          "type": "\"neutral\" | \"info\" | \"success\" | \"warning\" | \"danger\" | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "action",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "tone": "\"neutral\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/ColorExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiAsyncState",
+      "framework": "vue",
+      "name": "UiAsyncState",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAsyncState.vue",
+      "declaration": "packages/ui/dist/UiAsyncState.vue.d.ts",
+      "purpose": "加载、刷新保留、失败、取消和重试的表达",
+      "keywords": [
+        "async",
+        "等待",
+        "加载",
+        "失败",
+        "取消",
+        "重试"
+      ],
+      "props": [
+        {
+          "name": "cancellable",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "progress",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "retainContent",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "\"error\" | \"success\" | \"idle\" | \"pending\" | \"refreshing\" | \"cancelled\""
+        }
+      ],
+      "events": [
+        {
+          "name": "cancel",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "retry",
+          "type": "(() => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "retainContent": "false",
+        "cancellable": "false"
+      },
+      "models": [],
+      "limits": [
+        "宿主拥有请求、成功回执、取消和重试；组件不会自行请求或计时制造成功。"
+      ],
+      "examples": [
+        "apps/catalog/src/MotionExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiAuthCharacters",
+      "framework": "vue",
+      "name": "UiAuthCharacters",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAuthCharacters.vue",
+      "declaration": "packages/ui/dist/UiAuthCharacters.vue.d.ts",
+      "purpose": "四个响应输入焦点和密码显示状态的角色",
+      "keywords": [
+        "characters",
+        "角色",
+        "登录",
+        "密码",
+        "动效"
+      ],
+      "props": [
+        {
+          "name": "mode",
+          "required": false,
+          "type": "CharacterMode | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "mode": "\"idle\"",
+        "paused": "false"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiAuthLayout",
+      "framework": "vue",
+      "name": "UiAuthLayout",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAuthLayout.vue",
+      "declaration": "packages/ui/dist/UiAuthLayout.vue.d.ts",
+      "purpose": "响应式左右分屏入口，视觉区和表单区",
+      "keywords": [
+        "auth",
+        "login",
+        "登录",
+        "注册",
+        "兑换",
+        "分屏",
+        "split"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "visualSide",
+          "required": false,
+          "type": "\"left\" | \"right\" | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "footer",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "visual",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "visualSide": "\"left\"",
+        "label": "\"双栏入口\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiAvatar",
+      "framework": "vue",
+      "name": "UiAvatar",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiAvatar.vue",
+      "declaration": "packages/ui/dist/UiAvatar.vue.d.ts",
+      "purpose": "头像与姓名回退",
+      "keywords": [
+        "avatar",
+        "头像"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "CategoryColor | undefined"
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "required": false,
+          "type": "\"sm\" | \"md\" | \"lg\" | undefined"
+        },
+        {
+          "name": "src",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "size": "\"md\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/ColorExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiBackdrop",
+      "framework": "vue",
+      "name": "UiBackdrop",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiBackdrop.vue",
+      "declaration": "packages/ui/dist/UiBackdrop.vue.d.ts",
+      "purpose": "光束、网格、粒子和星雾背景，支持暂停与重载",
+      "keywords": [
+        "backdrop",
+        "动态",
+        "背景",
+        "光束",
+        "粒子",
+        "登录",
+        "rays",
+        "grid",
+        "particles",
+        "nebula"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "intensity",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "kind",
+          "required": false,
+          "type": "BackdropKind | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "speed",
+          "required": false,
+          "type": "number | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "state",
+          "type": "((state: EffectState) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "kind": "\"rays\"",
+        "paused": "false",
+        "intensity": "1",
+        "speed": "1",
+        "color": "\"#579eff\""
+      },
+      "models": [],
+      "limits": [
+        "WebGL失败保留CSS背景；通过组件暴露的retry重建。"
+      ],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiBadge",
+      "framework": "vue",
+      "name": "UiBadge",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiBadge.vue",
+      "declaration": "packages/ui/dist/UiBadge.vue.d.ts",
+      "purpose": "分类和语义状态标签",
+      "keywords": [
+        "badge",
+        "标签",
+        "状态",
+        "分类"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "CategoryColor | undefined"
+        },
+        {
+          "name": "tone",
+          "required": false,
+          "type": "\"neutral\" | \"info\" | \"success\" | \"warning\" | \"danger\" | \"accent\" | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "tone": "\"neutral\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/ColorExamples.vue",
+        "apps/catalog/src/AssetExamples.vue",
+        "apps/catalog/src/AiExamples.vue",
+        "apps/catalog/src/TaskLogExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiBreadcrumbs",
+      "framework": "vue",
+      "name": "UiBreadcrumbs",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiBreadcrumbs.vue",
+      "declaration": "packages/ui/dist/UiBreadcrumbs.vue.d.ts",
+      "purpose": "层级路径导航",
+      "keywords": [
+        "breadcrumbs",
+        "面包屑",
+        "导航"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "required": true,
+          "type": "readonly { label: string; href?: string | undefined; }[]"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiButton",
+      "framework": "vue",
+      "name": "UiButton",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiButton.vue",
+      "declaration": "packages/ui/dist/UiButton.vue.d.ts",
+      "purpose": "执行动作、提交与禁用",
+      "keywords": [
+        "button",
+        "按钮",
+        "保存",
+        "提交",
+        "loading"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "size",
+          "required": false,
+          "type": "\"sm\" | \"md\" | undefined"
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "\"button\" | \"submit\" | \"reset\" | undefined"
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "type": "\"danger\" | \"primary\" | \"secondary\" | \"ghost\" | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "variant": "\"secondary\"",
+        "size": "\"md\"",
+        "type": "\"button\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/AdditionalExamples.vue",
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/ColorExamples.vue",
+        "apps/catalog/src/AssetExamples.vue",
+        "apps/catalog/src/AiExamples.vue",
+        "apps/catalog/src/TaskLogExamples.vue",
+        "apps/catalog/src/StudioExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiCheckbox",
+      "framework": "vue",
+      "name": "UiCheckbox",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiCheckbox.vue",
+      "declaration": "packages/ui/dist/UiCheckbox.vue.d.ts",
+      "purpose": "复选与半选",
+      "keywords": [
+        "checkbox",
+        "复选",
+        "多选"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "boolean | \"indeterminate\" | undefined"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "value",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: boolean | \"indeterminate\") => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "false"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiCombobox",
+      "framework": "vue",
+      "name": "UiCombobox",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiCombobox.vue",
+      "declaration": "packages/ui/dist/UiCombobox.vue.d.ts",
+      "purpose": "可搜索选择器，支持宿主远程查询与重试",
+      "keywords": [
+        "combobox",
+        "搜索",
+        "选择",
+        "远程",
+        "重试"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "options",
+          "required": true,
+          "type": "readonly UiOption[]"
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "remote",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "search",
+          "type": "((query: string) => any) | undefined"
+        },
+        {
+          "name": "update:modelValue",
+          "type": "((value: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "\"\"",
+        "placeholder": "\"搜索或选择…\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiCommand",
+      "framework": "vue",
+      "name": "UiCommand",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiCommand.vue",
+      "declaration": "packages/ui/dist/UiCommand.vue.d.ts",
+      "purpose": "可搜索的命令列表",
+      "keywords": [
+        "command",
+        "命令",
+        "搜索"
+      ],
+      "props": [
+        {
+          "name": "description",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "items",
+          "required": true,
+          "type": "readonly UiMenuItem[]"
+        },
+        {
+          "name": "open",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "((id: string) => any) | undefined"
+        },
+        {
+          "name": "update:open",
+          "type": "((value: boolean) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "trigger",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "open": "false",
+        "title": "\"快捷命令\"",
+        "description": "\"搜索并执行一个操作，使用方向键与 Enter 选择。\""
+      },
+      "models": [
+        {
+          "prop": "open",
+          "event": "update:open"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AdditionalExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiCommandDock",
+      "framework": "vue",
+      "name": "UiCommandDock",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiCommandDock.vue",
+      "declaration": "packages/ui/dist/UiCommandDock.vue.d.ts",
+      "purpose": "跟随当前选择移动的导航底座",
+      "keywords": [
+        "dock",
+        "导航",
+        "动态",
+        "选择",
+        "快捷"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "required": true,
+          "type": "DockItem[]"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "label": "\"快捷导航\"",
+        "modelValue": "\"\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/AssetExamples.vue",
+        "apps/catalog/src/TaskLogExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiCopyButton",
+      "framework": "vue",
+      "name": "UiCopyButton",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiCopyButton.vue",
+      "declaration": "packages/ui/dist/UiCopyButton.vue.d.ts",
+      "purpose": "复制文字并处理剪贴板失败",
+      "keywords": [
+        "copy",
+        "复制",
+        "剪贴板",
+        "重试"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "text",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "copied",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "error",
+          "type": "((error: unknown) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "label": "\"复制\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/AssetExamples.vue",
+        "apps/catalog/src/AiExamples.vue",
+        "apps/catalog/src/StudioExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiDataTable",
+      "framework": "vue",
+      "name": "UiDataTable",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiDataTable.vue",
+      "declaration": "packages/ui/dist/UiDataTable.vue.d.ts",
+      "purpose": "搜索、排序、分页、选择和失败重试的数据表格",
+      "keywords": [
+        "table",
+        "数据表格",
+        "列表",
+        "筛选",
+        "搜索",
+        "排序",
+        "分页",
+        "服务端"
+      ],
+      "props": [
+        {
+          "name": "caption",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "columns",
+          "required": true,
+          "type": "readonly DataColumn<T>[]"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "manual",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "page",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "pageSize",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "query",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "rowKey",
+          "required": true,
+          "type": "keyof T & string"
+        },
+        {
+          "name": "rows",
+          "required": true,
+          "type": "readonly T[]"
+        },
+        {
+          "name": "searchable",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "selectable",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "selected",
+          "required": false,
+          "type": "RowId[] | undefined"
+        },
+        {
+          "name": "sort",
+          "required": false,
+          "type": "SortState | undefined"
+        },
+        {
+          "name": "total",
+          "required": false,
+          "type": "number | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "update:page",
+          "type": "((value: number) => any) | undefined"
+        },
+        {
+          "name": "update:pageSize",
+          "type": "((value: number) => any) | undefined"
+        },
+        {
+          "name": "update:query",
+          "type": "((value: string) => any) | undefined"
+        },
+        {
+          "name": "update:selected",
+          "type": "((value: RowId[]) => any) | undefined"
+        },
+        {
+          "name": "update:sort",
+          "type": "((value: SortState) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "empty",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "selection",
+          "required": false,
+          "type": "((props: { ids: RowId[]; clear: () => never[]; }) => any) | undefined"
+        },
+        {
+          "name": "toolbar",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "[dynamic name]",
+          "required": false,
+          "type": "((props: { row: T; value: T[keyof T & string]; }) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "searchable": "true",
+        "query": "\"\"",
+        "page": "1",
+        "pageSize": "10",
+        "selected": "() => []",
+        "sort": "null"
+      },
+      "models": [
+        {
+          "prop": "query",
+          "event": "update:query"
+        },
+        {
+          "prop": "page",
+          "event": "update:page"
+        },
+        {
+          "prop": "pageSize",
+          "event": "update:pageSize"
+        },
+        {
+          "prop": "selected",
+          "event": "update:selected"
+        },
+        {
+          "prop": "sort",
+          "event": "update:sort"
+        }
+      ],
+      "limits": [
+        "manual模式由宿主请求和维护服务端结果；组件不调用业务API。"
+      ],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiDialog",
+      "framework": "vue",
+      "name": "UiDialog",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiDialog.vue",
+      "declaration": "packages/ui/dist/UiDialog.vue.d.ts",
+      "purpose": "聚焦任务弹窗、草稿保护与焦点返回",
+      "keywords": [
+        "dialog",
+        "弹窗",
+        "对话框",
+        "编辑",
+        "焦点"
+      ],
+      "props": [
+        {
+          "name": "description",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "open",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "placement",
+          "required": false,
+          "type": "\"right\" | \"center\" | \"bottom\" | undefined"
+        },
+        {
+          "name": "preventClose",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "returnFocus",
+          "required": false,
+          "type": "HTMLElement | null | undefined"
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "closeRequest",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "update:open",
+          "type": "((value: boolean) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "footer",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "trigger",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "open": "false"
+      },
+      "models": [
+        {
+          "prop": "open",
+          "event": "update:open"
+        }
+      ],
+      "limits": [
+        "必须提供title/description。草稿保护由preventClose/closeRequest接到宿主动作。"
+      ],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/DesignComposer.vue"
+      ]
+    },
+    {
+      "id": "vue:UiDrawer",
+      "framework": "vue",
+      "name": "UiDrawer",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiDrawer.vue",
+      "declaration": "packages/ui/dist/UiDrawer.vue.d.ts",
+      "purpose": "侧边或底部详情面板",
+      "keywords": [
+        "drawer",
+        "抽屉",
+        "详情"
+      ],
+      "props": [
+        {
+          "name": "description",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "open",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "preventClose",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "returnFocus",
+          "required": false,
+          "type": "HTMLElement | null | undefined"
+        },
+        {
+          "name": "side",
+          "required": false,
+          "type": "\"right\" | \"bottom\" | undefined"
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "closeRequest",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "update:open",
+          "type": "((value: boolean) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "footer",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "trigger",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "open": "false",
+        "side": "\"right\""
+      },
+      "models": [
+        {
+          "prop": "open",
+          "event": "update:open"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiDropdownMenu",
+      "framework": "vue",
+      "name": "UiDropdownMenu",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiDropdownMenu.vue",
+      "declaration": "packages/ui/dist/UiDropdownMenu.vue.d.ts",
+      "purpose": "上下文动作菜单",
+      "keywords": [
+        "menu",
+        "菜单",
+        "操作"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "required": true,
+          "type": "readonly UiMenuItem[]"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "((id: string) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiEmptyState",
+      "framework": "vue",
+      "name": "UiEmptyState",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiEmptyState.vue",
+      "declaration": "packages/ui/dist/UiEmptyState.vue.d.ts",
+      "purpose": "空结果与下一步动作",
+      "keywords": [
+        "empty",
+        "空状态",
+        "空结果"
+      ],
+      "props": [
+        {
+          "name": "description",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiField",
+      "framework": "vue",
+      "name": "UiField",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiField.vue",
+      "declaration": "packages/ui/dist/UiField.vue.d.ts",
+      "purpose": "自定义输入的标签、描述与错误关联",
+      "keywords": [
+        "field",
+        "表单",
+        "标签",
+        "校验"
+      ],
+      "props": [
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: { id: string; describedby: string | undefined; invalid: boolean; }) => any) | undefined"
+        }
+      ],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiFilePicker",
+      "framework": "vue",
+      "name": "UiFilePicker",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiFilePicker.vue",
+      "declaration": "packages/ui/dist/UiFilePicker.vue.d.ts",
+      "purpose": "选择、拖入和校验本地文件",
+      "keywords": [
+        "file",
+        "文件",
+        "上传",
+        "选择"
+      ],
+      "props": [
+        {
+          "name": "accept",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "maxBytes",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "maxFiles",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "File[] | undefined"
+        },
+        {
+          "name": "multiple",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "reject",
+          "type": "((errors: string[]) => any) | undefined"
+        },
+        {
+          "name": "update:modelValue",
+          "type": "((value: File[]) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "() => []",
+        "accept": "\"\"",
+        "maxBytes": "10 * 1024 * 1024",
+        "maxFiles": "5",
+        "multiple": "true"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [
+        "仅浏览器File对象选择/校验，不会上传文件。"
+      ],
+      "examples": [
+        "apps/catalog/src/AdditionalExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiFoldedNote",
+      "framework": "vue",
+      "name": "UiFoldedNote",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiFoldedNote.vue",
+      "declaration": "packages/ui/dist/UiFoldedNote.vue.d.ts",
+      "purpose": "可展开细节的折页札记",
+      "keywords": [
+        "note",
+        "paper",
+        "折页",
+        "札记",
+        "卡片"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "open",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:open",
+          "type": "((value: boolean) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "detail",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "label": "\"设计札记\"",
+        "open": "false"
+      },
+      "models": [
+        {
+          "prop": "open",
+          "event": "update:open"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/StudioExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiGlowBorder",
+      "framework": "vue",
+      "name": "UiGlowBorder",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiGlowBorder.vue",
+      "declaration": "packages/ui/dist/UiGlowBorder.vue.d.ts",
+      "purpose": "可暂停的流光边框",
+      "keywords": [
+        "glow",
+        "流光",
+        "边框",
+        "动效"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "paused": "false",
+        "duration": "6"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiInput",
+      "framework": "vue",
+      "name": "UiInput",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiInput.vue",
+      "declaration": "packages/ui/dist/UiInput.vue.d.ts",
+      "purpose": "带标签的单行输入",
+      "keywords": [
+        "input",
+        "输入",
+        "表单",
+        "设置"
+      ],
+      "props": [
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "\"\"",
+        "type": "\"text\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/AdditionalExamples.vue",
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiLayout",
+      "framework": "vue",
+      "name": "UiLayout",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiLayout.vue",
+      "declaration": "packages/ui/dist/UiLayout.vue.d.ts",
+      "purpose": "十四种可组合的页面骨架",
+      "keywords": [
+        "layout",
+        "页面",
+        "骨架",
+        "设置",
+        "settings",
+        "对话",
+        "conversation",
+        "工作台",
+        "board",
+        "看板",
+        "studio",
+        "画布",
+        "showcase",
+        "展示"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "pattern",
+          "required": false,
+          "type": "LayoutPattern | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "aside",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "footer",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "header",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "navigation",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "pattern": "'sidebar'",
+        "label": "'应用布局'"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/DesignComposer.vue"
+      ]
+    },
+    {
+      "id": "vue:UiMarquee",
+      "framework": "vue",
+      "name": "UiMarquee",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiMarquee.vue",
+      "declaration": "packages/ui/dist/UiMarquee.vue.d.ts",
+      "purpose": "可播放、暂停的流动内容",
+      "keywords": [
+        "marquee",
+        "跑马灯",
+        "流动",
+        "动画"
+      ],
+      "props": [
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "items",
+          "required": true,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "reverse",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:paused",
+          "type": "((value: boolean) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "duration": "24",
+        "reverse": "false",
+        "paused": "true"
+      },
+      "models": [
+        {
+          "prop": "paused",
+          "event": "update:paused"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/MotionExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiMenuItem",
+      "framework": "vue",
+      "name": "UiMenuItem",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/types.d.ts",
+      "signatures": [],
+      "purpose": "UiMenuItem"
+    },
+    {
+      "id": "vue:UiNumberTicker",
+      "framework": "vue",
+      "name": "UiNumberTicker",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiNumberTicker.vue",
+      "declaration": "packages/ui/dist/UiNumberTicker.vue.d.ts",
+      "purpose": "可中断的数字变化",
+      "keywords": [
+        "number",
+        "数字",
+        "动画"
+      ],
+      "props": [
+        {
+          "name": "decimals",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "locale",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "duration": "650",
+        "decimals": "0",
+        "locale": "'zh-CN'"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/MotionExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiOption",
+      "framework": "vue",
+      "name": "UiOption",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/types.d.ts",
+      "signatures": [],
+      "purpose": "UiOption"
+    },
+    {
+      "id": "vue:UiPagination",
+      "framework": "vue",
+      "name": "UiPagination",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiPagination.vue",
+      "declaration": "packages/ui/dist/UiPagination.vue.d.ts",
+      "purpose": "分页与每页数量",
+      "keywords": [
+        "pagination",
+        "分页"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "pageSize",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "pageSizes",
+          "required": false,
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "total",
+          "required": true,
+          "type": "number"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: number) => any) | undefined"
+        },
+        {
+          "name": "update:pageSize",
+          "type": "((value: number) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "1",
+        "pageSize": "10",
+        "pageSizes": "() => [10, 20, 50]"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        },
+        {
+          "prop": "pageSize",
+          "event": "update:pageSize"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiPanel",
+      "framework": "vue",
+      "name": "UiPanel",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiPanel.vue",
+      "declaration": "packages/ui/dist/UiPanel.vue.d.ts",
+      "purpose": "标题和内容分组面板",
+      "keywords": [
+        "panel",
+        "卡片",
+        "面板"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "CategoryColor | undefined"
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "actions",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/ColorExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiPinInput",
+      "framework": "vue",
+      "name": "UiPinInput",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiPinInput.vue",
+      "declaration": "packages/ui/dist/UiPinInput.vue.d.ts",
+      "purpose": "数字验证码输入",
+      "keywords": [
+        "pin",
+        "otp",
+        "验证码"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "length",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "mask",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string[] | undefined"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "complete",
+          "type": "((value: string) => any) | undefined"
+        },
+        {
+          "name": "update:modelValue",
+          "type": "((value: string[]) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "() => []",
+        "length": "6"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AdditionalExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiPopover",
+      "framework": "vue",
+      "name": "UiPopover",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiPopover.vue",
+      "declaration": "packages/ui/dist/UiPopover.vue.d.ts",
+      "purpose": "带交互的轻浮层",
+      "keywords": [
+        "popover",
+        "浮层",
+        "选择"
+      ],
+      "props": [
+        {
+          "name": "align",
+          "required": false,
+          "type": "\"center\" | \"start\" | \"end\" | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "open",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "side",
+          "required": false,
+          "type": "\"left\" | \"right\" | \"bottom\" | \"top\" | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:open",
+          "type": "((value: boolean) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "close",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: { close: () => boolean; }) => any) | undefined"
+        },
+        {
+          "name": "trigger",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "open": "false",
+        "side": "\"bottom\"",
+        "align": "\"start\""
+      },
+      "models": [
+        {
+          "prop": "open",
+          "event": "update:open"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/ColorExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiProgress",
+      "framework": "vue",
+      "name": "UiProgress",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiProgress.vue",
+      "declaration": "packages/ui/dist/UiProgress.vue.d.ts",
+      "purpose": "已知进度或未知时长",
+      "keywords": [
+        "progress",
+        "进度",
+        "等待",
+        "加载"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "CategoryColor | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "max",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "value",
+          "required": false,
+          "type": "number | null | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "max": "100",
+        "value": "null"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/ColorExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiRadioGroup",
+      "framework": "vue",
+      "name": "UiRadioGroup",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiRadioGroup.vue",
+      "declaration": "packages/ui/dist/UiRadioGroup.vue.d.ts",
+      "purpose": "一组互斥选项",
+      "keywords": [
+        "radio",
+        "单选"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "options",
+          "required": true,
+          "type": "readonly UiOption[]"
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "\"\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiResizable",
+      "framework": "vue",
+      "name": "UiResizable",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiResizable.vue",
+      "declaration": "packages/ui/dist/UiResizable.vue.d.ts",
+      "purpose": "可调整宽度的工作区分栏",
+      "keywords": [
+        "resizable",
+        "分栏",
+        "工作区"
+      ],
+      "props": [
+        {
+          "name": "defaultSize",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "direction",
+          "required": false,
+          "type": "\"horizontal\" | \"vertical\" | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "minSize",
+          "required": false,
+          "type": "number | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "resize",
+          "type": "((sizes: number[]) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "first",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "second",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "defaultSize": "40",
+        "minSize": "20",
+        "direction": "\"horizontal\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AdditionalExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSelect",
+      "framework": "vue",
+      "name": "UiSelect",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSelect.vue",
+      "declaration": "packages/ui/dist/UiSelect.vue.d.ts",
+      "purpose": "有限选项的原生下拉选择",
+      "keywords": [
+        "select",
+        "选择",
+        "下拉",
+        "表单"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "options",
+          "required": true,
+          "type": "readonly { value: string; label: string; }[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "\"\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/ColorExamples.vue",
+        "apps/catalog/src/AssetExamples.vue",
+        "apps/catalog/src/TaskLogExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSeparator",
+      "framework": "vue",
+      "name": "UiSeparator",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSeparator.vue",
+      "declaration": "packages/ui/dist/UiSeparator.vue.d.ts",
+      "purpose": "内容分隔",
+      "keywords": [
+        "separator",
+        "分隔"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSignalOrbit",
+      "framework": "vue",
+      "name": "UiSignalOrbit",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSignalOrbit.vue",
+      "declaration": "packages/ui/dist/UiSignalOrbit.vue.d.ts",
+      "purpose": "轨道关系展示与固定位置的选择操作",
+      "keywords": [
+        "orbit",
+        "轨道",
+        "科技",
+        "关系",
+        "动态"
+      ],
+      "props": [
+        {
+          "name": "center",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "nodes",
+          "required": true,
+          "type": "OrbitNode[]"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "selectedId",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "((id: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "center": "\"CORE\"",
+        "paused": "false",
+        "duration": "32"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSkeleton",
+      "framework": "vue",
+      "name": "UiSkeleton",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSkeleton.vue",
+      "declaration": "packages/ui/dist/UiSkeleton.vue.d.ts",
+      "purpose": "加载占位，不代表业务进度",
+      "keywords": [
+        "skeleton",
+        "骨架屏",
+        "占位",
+        "等待"
+      ],
+      "props": [
+        {
+          "name": "avatar",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "lines",
+          "required": false,
+          "type": "number | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "lines": "3"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSlider",
+      "framework": "vue",
+      "name": "UiSlider",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSlider.vue",
+      "declaration": "packages/ui/dist/UiSlider.vue.d.ts",
+      "purpose": "单值或区间滑块",
+      "keywords": [
+        "slider",
+        "滑块",
+        "数值",
+        "透明度"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "max",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "min",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "step",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "unit",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "commit",
+          "type": "((value: number[]) => any) | undefined"
+        },
+        {
+          "name": "update:modelValue",
+          "type": "((value: number[]) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "() => [50]",
+        "min": "0",
+        "max": "100",
+        "step": "1",
+        "unit": "\"\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AdditionalExamples.vue",
+        "apps/catalog/src/DesignComposer.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSpotlight",
+      "framework": "vue",
+      "name": "UiSpotlight",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSpotlight.vue",
+      "declaration": "packages/ui/dist/UiSpotlight.vue.d.ts",
+      "purpose": "指针与焦点光斑",
+      "keywords": [
+        "spotlight",
+        "光斑",
+        "动效"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "label": "'互动表面'"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/MotionExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiStudioAvatar",
+      "framework": "vue",
+      "name": "UiStudioAvatar",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiStudioAvatar.vue",
+      "declaration": "packages/ui/dist/UiStudioAvatar.vue.d.ts",
+      "purpose": "原创圆角机器人角色与状态",
+      "keywords": [
+        "avatar",
+        "角色",
+        "空间",
+        "原创",
+        "studio"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"sage\" | \"coral\" | \"sky\" | \"sand\" | undefined"
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "state",
+          "required": false,
+          "type": "\"idle\" | \"working\" | \"resting\" | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "color": "\"sage\"",
+        "state": "\"idle\"",
+        "size": "80"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/StudioExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiStudioScene",
+      "framework": "vue",
+      "name": "UiStudioScene",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiStudioScene.vue",
+      "declaration": "packages/ui/dist/UiStudioScene.vue.d.ts",
+      "purpose": "原创家具空间与可选择的成员工作位",
+      "keywords": [
+        "scene",
+        "场景",
+        "家具",
+        "成员",
+        "空间",
+        "studio"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "members",
+          "required": true,
+          "type": "StudioMember[]"
+        },
+        {
+          "name": "selectedId",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "((member: StudioMember) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "label": "\"栖间创作室\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/StudioExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiStudioWorkbench",
+      "framework": "vue",
+      "name": "UiStudioWorkbench",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiStudioWorkbench.vue",
+      "declaration": "packages/ui/dist/UiStudioWorkbench.vue.d.ts",
+      "purpose": "空间工作室骨架与成员详情",
+      "keywords": [
+        "studio",
+        "workbench",
+        "骨架",
+        "工作室"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "footer",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "header",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "inspector",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "title": "\"创作工作室\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/StudioExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSurface",
+      "framework": "vue",
+      "name": "UiSurface",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSurface.vue",
+      "declaration": "packages/ui/dist/UiSurface.vue.d.ts",
+      "purpose": "内容表面、透明材质与装饰",
+      "keywords": [
+        "surface",
+        "卡片",
+        "表面",
+        "玻璃",
+        "glass",
+        "装饰"
+      ],
+      "props": [
+        {
+          "name": "decoration",
+          "required": false,
+          "type": "Decoration | undefined"
+        },
+        {
+          "name": "glassVariant",
+          "required": false,
+          "type": "\"clear\" | \"regular\" | undefined"
+        },
+        {
+          "name": "material",
+          "required": false,
+          "type": "Material | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {},
+      "models": [],
+      "limits": [
+        "液态折射是Web近似；Chromium实测，其他引擎与真实背景需单独验证。"
+      ],
+      "examples": [
+        "apps/catalog/src/DesignComposer.vue"
+      ]
+    },
+    {
+      "id": "vue:UiSwitch",
+      "framework": "vue",
+      "name": "UiSwitch",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiSwitch.vue",
+      "declaration": "packages/ui/dist/UiSwitch.vue.d.ts",
+      "purpose": "布尔开关",
+      "keywords": [
+        "switch",
+        "开关",
+        "设置"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: boolean) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "false"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/ColorExamples.vue",
+        "apps/catalog/src/AssetExamples.vue",
+        "apps/catalog/src/AiExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTab",
+      "framework": "vue",
+      "name": "UiTab",
+      "kind": "type",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/types.d.ts",
+      "signatures": [],
+      "purpose": "UiTab"
+    },
+    {
+      "id": "vue:UiTable",
+      "framework": "vue",
+      "name": "UiTable",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTable.vue",
+      "declaration": "packages/ui/dist/UiTable.vue.d.ts",
+      "purpose": "原生表格表面",
+      "keywords": [
+        "table",
+        "表格",
+        "列表"
+      ],
+      "props": [
+        {
+          "name": "caption",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        },
+        {
+          "name": "head",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTabs",
+      "framework": "vue",
+      "name": "UiTabs",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTabs.vue",
+      "declaration": "packages/ui/dist/UiTabs.vue.d.ts",
+      "purpose": "同页内容分组与键盘切换",
+      "keywords": [
+        "tabs",
+        "页签",
+        "导航"
+      ],
+      "props": [
+        {
+          "name": "activationMode",
+          "required": false,
+          "type": "\"manual\" | \"automatic\" | undefined"
+        },
+        {
+          "name": "items",
+          "required": true,
+          "type": "readonly UiTab[]"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "type": "\"line\" | \"segment\" | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string | undefined) => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: { value: string; }) => any) | undefined"
+        },
+        {
+          "name": "[dynamic name]",
+          "required": false,
+          "type": "(Slot<any> & ((props: { value: string; }) => any)) | undefined"
+        }
+      ],
+      "defaults": {
+        "variant": "\"line\"",
+        "activationMode": "\"automatic\""
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTagsInput",
+      "framework": "vue",
+      "name": "UiTagsInput",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTagsInput.vue",
+      "declaration": "packages/ui/dist/UiTagsInput.vue.d.ts",
+      "purpose": "可添加、去重和删除的标签输入",
+      "keywords": [
+        "tags",
+        "标签",
+        "输入"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "max",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string[] | undefined"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string[]) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "() => []",
+        "placeholder": "\"输入后按 Enter\"",
+        "max": "8"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AdditionalExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTaskLog",
+      "framework": "vue",
+      "name": "UiTaskLog",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTaskLog.vue",
+      "declaration": "packages/ui/dist/UiTaskLog.vue.d.ts",
+      "purpose": "macOS和Windows终端任务日志，筛选、跟随和恢复操作",
+      "keywords": [
+        "sse",
+        "SSE",
+        "terminal",
+        "mac",
+        "windows",
+        "终端",
+        "任务",
+        "日志",
+        "续接",
+        "流式"
+      ],
+      "props": [
+        {
+          "name": "canCancel",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "cancelling",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "canPause",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "canResume",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "canRetry",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "connection",
+          "required": false,
+          "type": "TaskConnection | undefined"
+        },
+        {
+          "name": "discarded",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "entries",
+          "required": true,
+          "type": "TaskLogEntry[]"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "maxVisible",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "runId",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "shell",
+          "required": false,
+          "type": "\"mac\" | \"windows\" | undefined"
+        },
+        {
+          "name": "status",
+          "required": false,
+          "type": "TaskStatus | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "cancel",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "pause",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "resume",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "retry",
+          "type": "(() => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "title": "\"任务日志\"",
+        "shell": "\"mac\"",
+        "status": "\"idle\"",
+        "connection": "\"idle\"",
+        "discarded": "0",
+        "maxVisible": "500"
+      },
+      "models": [],
+      "limits": [
+        "受控日志视图，不请求接口、不执行Shell；canCancel/canResume等控制动作可见，事件由宿主接到任务服务。",
+        "推荐@ai-design-system/stream的可选任务客户端；协议、保留期限和恢复边界见其README。"
+      ],
+      "examples": [
+        "apps/catalog/src/TaskLogExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTerminal",
+      "framework": "vue",
+      "name": "UiTerminal",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTerminal.vue",
+      "declaration": "packages/ui/dist/UiTerminal.vue.d.ts",
+      "purpose": "宿主日志内容的轻量终端展示",
+      "keywords": [
+        "terminal",
+        "终端",
+        "日志",
+        "复制"
+      ],
+      "props": [
+        {
+          "name": "lines",
+          "required": true,
+          "type": "TerminalLine[]"
+        },
+        {
+          "name": "live",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "footer",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "title": "\"运行记录\"",
+        "live": "false"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTextarea",
+      "framework": "vue",
+      "name": "UiTextarea",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTextarea.vue",
+      "declaration": "packages/ui/dist/UiTextarea.vue.d.ts",
+      "purpose": "多行文本输入",
+      "keywords": [
+        "textarea",
+        "输入",
+        "长文本",
+        "描述"
+      ],
+      "props": [
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "modelValue",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "type": "number | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "((value: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "modelValue": "\"\"",
+        "rows": "3"
+      },
+      "models": [
+        {
+          "prop": "modelValue",
+          "event": "update:modelValue"
+        }
+      ],
+      "limits": [],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/AiExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTextReveal",
+      "framework": "vue",
+      "name": "UiTextReveal",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTextReveal.vue",
+      "declaration": "packages/ui/dist/UiTextReveal.vue.d.ts",
+      "purpose": "文字逐字、逐词或逐行显现",
+      "keywords": [
+        "text",
+        "文字",
+        "动画",
+        "显现"
+      ],
+      "props": [
+        {
+          "name": "by",
+          "required": false,
+          "type": "\"line\" | \"word\" | \"character\" | undefined"
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "effect",
+          "required": false,
+          "type": "\"fade\" | \"rise\" | \"blur\" | undefined"
+        },
+        {
+          "name": "replay",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "text",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "effect": "'rise'",
+        "by": "'word'",
+        "replay": "0",
+        "duration": "500"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/MotionExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTheme",
+      "framework": "vue",
+      "name": "UiTheme",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTheme.vue",
+      "declaration": "packages/ui/dist/UiTheme.vue.d.ts",
+      "purpose": "主题作用域：视觉语言、明暗、配色和字体",
+      "keywords": [
+        "theme",
+        "主题",
+        "风格",
+        "配色",
+        "字体",
+        "暗色"
+      ],
+      "props": [
+        {
+          "name": "buttonFeel",
+          "required": false,
+          "type": "ButtonFeel | undefined"
+        },
+        {
+          "name": "decoration",
+          "required": false,
+          "type": "Decoration | undefined"
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "Density | undefined"
+        },
+        {
+          "name": "design",
+          "required": false,
+          "type": "DesignStyle | undefined"
+        },
+        {
+          "name": "font",
+          "required": false,
+          "type": "FontFamily | undefined"
+        },
+        {
+          "name": "glassVariant",
+          "required": false,
+          "type": "\"clear\" | \"regular\" | undefined"
+        },
+        {
+          "name": "headingFont",
+          "required": false,
+          "type": "FontFamily | undefined"
+        },
+        {
+          "name": "material",
+          "required": false,
+          "type": "Material | undefined"
+        },
+        {
+          "name": "mode",
+          "required": false,
+          "type": "Mode | undefined"
+        },
+        {
+          "name": "motion",
+          "required": false,
+          "type": "MotionPreset | undefined"
+        },
+        {
+          "name": "palette",
+          "required": false,
+          "type": "Palette | undefined"
+        },
+        {
+          "name": "scale",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "skin",
+          "required": false,
+          "type": "Skin | undefined"
+        },
+        {
+          "name": "transparency",
+          "required": false,
+          "type": "number | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "skin": "\"console\"",
+        "mode": "\"light\"",
+        "density": "\"comfortable\"",
+        "scale": "1",
+        "palette": "\"default\""
+      },
+      "models": [],
+      "limits": [
+        "只提供作用域；页面宿主设置canvas背景。字体另导入fonts.css或所需字体。"
+      ],
+      "examples": [
+        "examples/vue/App.vue",
+        "apps/catalog/src/ComponentExamples.vue",
+        "apps/catalog/src/DesignComposer.vue",
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTimeline",
+      "framework": "vue",
+      "name": "UiTimeline",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTimeline.vue",
+      "declaration": "packages/ui/dist/UiTimeline.vue.d.ts",
+      "purpose": "带状态和恢复动作的过程时间线",
+      "keywords": [
+        "timeline",
+        "时间线",
+        "步骤",
+        "进度"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "steps",
+          "required": true,
+          "type": "TimelineStep[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "action",
+          "type": "((id: string) => any) | undefined"
+        }
+      ],
+      "slots": [],
+      "defaults": {
+        "label": "\"处理过程\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AssetExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiToastProvider",
+      "framework": "vue",
+      "name": "UiToastProvider",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiToastProvider.vue",
+      "declaration": "packages/ui/dist/UiToastProvider.vue.d.ts",
+      "purpose": "短消息通知的作用域",
+      "keywords": [
+        "toast",
+        "通知",
+        "成功",
+        "错误"
+      ],
+      "props": [
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: { notify: (options: ToastOptions) => string; dismiss: (id: string) => void; clear: () => void; }) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "duration": "5000",
+        "label": "\"通知\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiToolActivity",
+      "framework": "vue",
+      "name": "UiToolActivity",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiToolActivity.vue",
+      "declaration": "packages/ui/dist/UiToolActivity.vue.d.ts",
+      "purpose": "工具执行、授权、失败和未知结果的处理入口",
+      "keywords": [
+        "ai",
+        "tool",
+        "AI",
+        "工具",
+        "执行",
+        "状态",
+        "审批",
+        "重试"
+      ],
+      "props": [
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "detail",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "\"error\" | \"success\" | \"cancelled\" | \"paused\" | \"running\" | \"unknown\" | \"approval\""
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "approve",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "cancel",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "reject",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "retry",
+          "type": "(() => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "actions",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "busy": "false"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/AiExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTooltip",
+      "framework": "vue",
+      "name": "UiTooltip",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTooltip.vue",
+      "declaration": "packages/ui/dist/UiTooltip.vue.d.ts",
+      "purpose": "非交互的简短说明",
+      "keywords": [
+        "tooltip",
+        "提示"
+      ],
+      "props": [
+        {
+          "name": "delay",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "side",
+          "required": false,
+          "type": "\"left\" | \"right\" | \"bottom\" | \"top\" | undefined"
+        },
+        {
+          "name": "text",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "side": "\"top\"",
+        "delay": "350"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/ComponentExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiTransition",
+      "framework": "vue",
+      "name": "UiTransition",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiTransition.vue",
+      "declaration": "packages/ui/dist/UiTransition.vue.d.ts",
+      "purpose": "内容或页面进出，保留草稿与隐藏焦点管理",
+      "keywords": [
+        "transition",
+        "动画",
+        "过渡",
+        "切页"
+      ],
+      "props": [
+        {
+          "name": "appear",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "mode",
+          "required": false,
+          "type": "\"default\" | \"out-in\" | \"in-out\" | undefined"
+        },
+        {
+          "name": "preset",
+          "required": false,
+          "type": "\"page\" | \"fade\" | \"scale\" | \"slide\" | undefined"
+        },
+        {
+          "name": "returnFocus",
+          "required": false,
+          "type": "HTMLElement | null | undefined"
+        }
+      ],
+      "events": [
+        {
+          "name": "afterEnter",
+          "type": "(() => any) | undefined"
+        },
+        {
+          "name": "afterLeave",
+          "type": "(() => any) | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "required": false,
+          "type": "((props: {}) => any) | undefined"
+        }
+      ],
+      "defaults": {
+        "preset": "\"fade\"",
+        "mode": "\"default\""
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/MotionExamples.vue",
+        "apps/catalog/src/AssetExamples.vue",
+        "apps/catalog/src/AiExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:UiWordSwitch",
+      "framework": "vue",
+      "name": "UiWordSwitch",
+      "kind": "component",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/UiWordSwitch.vue",
+      "declaration": "packages/ui/dist/UiWordSwitch.vue.d.ts",
+      "purpose": "可暂停的文字轮换与稳定宽度",
+      "keywords": [
+        "text",
+        "文字",
+        "动效",
+        "轮换",
+        "motion"
+      ],
+      "props": [
+        {
+          "name": "interval",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "words",
+          "required": true,
+          "type": "string[]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {
+        "interval": "2400",
+        "paused": "false"
+      },
+      "models": [],
+      "limits": [],
+      "examples": [
+        "apps/catalog/src/StudioExamples.vue"
+      ]
+    },
+    {
+      "id": "vue:useToast",
+      "framework": "vue",
+      "name": "useToast",
+      "kind": "utility",
+      "package": "@ai-design-system/ui",
+      "version": "0.4.0",
+      "source": "packages/ui/src/index.ts",
+      "declaration": "packages/ui/dist/toast.d.ts",
+      "signatures": [
+        "(): ToastApi"
+      ],
+      "purpose": "useToast"
+    },
+    {
+      "id": "react:BackdropKind",
+      "framework": "react",
+      "name": "BackdropKind",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "BackdropKind"
+    },
+    {
+      "id": "react:CharacterMode",
+      "framework": "react",
+      "name": "CharacterMode",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "CharacterMode"
+    },
+    {
+      "id": "react:DockItem",
+      "framework": "react",
+      "name": "DockItem",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "DockItem"
+    },
+    {
+      "id": "react:EffectState",
+      "framework": "react",
+      "name": "EffectState",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "EffectState"
+    },
+    {
+      "id": "react:OrbitNode",
+      "framework": "react",
+      "name": "OrbitNode",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "OrbitNode"
+    },
+    {
+      "id": "react:TaskConnection",
+      "framework": "react",
+      "name": "TaskConnection",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskConnection"
+    },
+    {
+      "id": "react:TaskLogEntry",
+      "framework": "react",
+      "name": "TaskLogEntry",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskLogEntry"
+    },
+    {
+      "id": "react:TaskLogSnapshot",
+      "framework": "react",
+      "name": "TaskLogSnapshot",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskLogSnapshot"
+    },
+    {
+      "id": "react:TaskStatus",
+      "framework": "react",
+      "name": "TaskStatus",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/stream/index.d.ts",
+      "signatures": [],
+      "purpose": "TaskStatus"
+    },
+    {
+      "id": "react:TerminalLine",
+      "framework": "react",
+      "name": "TerminalLine",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "TerminalLine"
+    },
+    {
+      "id": "react:themeAttributes",
+      "framework": "react",
+      "name": "themeAttributes",
+      "kind": "utility",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "signatures": [
+        "(theme?: UiThemeOptions | undefined): { \"data-ui-skin\": \"console\" | \"clinical\" | \"pearl\"; \"data-ui-mode\": \"dark\" | \"light\"; \"data-ui-density\": \"compact\" | \"comfortable\"; \"data-ui-palette\": Palette; \"data-ui-design\": DesignStyle | undefined; \"data-ui-font\": FontFamily; \"data-ui-heading-font\": FontFamily; \"data-ui-motion\": MotionPreset; \"data-ui-material\": string; style: CSSProperties; }"
+      ],
+      "purpose": "themeAttributes"
+    },
+    {
+      "id": "react:TimelineStep",
+      "framework": "react",
+      "name": "TimelineStep",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/effects/index.d.ts",
+      "signatures": [],
+      "purpose": "TimelineStep"
+    },
+    {
+      "id": "react:UiAiComposer",
+      "framework": "react",
+      "name": "UiAiComposer",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/ai.tsx",
+      "declaration": "packages/react/dist/ai.d.ts",
+      "purpose": "支持上下文、IME和停止动作的AI输入器",
+      "keywords": [
+        "ai",
+        "composer",
+        "AI",
+        "助手",
+        "输入",
+        "SSE",
+        "对话"
+      ],
+      "props": [
+        {
+          "name": "attachments",
+          "required": false,
+          "type": "ReactNode"
+        },
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "context",
+          "required": false,
+          "type": "ReactNode"
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "onStop",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "onSubmit",
+          "required": true,
+          "type": "(text: string) => void"
+        },
+        {
+          "name": "onValueChange",
+          "required": true,
+          "type": "(value: string) => void"
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "suggestions",
+          "required": false,
+          "type": "string[] | undefined"
+        },
+        {
+          "name": "tools",
+          "required": false,
+          "type": "ReactNode"
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "limits": [
+        "使用value/onValueChange；不连接模型、不自动清空草稿。"
+      ],
+      "examples": [
+        "examples/react/TaskExample.tsx"
+      ]
+    },
+    {
+      "id": "react:UiAiComposerProps",
+      "framework": "react",
+      "name": "UiAiComposerProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/ai.d.ts",
+      "signatures": [],
+      "purpose": "UiAiComposerProps"
+    },
+    {
+      "id": "react:UiAiSuggestion",
+      "framework": "react",
+      "name": "UiAiSuggestion",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/ai.tsx",
+      "declaration": "packages/react/dist/ai.d.ts",
+      "purpose": "修改前后对比与建议应用、放弃和重试",
+      "keywords": [
+        "ai",
+        "suggestion",
+        "AI",
+        "建议",
+        "diff",
+        "修改",
+        "审阅"
+      ],
+      "props": [
+        {
+          "name": "after",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "before",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "meta",
+          "required": false,
+          "type": "ReactNode"
+        },
+        {
+          "name": "onApply",
+          "required": true,
+          "type": "() => void"
+        },
+        {
+          "name": "onDismiss",
+          "required": true,
+          "type": "() => void"
+        },
+        {
+          "name": "onRetry",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "examples/react/TaskExample.tsx"
+      ]
+    },
+    {
+      "id": "react:UiAiSuggestionProps",
+      "framework": "react",
+      "name": "UiAiSuggestionProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/ai.d.ts",
+      "signatures": [],
+      "purpose": "UiAiSuggestionProps"
+    },
+    {
+      "id": "react:UiAuthCharacters",
+      "framework": "react",
+      "name": "UiAuthCharacters",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/effects.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "purpose": "四个响应输入焦点和密码显示状态的角色",
+      "keywords": [
+        "characters",
+        "角色",
+        "登录",
+        "密码",
+        "动效"
+      ],
+      "props": [
+        {
+          "name": "mode",
+          "required": false,
+          "type": "CharacterMode | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'div'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [],
+      "examples": [
+        "examples/react/App.tsx"
+      ]
+    },
+    {
+      "id": "react:UiAuthCharactersProps",
+      "framework": "react",
+      "name": "UiAuthCharactersProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "signatures": [],
+      "purpose": "UiAuthCharactersProps"
+    },
+    {
+      "id": "react:UiAuthLayout",
+      "framework": "react",
+      "name": "UiAuthLayout",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/effects.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "purpose": "响应式左右分屏入口，视觉区和表单区",
+      "keywords": [
+        "auth",
+        "login",
+        "登录",
+        "注册",
+        "兑换",
+        "分屏",
+        "split"
+      ],
+      "props": [
+        {
+          "name": "footer",
+          "required": false,
+          "type": "ReactNode"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "visual",
+          "required": true,
+          "type": "ReactNode"
+        },
+        {
+          "name": "visualSide",
+          "required": false,
+          "type": "\"left\" | \"right\" | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'section'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [],
+      "examples": [
+        "examples/react/App.tsx"
+      ]
+    },
+    {
+      "id": "react:UiAuthLayoutProps",
+      "framework": "react",
+      "name": "UiAuthLayoutProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "signatures": [],
+      "purpose": "UiAuthLayoutProps"
+    },
+    {
+      "id": "react:UiBackdrop",
+      "framework": "react",
+      "name": "UiBackdrop",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/effects.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "purpose": "光束、网格、粒子和星雾背景，支持暂停与重载",
+      "keywords": [
+        "backdrop",
+        "动态",
+        "背景",
+        "光束",
+        "粒子",
+        "登录",
+        "rays",
+        "grid",
+        "particles",
+        "nebula"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "intensity",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "kind",
+          "required": false,
+          "type": "BackdropKind | undefined"
+        },
+        {
+          "name": "onState",
+          "required": false,
+          "type": "((state: EffectState) => void) | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "retryKey",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "speed",
+          "required": false,
+          "type": "number | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'div'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [
+        "retryKey变化重建；不是Vue expose retry方法。"
+      ],
+      "examples": [
+        "examples/react/App.tsx"
+      ]
+    },
+    {
+      "id": "react:UiBackdropProps",
+      "framework": "react",
+      "name": "UiBackdropProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "signatures": [],
+      "purpose": "UiBackdropProps"
+    },
+    {
+      "id": "react:UiButton",
+      "framework": "react",
+      "name": "UiButton",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "purpose": "执行动作、提交与禁用",
+      "keywords": [
+        "button",
+        "按钮",
+        "保存",
+        "提交",
+        "loading"
+      ],
+      "props": [
+        {
+          "name": "asChild",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "size",
+          "required": false,
+          "type": "\"default\" | \"sm\" | \"lg\" | \"icon\" | \"icon-sm\" | \"icon-lg\" | undefined"
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "type": "\"link\" | \"primary\" | \"secondary\" | \"outline\" | \"ghost\" | \"danger\" | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'button'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [
+        "无loading属性；宿主设置disabled/aria-busy和等待文字。",
+        "原生button默认提交行为仍存在；非提交按钮明确type=\"button\"。"
+      ],
+      "examples": [
+        "examples/react/App.tsx",
+        "examples/react/TaskExample.tsx"
+      ]
+    },
+    {
+      "id": "react:UiButtonProps",
+      "framework": "react",
+      "name": "UiButtonProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "signatures": [],
+      "purpose": "UiButtonProps"
+    },
+    {
+      "id": "react:UiCommandDock",
+      "framework": "react",
+      "name": "UiCommandDock",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/showcase.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "purpose": "跟随当前选择移动的导航底座",
+      "keywords": [
+        "dock",
+        "导航",
+        "动态",
+        "选择",
+        "快捷"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "required": true,
+          "type": "DockItem[]"
+        },
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "onValueChange",
+          "required": true,
+          "type": "(value: string) => void"
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'nav'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [],
+      "examples": [
+        "examples/react/App.tsx",
+        "examples/react/TaskExample.tsx"
+      ]
+    },
+    {
+      "id": "react:UiCommandDockProps",
+      "framework": "react",
+      "name": "UiCommandDockProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "signatures": [],
+      "purpose": "UiCommandDockProps"
+    },
+    {
+      "id": "react:UiGlowBorder",
+      "framework": "react",
+      "name": "UiGlowBorder",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/effects.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "purpose": "可暂停的流光边框",
+      "keywords": [
+        "glow",
+        "流光",
+        "边框",
+        "动效"
+      ],
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'div'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [],
+      "examples": []
+    },
+    {
+      "id": "react:UiGlowBorderProps",
+      "framework": "react",
+      "name": "UiGlowBorderProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/effects.d.ts",
+      "signatures": [],
+      "purpose": "UiGlowBorderProps"
+    },
+    {
+      "id": "react:UiInput",
+      "framework": "react",
+      "name": "UiInput",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "purpose": "原生input样式；标签和校验由宿主提供",
+      "keywords": [
+        "input",
+        "输入",
+        "表单",
+        "设置"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'input'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [
+        "透传原生input属性；标签、错误关联和受控value/onChange由宿主提供。"
+      ],
+      "examples": [
+        "examples/react/App.tsx"
+      ]
+    },
+    {
+      "id": "react:UiSignalOrbit",
+      "framework": "react",
+      "name": "UiSignalOrbit",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/showcase.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "purpose": "轨道关系展示与固定位置的选择操作",
+      "keywords": [
+        "orbit",
+        "轨道",
+        "科技",
+        "关系",
+        "动态"
+      ],
+      "props": [
+        {
+          "name": "center",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "nodes",
+          "required": true,
+          "type": "OrbitNode[]"
+        },
+        {
+          "name": "onSelectNode",
+          "required": false,
+          "type": "((id: string) => void) | undefined"
+        },
+        {
+          "name": "paused",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "selectedId",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'section'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [],
+      "examples": []
+    },
+    {
+      "id": "react:UiSignalOrbitProps",
+      "framework": "react",
+      "name": "UiSignalOrbitProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "signatures": [],
+      "purpose": "UiSignalOrbitProps"
+    },
+    {
+      "id": "react:UiSurface",
+      "framework": "react",
+      "name": "UiSurface",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "purpose": "内容表面、透明材质与装饰",
+      "keywords": [
+        "surface",
+        "卡片",
+        "表面",
+        "玻璃",
+        "glass",
+        "装饰"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'div'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [
+        "仅div表面；无Vue material/decoration属性和折射运行时。"
+      ],
+      "examples": []
+    },
+    {
+      "id": "react:UiTable",
+      "framework": "react",
+      "name": "UiTable",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "purpose": "原生表格表面",
+      "keywords": [
+        "table",
+        "表格",
+        "列表"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'table'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [
+        "仅原生table样式；排序、分页、选择和请求由宿主实现。"
+      ],
+      "examples": []
+    },
+    {
+      "id": "react:UiTaskLog",
+      "framework": "react",
+      "name": "UiTaskLog",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/task-log.tsx",
+      "declaration": "packages/react/dist/task-log.d.ts",
+      "purpose": "macOS和Windows终端任务日志，筛选、跟随和恢复操作",
+      "keywords": [
+        "sse",
+        "SSE",
+        "terminal",
+        "mac",
+        "windows",
+        "终端",
+        "任务",
+        "日志",
+        "续接",
+        "流式"
+      ],
+      "props": [
+        {
+          "name": "cancelling",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "connection",
+          "required": false,
+          "type": "TaskConnection | undefined"
+        },
+        {
+          "name": "discarded",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "entries",
+          "required": true,
+          "type": "TaskLogEntry[]"
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "maxVisible",
+          "required": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "onCancel",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "onPause",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "onResume",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "onRetry",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "runId",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "shell",
+          "required": false,
+          "type": "\"mac\" | \"windows\" | undefined"
+        },
+        {
+          "name": "status",
+          "required": false,
+          "type": "TaskStatus | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "limits": [
+        "受控日志视图；以onCancel/onResume/onPause/onRetry是否提供决定动作可见，不使用Vue canCancel属性。",
+        "不执行Shell；SSE连接与任务执行是两种状态。"
+      ],
+      "examples": [
+        "examples/react/TaskExample.tsx"
+      ]
+    },
+    {
+      "id": "react:UiTaskLogProps",
+      "framework": "react",
+      "name": "UiTaskLogProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/task-log.d.ts",
+      "signatures": [],
+      "purpose": "UiTaskLogProps"
+    },
+    {
+      "id": "react:UiTerminal",
+      "framework": "react",
+      "name": "UiTerminal",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/showcase.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "purpose": "宿主日志内容的轻量终端展示",
+      "keywords": [
+        "terminal",
+        "终端",
+        "日志",
+        "复制"
+      ],
+      "props": [
+        {
+          "name": "lines",
+          "required": true,
+          "type": "TerminalLine[]"
+        },
+        {
+          "name": "live",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'section'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [],
+      "examples": []
+    },
+    {
+      "id": "react:UiTerminalProps",
+      "framework": "react",
+      "name": "UiTerminalProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "signatures": [],
+      "purpose": "UiTerminalProps"
+    },
+    {
+      "id": "react:UiTextarea",
+      "framework": "react",
+      "name": "UiTextarea",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "purpose": "原生textarea样式；标签和校验由宿主提供",
+      "keywords": [
+        "textarea",
+        "输入",
+        "长文本",
+        "描述"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'textarea'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [
+        "透传原生textarea属性；标签和错误关联由宿主提供。"
+      ],
+      "examples": [
+        "examples/react/App.tsx"
+      ]
+    },
+    {
+      "id": "react:UiTheme",
+      "framework": "react",
+      "name": "UiTheme",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "purpose": "主题作用域：视觉语言、明暗、配色和字体",
+      "keywords": [
+        "theme",
+        "主题",
+        "风格",
+        "配色",
+        "字体",
+        "暗色"
+      ],
+      "props": [
+        {
+          "name": "children",
+          "required": true,
+          "type": "ReactNode"
+        },
+        {
+          "name": "theme",
+          "required": true,
+          "type": "UiThemeOptions"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'div'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [
+        "使用theme对象属性。当前只设置实体材质，不提供Vue液态折射运行时。",
+        "字体资源由宿主导入。body portal需传播主题属性，参见React示例。"
+      ],
+      "examples": [
+        "examples/react/App.tsx"
+      ]
+    },
+    {
+      "id": "react:UiThemeOptions",
+      "framework": "react",
+      "name": "UiThemeOptions",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "signatures": [],
+      "purpose": "UiThemeOptions"
+    },
+    {
+      "id": "react:UiTimeline",
+      "framework": "react",
+      "name": "UiTimeline",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/showcase.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "purpose": "带状态和恢复动作的过程时间线",
+      "keywords": [
+        "timeline",
+        "时间线",
+        "步骤",
+        "进度"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "onAction",
+          "required": false,
+          "type": "((id: string) => void) | undefined"
+        },
+        {
+          "name": "steps",
+          "required": true,
+          "type": "TimelineStep[]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "nativeProps": "React.ComponentPropsWithoutRef<'ol'>; native attributes are accepted; see source for owned style/keyboard behavior. Ref forwarding only on UiButton, UiInput, UiTextarea, UiSurface and UiTable.",
+      "limits": [],
+      "examples": []
+    },
+    {
+      "id": "react:UiTimelineProps",
+      "framework": "react",
+      "name": "UiTimelineProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/showcase.d.ts",
+      "signatures": [],
+      "purpose": "UiTimelineProps"
+    },
+    {
+      "id": "react:UiToolActivity",
+      "framework": "react",
+      "name": "UiToolActivity",
+      "kind": "component",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/ai.tsx",
+      "declaration": "packages/react/dist/ai.d.ts",
+      "purpose": "工具执行、授权、失败和未知结果的处理入口",
+      "keywords": [
+        "ai",
+        "tool",
+        "AI",
+        "工具",
+        "执行",
+        "状态",
+        "审批",
+        "重试"
+      ],
+      "props": [
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "children",
+          "required": false,
+          "type": "ReactNode"
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "detail",
+          "required": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "onApprove",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "onCancel",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "onReject",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "onRetry",
+          "required": false,
+          "type": "(() => void) | undefined"
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "\"running\" | \"paused\" | \"unknown\" | \"success\" | \"cancelled\" | \"error\" | \"approval\""
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "defaults": {},
+      "models": [],
+      "limits": [],
+      "examples": [
+        "examples/react/TaskExample.tsx"
+      ]
+    },
+    {
+      "id": "react:UiToolActivityProps",
+      "framework": "react",
+      "name": "UiToolActivityProps",
+      "kind": "type",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/ai.d.ts",
+      "signatures": [],
+      "purpose": "UiToolActivityProps"
+    },
+    {
+      "id": "react:useUiThemeAttributes",
+      "framework": "react",
+      "name": "useUiThemeAttributes",
+      "kind": "utility",
+      "package": "@ai-design-system/react",
+      "version": "0.2.0",
+      "source": "packages/react/src/index.tsx",
+      "declaration": "packages/react/dist/index.d.ts",
+      "signatures": [
+        "(): { \"data-ui-skin\": \"console\" | \"clinical\" | \"pearl\"; \"data-ui-mode\": \"dark\" | \"light\"; \"data-ui-density\": \"compact\" | \"comfortable\"; \"data-ui-palette\": Palette; \"data-ui-design\": DesignStyle | undefined; \"data-ui-font\": FontFamily; \"data-ui-heading-font\": FontFamily; \"data-ui-motion\": MotionPreset; \"data-ui-material\": string; style: CSSProperties; }"
+      ],
+      "purpose": "useUiThemeAttributes"
+    }
+  ]
+}

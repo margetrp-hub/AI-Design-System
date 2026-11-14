@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Design System"
+  short_description: "Build interfaces with visual languages and real APIs"
+  default_prompt: "Use $ai-design-system to build this interface with the right layout, visual language, components and interaction states."

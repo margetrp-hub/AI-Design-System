@@ -1,0 +1,15 @@
+# AI Design System
+
+Reusable Vue/React design workshop, with visual languages, layouts, motion and browser-simulated AI examples.
+
+- [Start](README.md)
+- [Skill](skills/ai-design-system/SKILL.md)
+- [AI usage and CLI](docs/ai.md)
+- [Actual interfaces](registry/manifest.json)
+- [Task compositions](registry/tasks.json)
+- [Design contract](DESIGN.md)
+- [Integration](docs/integration.md)
+- [Platform boundaries](docs/platforms.md)
+- [Provenance](docs/design-absorption.md)
+
+Query by framework. Vue and React APIs and coverage differ. Native token mapping is not a native component implementation. Demo logs/AI are simulations, not real service output.
