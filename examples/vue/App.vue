@@ -19,6 +19,9 @@ const key = "ai-design-system-integration-vue-v1",
   dark = ref(false),
   dialog = ref(false),
   focus = ref(false),
+  layout = ref<"split" | "centered">("split"),
+  field = ref(false),
+  progress = ref(0),
   view = ref("profile");
 function load() {
   try {
@@ -58,11 +61,39 @@ onMounted(load);
         dark ? "切换浅色" : "切换深色"
       }}</UiButton>
     </header>
-    <UiAuthLayout label="Vue 设置示例"
+    <div class="integration-actions">
+      <label
+        >入口布局
+        <select v-model="layout">
+          <option value="split">左右分屏</option>
+          <option value="centered">中央浮层</option>
+        </select></label
+      >
+      <label><input v-model="field" type="checkbox" />五形态粒子背景</label>
+      <label v-if="field"
+        >形态进度
+        <input
+          v-model.number="progress"
+          type="range"
+          min="0"
+          max="1"
+          step=".25"
+      /></label>
+    </div>
+    <UiAuthLayout label="Vue 设置示例" :pattern="layout"
       ><template #visual
-        ><UiBackdrop kind="rays" /><strong>AI Design System / VUE</strong
-        ><UiAuthCharacters :mode="focus ? 'typing' : 'idle'" />
-        <h2 class="integration-visual-title">
+        ><UiBackdrop
+          :kind="
+            field ? 'particle-field' : layout === 'centered' ? 'grid' : 'rays'
+          "
+          :color="field ? '#ffffff' : '#579eff'"
+          :progress="progress"
+        /><strong v-if="layout === 'split'">AI Design System / VUE</strong
+        ><UiAuthCharacters
+          v-if="layout === 'split'"
+          :mode="focus ? 'typing' : 'idle'"
+        />
+        <h2 v-if="layout === 'split'" class="integration-visual-title">
           让组件回应你，<br />也记住你的输入。
         </h2></template
       ><UiCommandDock
@@ -90,8 +121,11 @@ onMounted(load);
             variant="primary"
             :disabled="status === 'saving'"
             :loading="status === 'saving'"
-            >{{ status === "saving" ? "保存中" : "保存到本机" }}</UiButton
-          ><UiButton type="button" @click="dialog = true">查看预览</UiButton>
+            >{{
+              status === "saving" ? "保存中" : "保存到本机"
+            }}</UiButton><UiButton type="button" @click="dialog = true"
+            >查看预览</UiButton
+          >
         </div>
       </form>
       <p v-show="view === 'about'" class="integration-muted">

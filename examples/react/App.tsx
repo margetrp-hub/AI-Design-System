@@ -22,6 +22,9 @@ export default function App() {
     [dark, setDark] = useState(false),
     [open, setOpen] = useState(false),
     [focus, setFocus] = useState(false),
+    [layout, setLayout] = useState<"split" | "centered">("split"),
+    [field, setField] = useState(false),
+    [progress, setProgress] = useState(0),
     [view, setView] = useState("profile"),
     dialog = useRef<HTMLDialogElement>(null),
     returnFocus = useRef<HTMLElement | null>(null);
@@ -73,18 +76,68 @@ export default function App() {
           {dark ? "切换浅色" : "切换深色"}
         </UiButton>
       </header>
+      <div className="integration-actions">
+        <label>
+          入口布局{" "}
+          <select
+            value={layout}
+            onChange={(event) =>
+              setLayout(event.target.value as "split" | "centered")
+            }
+          >
+            <option value="split">左右分屏</option>
+            <option value="centered">中央浮层</option>
+          </select>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={field}
+            onChange={(event) => setField(event.target.checked)}
+          />
+          五形态粒子背景
+        </label>
+        {field && (
+          <label>
+            形态进度{" "}
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step=".25"
+              value={progress}
+              onChange={(event) => setProgress(Number(event.target.value))}
+            />
+          </label>
+        )}
+      </div>
       <UiAuthLayout
+        pattern={layout}
         label="React 设置示例"
         visual={
           <>
-            <UiBackdrop kind="rays" />
-            <strong>AI Design System / REACT</strong>
-            <UiAuthCharacters mode={focus ? "typing" : "idle"} />
-            <h2 className="integration-visual-title">
-              同一个视觉资产，
-              <br />
-              两种框架使用。
-            </h2>
+            <UiBackdrop
+              kind={
+                field
+                  ? "particle-field"
+                  : layout === "centered"
+                    ? "grid"
+                    : "rays"
+              }
+              color={field ? "#ffffff" : "#579eff"}
+              progress={progress}
+            />
+            {layout === "split" && (
+              <>
+                <strong>AI Design System / REACT</strong>
+                <UiAuthCharacters mode={focus ? "typing" : "idle"} />
+                <h2 className="integration-visual-title">
+                  同一个视觉资产，
+                  <br />
+                  两种框架使用。
+                </h2>
+              </>
+            )}
           </>
         }
         footer="本地演示 · 保存结果来自实际写入回执"

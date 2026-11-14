@@ -100,7 +100,7 @@ export default function TaskExample() {
         }
       />
       <p className="integration-muted">
-        真实 SSE 传输、本地只读清单检查；不连接模型或系统 Shell。
+        浏览器模拟 SSE 设计实例；不连接模型、任务后端或系统 Shell。
       </p>
       <UiAiComposer
         value={prompt}

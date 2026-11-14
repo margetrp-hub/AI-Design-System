@@ -199,6 +199,7 @@ test("characters follow focus, reduced motion pauses backgrounds; original studi
   page,
 }) => {
   await page.goto("/#assets");
+  await page.getByRole("button", { name: "左右分屏登录", exact: true }).click();
   await page.getByLabel("称呼", { exact: true }).focus();
   await expect(page.locator(".ui-auth-characters")).toHaveAttribute(
     "data-mode",

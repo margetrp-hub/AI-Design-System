@@ -21,6 +21,7 @@ export interface UiBackdropProps extends ComponentPropsWithoutRef<"div"> {
   intensity?: number;
   speed?: number;
   color?: string;
+  progress?: number;
   onState?: (state: EffectState) => void;
   retryKey?: number;
 }
@@ -30,6 +31,7 @@ export function UiBackdrop({
   intensity = 1,
   speed = 1,
   color = "#579eff",
+  progress = 0,
   onState,
   retryKey = 0,
   className = "",
@@ -46,6 +48,7 @@ export function UiBackdrop({
       intensity,
       speed,
       color,
+      progress,
       onState: (value) => callback.current?.(value),
     });
     return () => {
@@ -54,8 +57,16 @@ export function UiBackdrop({
     };
   }, [retryKey]);
   useEffect(
-    () => effect.current?.update({ kind, paused, intensity, speed, color }),
-    [kind, paused, intensity, speed, color],
+    () =>
+      effect.current?.update({
+        kind,
+        paused,
+        intensity,
+        speed,
+        color,
+        progress,
+      }),
+    [kind, paused, intensity, speed, color, progress],
   );
   return (
     <div
@@ -136,12 +147,14 @@ export interface UiAuthLayoutProps extends ComponentPropsWithoutRef<"section"> {
   visual: ReactNode;
   footer?: ReactNode;
   visualSide?: "left" | "right";
+  pattern?: "split" | "centered";
   label?: string;
 }
 export function UiAuthLayout({
   visual,
   footer,
   visualSide = "left",
+  pattern = "split",
   label = "双栏入口",
   children,
   className = "",
@@ -152,6 +165,7 @@ export function UiAuthLayout({
       {...rest}
       className={"ui-auth-layout " + className}
       data-side={visualSide}
+      data-pattern={pattern}
       aria-label={label}
     >
       <div className="ui-auth-layout-grid">

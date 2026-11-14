@@ -83,3 +83,10 @@ body {
 .integration-native-dialog p {
   line-height: 1.7;
 }
+.integration-page .ui-auth-layout[data-pattern="centered"] .ui-auth-form {
+  padding: 28px;
+  background: var(--ui-surface);
+  color: var(--ui-text);
+  border: 1px solid var(--ui-border);
+  border-radius: 12px;
+}

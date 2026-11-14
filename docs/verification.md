@@ -1,4 +1,4 @@
-# Release verification · 0.4
+# Release verification · 0.4.1
 
 Verified locally on 2026-11-14, Windows / Edge Chromium. This records the tested boundary, not a promise of compatibility with every host.
 
@@ -15,6 +15,14 @@ Verified locally on 2026-11-14, Windows / Edge Chromium. This records the tested
 | Pages build | Built with `BASE_PATH=/AI-Design-System/`; deployment status is visible in GitHub Actions |
 
 README images were captured from the runnable workshop. The Pages workflow repeats the public source checks on Linux / Node 24 before deployment.
+
+## 0.4.1 asset correction
+
+The administrator reference is a centered dark form over a four-plane scanning tunnel. It is now separate from the split character login. The OHLAOO homepage uses its original ribbon/sphere/helix/rings/galaxy coordinates; `particle-field` is distinct from the 64-dot `particles` background. Console-form recipe CSS is distributed in the shared styles package.
+
+On 2026-11-14, local type/Node/build/registry checks passed, followed by five affected browser regressions. Direct browser checks exercised all five shapes, rapid retargeting, pause and reduced-motion shape selection, WebGL loss/restoration, 16,000/5,000 initial point counts, retained form input when switching examples, and 390px layouts without page overflow. README screenshots show the running components. The final six tarballs were independently installed, compared file by file, and built as Vue/React consumers. Both installed consumers then passed layout/background switching, shape progress, retained draft, reduced-motion and narrow-screen browser checks. The existing Vite consumer needed a force restart to discard its old dependency prebundle after package replacement.
+
+The 34-test total above describes the 0.4.0 baseline; 0.4.1 reran the five affected regressions and the new effect/consumer interactions, not that entire baseline suite. Motion screenshots are not frame-rate benchmarks. Production login and original business sites were not changed.
 
 ## Reproduce
 

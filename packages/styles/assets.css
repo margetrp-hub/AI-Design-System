@@ -17,6 +17,22 @@
   height: 100%;
   opacity: 1;
 }
+.ui-backdrop[data-kind="particle-field"] {
+  background: #050509;
+}
+.ui-backdrop[data-kind="particle-field"][data-effect-state="fallback"] {
+  background:
+    radial-gradient(ellipse at center, #ffffff0d, transparent 65%),
+    radial-gradient(circle at 18% 46%, #cbd5e1 0 1px, transparent 2px),
+    radial-gradient(circle at 68% 38%, #cbd5e1 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 72%, #cbd5e1 0 1px, transparent 2px), #050509;
+  background-size:
+    auto,
+    87px 79px,
+    131px 113px,
+    163px 149px,
+    auto;
+}
 .ui-backdrop[data-kind="grid"] {
   background:
     repeating-linear-gradient(90deg, #579eff12 0 1px, transparent 1px 40px),
@@ -292,6 +308,36 @@
   }
   .ui-auth-layout[data-side="right"] .ui-auth-visual {
     order: 0;
+  }
+}
+.ui-auth-layout[data-pattern="centered"] .ui-auth-layout-grid {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  min-height: var(--ui-auth-height, 680px);
+  padding: 64px 24px;
+  background: #08080d;
+}
+.ui-auth-layout[data-pattern="centered"] .ui-auth-visual {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  order: 0;
+}
+.ui-auth-layout[data-pattern="centered"] .ui-auth-form {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--ui-auth-width, 440px));
+  padding: 0;
+  gap: 12px;
+  color: #f8fafc;
+}
+@container ui-auth (max-width:480px) {
+  .ui-auth-layout[data-pattern="centered"] .ui-auth-layout-grid {
+    padding: 44px 16px;
+    min-height: 620px;
   }
 }
 @property --ui-glow-angle {

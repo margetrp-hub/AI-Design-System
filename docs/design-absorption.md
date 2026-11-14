@@ -8,7 +8,7 @@
 
 UiWordSwitch 和 UiFoldedNote 分别吸收文字切换、纸张折角与渐进展开的机制，用自有 Vue/CSS 实现。没有复制 Once UI、Motion Primitives 或 Cult UI 源码。组织方式见 [architecture.md](architecture.md)。
 
-背景光束、登录角色和分屏入口来自维护者自有项目的可复用视觉代码；在此抽离业务，统一生命周期。网格、粒子为独立实现；未打包 ReactBits 代码或受限素材。
+背景光束、登录角色和分屏入口来自维护者自有项目的可复用视觉代码；在此抽离业务，统一生命周期。深网 `grid` 保留自有管理员登录页的四面透视网格和往返扫描；星序 `particle-field` 保留旧 OHLAOO.COM 企业首页的五形态粒子坐标，以无 Three.js 依赖的 WebGL 点渲染实现。它们分别展示为完整居中登录与首页背景，不再与左右分屏人物入口混用。轻量星尘 `particles` 仍是独立资产。未打包 ReactBits 代码或受限素材，未包含原业务登录、风控、域名探测或接口。
 
 ## 参考与改编
 

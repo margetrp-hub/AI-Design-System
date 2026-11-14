@@ -13,6 +13,7 @@ const props = withDefaults(
     intensity?: number;
     speed?: number;
     color?: string;
+    progress?: number;
   }>(),
   { kind: "rays", paused: false, intensity: 1, speed: 1, color: "#579eff" },
 );

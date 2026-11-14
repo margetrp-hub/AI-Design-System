@@ -22,6 +22,11 @@
 
 ![视觉语言与页面组合器](docs/screenshots/composer.png)
 
+[场景与交互资产](https://margetrp-hub.github.io/AI-Design-System/#assets) 提供独立的管理员登录、企业首页粒子和左右分屏登录。深网保留四面扫描隧道与中央暗卡；星序保留旧 OHLAOO.COM 首页的流带、球体、螺旋、环阵、星系及连续变形。背景和居中布局供 Vue / React 共用，管理员表单配方样式随包分发。
+
+![深网：四面扫描隧道与居中管理员入口](docs/screenshots/admin-login.png)
+![星序：企业首页五形态粒子背景](docs/screenshots/particle-home.png)
+
 视觉语言改变导航、几何、文字层级、材质和交互。配色是独立选择，不把换一个主色当作新风格。流璃提供可调透明度、清透/柔透材质与 Web 边缘折射；具体浏览器能力见 [平台边界](docs/platforms.md)。
 
 ## 运行工坊

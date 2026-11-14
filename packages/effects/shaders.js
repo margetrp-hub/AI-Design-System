@@ -1,5 +1,5 @@
-// Rays extracted from our original public-light-rays.js. Grid is a new single-plane
-// projection, not the old admin shader or a ReactBits port. See README provenance.
+// Rays and the four-plane tunnel use the maintainer's original entry-page geometry.
+// Particle projection shares the original five-shape coordinates, without a 3D dependency.
 export const vertex =
   "attribute vec2 position;void main(){gl_Position=vec4(position,0.0,1.0);}";
 export const rays = `precision highp float;
@@ -23,17 +23,52 @@ void main(){
 export const grid = `precision highp float;
 uniform float time;uniform vec2 resolution;uniform vec2 pointer;uniform vec3 tint;uniform float intensity;
 void main(){
- vec2 screen=gl_FragCoord.xy/resolution;
- float horizon=.61+(pointer.y-.5)*.04;
- float ground=max(horizon-screen.y,.002);
- float depth=.20/ground;
- vec2 cell=vec2((screen.x-.5+(pointer.x-.5)*.035)*depth*8.,depth*2.5-time*.22);
- vec2 edge=abs(fract(cell+.5)-.5);
- float width=clamp(depth/resolution.y*5.,.012,.15);
- float lines=1.-smoothstep(width,width*2.,min(edge.x,edge.y));
- float visible=smoothstep(.012,.13,ground)*smoothstep(0.,.12,screen.y);
- float band=pow(max(0.,cos(depth*.65-time*.7)),24.);
- vec3 groundColor=tint*(lines*.32+band*.20)*visible;
- float glow=exp(-abs(screen.y-horizon)*20.)*.12;
- gl_FragColor=vec4((groundColor+tint*glow)*intensity,1.);
+ vec2 screen=(2.*gl_FragCoord.xy-resolution)/resolution.y;
+ vec3 direction=normalize(vec3(screen,2.));
+ direction.xy+=(pointer-.5)*vec2(.12,-.18)*direction.z;
+ // Intersect both side walls and the floor/ceiling, selecting the nearest plane.
+ float wall=.5/max(abs(direction.x),.0001);
+ float floorCeiling=.2/max(abs(direction.y),.0001);
+ float distanceToPlane=min(wall,floorCeiling);
+ vec3 hit=direction*distanceToPlane;
+ vec2 cell=(wall<floorCeiling?hit.zy:hit.xz)*10.;
+ vec2 edge=min(fract(cell),1.-fract(cell));
+ float lines=1.-smoothstep(0.,.035,min(edge.x,edge.y));
+ float fade=exp(-distanceToPlane*2.);
+ float scanZ=(1.-abs(mod(time+.65,4.)-2.)/2.)*2.;
+ float dz=hit.z-scanZ;
+ float scan=exp(-.5*dz*dz/.0324)+exp(-.5*dz*dz/.1296)*.25;
+ vec3 color=vec3(.184,.161,.227)*lines*fade+tint*scan*.72;
+ gl_FragColor=vec4(color*intensity,1.);
+}`;
+
+export const particleVertex = `precision highp float;
+attribute vec3 shape0;attribute vec3 shape1;attribute vec3 shape2;attribute vec3 shape3;attribute vec3 shape4;
+uniform vec2 resolution;uniform vec2 pointer;uniform float time;uniform float progress;
+void main(){
+ float phase=clamp(progress,0.,1.)*4.;
+ float blend=smoothstep(0.,1.,fract(phase));
+ vec3 p;
+ if(phase<1.) p=mix(shape0,shape1,blend);
+ else if(phase<2.) p=mix(shape1,shape2,blend);
+ else if(phase<3.) p=mix(shape2,shape3,blend);
+ else p=mix(shape3,shape4,smoothstep(0.,1.,phase-3.));
+ float yaw=(pointer.x-.5)*.056;
+ p.xz=mat2(cos(yaw),-sin(yaw),sin(yaw),cos(yaw))*p.xz;
+ float pitch=(pointer.y-.5)*.056;
+ p.yz=mat2(cos(pitch),-sin(pitch),sin(pitch),cos(pitch))*p.yz;
+ p*=1.25*(1.+sin(time*.96)*.018);
+ p.y-=.7;
+ p.xy-=(pointer-.5)*vec2(.36,-.24);
+ float depth=9.2-p.z;
+ float focal=1.6003;
+ gl_Position=vec4(p.x*focal/(resolution.x/resolution.y),p.y*focal,0.,depth);
+ gl_PointSize=clamp(.033*resolution.y*.5/depth,1.,4.);
+}`;
+export const particleFragment = `precision mediump float;
+uniform vec3 tint;uniform float intensity;
+void main(){
+ float radius=length(gl_PointCoord-.5)*2.;
+ if(radius>1.) discard;
+ gl_FragColor=vec4(tint,(1.-smoothstep(.45,1.,radius))*.84*intensity);
 }`;

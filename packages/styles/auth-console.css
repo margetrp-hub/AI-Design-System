@@ -1,0 +1,139 @@
+.ui-auth-console .ui-auth-layout-grid {
+  border-color: #28344a;
+  border-radius: 14px;
+}
+.ui-auth-console-kicker {
+  color: #8cbbff;
+  font-size: 11px;
+}
+.ui-auth-console-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #3b82f6;
+  box-shadow: 0 0 12px #3b82f688;
+}
+.ui-auth-console-card.ui-glow-border {
+  --ui-panel-radius: 12px;
+  --ui-inset: 32px;
+  --ui-surface: #0e0a14f5;
+  --ui-muted: #b8b0c0;
+  --ui-text: #f8fafc;
+  border: 1px solid #28466e;
+  box-shadow:
+    0 24px 70px #0008,
+    0 0 24px #3b82f61f;
+  backdrop-filter: blur(8px);
+  color: #f8fafc;
+}
+.ui-auth-console-card header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.ui-auth-console-card h2 {
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  margin: 0 0 8px;
+  color: #f8fafc;
+}
+.ui-auth-console-card header p {
+  color: #b8b0c0;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.7;
+}
+.ui-auth-console-form {
+  display: grid;
+  gap: 18px;
+}
+.ui-auth-console .ui-field label {
+  color: #d9d0dc;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ui-auth-console .ui-input {
+  min-height: 48px;
+  background: #101727;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+.ui-auth-console .ui-input::placeholder {
+  color: #91a4be;
+}
+.ui-auth-console .ui-input:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+.ui-auth-console-password {
+  position: relative;
+}
+.ui-auth-console-password .ui-input {
+  padding-right: 70px;
+}
+.ui-auth-console-password button {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid #334155;
+  border-radius: 7px;
+  background: #16243b;
+  color: #dbeafe;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ui-auth-console-forgot {
+  justify-self: end;
+  padding: 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 12px;
+  color: #83bbff;
+  cursor: pointer;
+}
+.ui-auth-console .ui-auth-console-submit {
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+  background: #fff;
+  color: #16101b;
+  font-weight: 650;
+}
+.ui-auth-console .ui-auth-console-submit:hover {
+  background: #e9f2ff;
+}
+.ui-auth-console button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
+}
+.ui-auth-console-foot {
+  margin: 24px 0 0;
+  text-align: center;
+  color: #b8b0c0;
+  font-size: 12px;
+}
+.ui-auth-console-notice {
+  margin: 0;
+  color: #c4d9f5;
+  font-size: 12px;
+  line-height: 1.7;
+}
+@container ui-auth (max-width:480px) {
+  .ui-auth-console-card.ui-glow-border {
+    --ui-inset: 24px 20px;
+  }
+  .ui-auth-console-card h2 {
+    font-size: 26px;
+  }
+}

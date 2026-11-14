@@ -1,6 +1,6 @@
 {
   "name": "@ai-design-system/effects",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Shared visual runtime for Vue and React, extracted from our entry pages",

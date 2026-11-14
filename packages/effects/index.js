@@ -1,4 +1,11 @@
-import { vertex, rays, grid } from "./shaders.js";
+import {
+  vertex,
+  rays,
+  grid,
+  particleVertex,
+  particleFragment,
+} from "./shaders.js";
+import { createParticleShapes } from "./particle-shapes.js";
 const clamp = (v, a, b, fallback) =>
   Number.isFinite(v) ? Math.min(b, Math.max(a, v)) : fallback;
 export function observeActivity(host, callback) {
@@ -29,6 +36,7 @@ export function mountBackdrop(host, initial = {}) {
     intensity: 1,
     speed: 1,
     color: "#579eff",
+    progress: 0,
     ...initial,
   };
   let canvas,
@@ -44,7 +52,16 @@ export function mountBackdrop(host, initial = {}) {
     failed = false,
     stopActivity = () => {},
     size;
-  const pointer = { x: 0.52, y: 0.45 },
+  let morphFrom = clamp(options.progress, 0, 1, 0),
+    morphTo = morphFrom,
+    morphStarted = 0;
+  const progressAt = (t) => {
+    const portion = clamp((t - morphStarted) / 0.86, 0, 1, 1);
+    return (
+      morphFrom + (morphTo - morphFrom) * portion * portion * (3 - 2 * portion)
+    );
+  };
+  const pointer = { x: 0.5, y: 0.5 },
     shaders = [],
     pointerRoot = host.parentElement ?? host;
   const state = (value) => {
@@ -195,10 +212,17 @@ export function mountBackdrop(host, initial = {}) {
         };
         program = gl.createProgram();
         if (!program) throw Error("Program allocation failed");
-        gl.attachShader(program, compile(gl.VERTEX_SHADER, vertex));
+        const field = options.kind === "particle-field";
         gl.attachShader(
           program,
-          compile(gl.FRAGMENT_SHADER, options.kind === "grid" ? grid : rays),
+          compile(gl.VERTEX_SHADER, field ? particleVertex : vertex),
+        );
+        gl.attachShader(
+          program,
+          compile(
+            gl.FRAGMENT_SHADER,
+            field ? particleFragment : options.kind === "grid" ? grid : rays,
+          ),
         );
         gl.linkProgram(program);
         if (!gl.getProgramParameter(program, gl.LINK_STATUS))
@@ -206,20 +230,54 @@ export function mountBackdrop(host, initial = {}) {
         shaders.splice(0).forEach((shader) => gl.deleteShader(shader));
         buffer = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-        gl.bufferData(
-          gl.ARRAY_BUFFER,
-          new Float32Array([-1, -1, 3, -1, -1, 3]),
-          gl.STATIC_DRAW,
-        );
         gl.useProgram(program);
-        const position = gl.getAttribLocation(program, "position");
-        gl.enableVertexAttribArray(position);
-        gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
+        const count = host.getBoundingClientRect().width < 720 ? 5000 : 16000;
+        if (field) {
+          const shapes = createParticleShapes(count),
+            vertices = new Float32Array(count * 15);
+          for (let i = 0; i < count; i++)
+            for (let shape = 0; shape < 5; shape++) {
+              vertices.set(
+                shapes[shape].subarray(i * 3, i * 3 + 3),
+                i * 15 + shape * 3,
+              );
+            }
+          gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+          for (let shape = 0; shape < 5; shape++) {
+            const location = gl.getAttribLocation(program, `shape${shape}`);
+            gl.enableVertexAttribArray(location);
+            gl.vertexAttribPointer(
+              location,
+              3,
+              gl.FLOAT,
+              false,
+              60,
+              shape * 12,
+            );
+          }
+          gl.enable(gl.BLEND);
+          gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+          host.dataset.particleCount = String(count);
+        } else {
+          gl.bufferData(
+            gl.ARRAY_BUFFER,
+            new Float32Array([-1, -1, 3, -1, -1, 3]),
+            gl.STATIC_DRAW,
+          );
+          const position = gl.getAttribLocation(program, "position");
+          gl.enableVertexAttribArray(position);
+          gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
+          delete host.dataset.particleCount;
+        }
         const uniforms = Object.fromEntries(
-          ["time", "resolution", "pointer", "tint", "intensity"].map((key) => [
-            key,
-            gl.getUniformLocation(program, key),
-          ]),
+          [
+            "time",
+            "resolution",
+            "pointer",
+            "tint",
+            "intensity",
+            "progress",
+          ].map((key) => [key, gl.getUniformLocation(program, key)]),
         );
         drawFrame = (t) => {
           const hex = /^#[\da-f]{6}$/i.test(options.color)
@@ -234,7 +292,15 @@ export function mountBackdrop(host, initial = {}) {
             ...[1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255),
           );
           gl.uniform1f(uniforms.intensity, clamp(options.intensity, 0, 2, 1));
-          gl.drawArrays(gl.TRIANGLES, 0, 3);
+          if (field) {
+            if (!active || options.paused || options.speed === 0)
+              morphFrom = morphTo;
+            const progress = progressAt(t);
+            gl.uniform1f(uniforms.progress, progress);
+            host.dataset.progress = progress.toFixed(3);
+            gl.clear(gl.COLOR_BUFFER_BIT);
+            gl.drawArrays(gl.POINTS, 0, count);
+          } else gl.drawArrays(gl.TRIANGLES, 0, 3);
         };
         canvas.addEventListener("webglcontextlost", lost);
         canvas.addEventListener("webglcontextrestored", restored);
@@ -261,6 +327,11 @@ export function mountBackdrop(host, initial = {}) {
     update(next) {
       if (disposed) return;
       const rebuild = next.kind !== undefined && next.kind !== options.kind;
+      if (next.progress !== undefined && next.progress !== options.progress) {
+        morphFrom = progressAt(time);
+        morphTo = clamp(next.progress, 0, 1, 0);
+        morphStarted = time;
+      }
       options = { ...options, ...next };
       if (rebuild) init();
       else {

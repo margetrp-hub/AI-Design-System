@@ -1,10 +1,26 @@
 // Human-owned purpose/limits only. Exports and API types come from the built declarations.
 export const usage = Object.fromEntries(
   [
-    ["UiStudioAvatar", "原创圆角机器人角色与状态", "avatar 角色 空间 原创 studio"],
-    ["UiStudioScene", "原创家具空间与可选择的成员工作位", "scene 场景 家具 成员 空间 studio"],
-    ["UiStudioWorkbench", "空间工作室骨架与成员详情", "studio workbench 骨架 工作室"],
-    ["UiWordSwitch", "可暂停的文字轮换与稳定宽度", "text 文字 动效 轮换 motion"],
+    [
+      "UiStudioAvatar",
+      "原创圆角机器人角色与状态",
+      "avatar 角色 空间 原创 studio",
+    ],
+    [
+      "UiStudioScene",
+      "原创家具空间与可选择的成员工作位",
+      "scene 场景 家具 成员 空间 studio",
+    ],
+    [
+      "UiStudioWorkbench",
+      "空间工作室骨架与成员详情",
+      "studio workbench 骨架 工作室",
+    ],
+    [
+      "UiWordSwitch",
+      "可暂停的文字轮换与稳定宽度",
+      "text 文字 动效 轮换 motion",
+    ],
     ["UiFoldedNote", "可展开细节的折页札记", "note paper 折页 札记 卡片"],
     [
       "UiTheme",
@@ -85,8 +101,8 @@ export const usage = Object.fromEntries(
     ],
     [
       "UiBackdrop",
-      "光束、网格、粒子和星雾背景，支持暂停与重载",
-      "backdrop 动态 背景 光束 粒子 登录 rays grid particles nebula",
+      "光束、四面扫描隧道、星尘、五形态粒子场和星雾，支持暂停与重载",
+      "backdrop 动态 背景 光束 粒子 首页 OHLAOO 登录 隧道 rays grid particles particle-field nebula",
     ],
     [
       "UiAuthCharacters",
@@ -95,8 +111,8 @@ export const usage = Object.fromEntries(
     ],
     [
       "UiAuthLayout",
-      "响应式左右分屏入口，视觉区和表单区",
-      "auth login 登录 注册 兑换 分屏 split",
+      "响应式左右分屏或全幅背景中央表单入口",
+      "auth login 登录 管理员 注册 兑换 分屏 居中 split centered",
     ],
     ["UiGlowBorder", "可暂停的流光边框", "glow 流光 边框 动效"],
     [

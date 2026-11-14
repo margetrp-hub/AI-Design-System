@@ -1,4 +1,5 @@
-export type BackdropKind = "rays" | "grid" | "particles" | "nebula";
+export type BackdropKind =
+  "rays" | "grid" | "particles" | "particle-field" | "nebula";
 export type EffectState = "running" | "paused" | "fallback" | "disposed";
 export interface EffectOptions {
   kind?: BackdropKind;
@@ -6,6 +7,8 @@ export interface EffectOptions {
   intensity?: number;
   speed?: number;
   color?: string;
+  /** Five-shape field: ribbon 0, sphere .25, helix .5, rings .75, galaxy 1. */
+  progress?: number;
   onState?: (state: EffectState) => void;
 }
 export interface EffectHandle {
