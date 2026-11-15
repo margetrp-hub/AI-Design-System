@@ -10,6 +10,7 @@ import {
   UiAccordion,
   UiDialog,
   UiProgress,
+  UiMotionSurface, UiTextScramble,
   UiTextReveal,UiNumberTicker,UiSpotlight,UiMarquee,UiAsyncState,
 } from "@ai-design-system/ui";
 import DemoCard from "./DemoCard.vue";
@@ -41,6 +42,8 @@ onUnmounted(()=>request?.abort())
 <template>
   <section class="motion-examples" aria-label="动效演示">
     <div class="demo-grid">
+      <DemoCard title="指针倾斜与磁吸" names="UiMotionSurface" code='<UiMotionSurface effect="tilt"><UiPanel title="作品预览">你的内容</UiPanel></UiMotionSurface>'><div class="motion-surface-samples"><UiMotionSurface effect="tilt"><UiPanel title="随指针轻轻转动"><p>保持点击区域稳定，只让展示层回应指针。</p></UiPanel></UiMotionSurface><UiMotionSurface effect="magnetic"><UiButton variant="primary">轻量磁吸 ↗</UiButton></UiMotionSurface></div></DemoCard>
+      <DemoCard title="字符解码" names="UiTextScramble" code='<UiTextScramble text="DESIGN IN MOTION" :replay="replay" />'><h2 class="motion-display"><UiTextScramble text="DESIGN IN MOTION" :replay="replay" /></h2><UiButton @click="replay++">重播字符解码</UiButton><p class="muted small">用于短标题；日志、错误和金额直接显示。减少动态时立即显示完整文字。</p></DemoCard>
       <DemoCard title="文字显现" names="UiTextReveal" code='<UiTextReveal text="让细节自然出现" effect="blur" by="character" :replay="replay" />'>
        <div class="form-stack"><UiSelect v-model="textEffect" label="文字动画" :options="[{value:'blur',label:'模糊渐显'},{value:'rise',label:'逐字上浮'},{value:'fade',label:'逐字淡入'}]"/><h2 class="motion-display"><UiTextReveal text="让细节自然出现。" :effect="textEffect" by="character" :replay="replay"/></h2><UiButton @click="replay++">重播文字动画</UiButton><p class="muted small">整段文字始终可读屏；切换、重播和减少动态不会丢字。</p></div>
       </DemoCard>

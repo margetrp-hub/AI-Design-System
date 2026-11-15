@@ -10,6 +10,7 @@ import {
   UiBackdrop,
   UiAuthCharacters,
   UiCommandDock,
+  UiDesignCase, UiSettingsSection, UiMotionSurface, UiTextScramble,
 } from "@ai-design-system/ui";
 import { defaults, readSettings, saveSettings } from "../shared/settings";
 const key = "ai-design-system-integration-vue-v1",
@@ -160,4 +161,9 @@ onMounted(load);
       ></UiAuthLayout
     ></UiTheme
   >
+  <UiTheme skin="console" mode="light" class="integration-extra">
+    <UiSettingsSection title="复用设置分组"><UiInput v-model="draft.name" label="分组内名称" /></UiSettingsSection>
+    <UiMotionSurface effect="tilt"><UiTextScramble text="REUSABLE BY DESIGN" /></UiMotionSurface>
+    <UiDesignCase case-id="vercel" />
+  </UiTheme>
 </template>

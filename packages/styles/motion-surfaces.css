@@ -1,0 +1,54 @@
+.ui-motion-surface {
+  perspective: 800px;
+  min-width: 0;
+}
+.ui-motion-surface-inner {
+  transition:
+    transform 180ms var(--ui-ease),
+    opacity 240ms var(--ui-ease);
+}
+.ui-motion-surface[data-effect="tilt"] > .ui-motion-surface-inner {
+  transform: rotateX(calc(var(--ui-pointer-y) * -10deg))
+    rotateY(calc(var(--ui-pointer-x) * 10deg));
+}
+.ui-motion-surface[data-effect="magnetic"] > .ui-motion-surface-inner {
+  transform: translate(
+    calc(var(--ui-pointer-x) * 12px),
+    calc(var(--ui-pointer-y) * 12px)
+  );
+}
+.ui-motion-surface[data-effect="reveal"][data-seen="false"]
+  > .ui-motion-surface-inner {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.ui-motion-surface:focus-within > .ui-motion-surface-inner,
+.ui-motion-surface[data-reduced="true"] > .ui-motion-surface-inner {
+  transform: none;
+  opacity: 1;
+}
+.ui-text-scramble {
+  display: inline-block;
+  position: relative;
+  font-variant-numeric: tabular-nums;
+}
+.ui-text-scramble-source {
+  color: transparent;
+}
+.ui-text-scramble-source::selection {
+  color: HighlightText;
+  background: Highlight;
+}
+.ui-text-scramble-visual {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-motion-surface > .ui-motion-surface-inner {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none;
+  }
+}

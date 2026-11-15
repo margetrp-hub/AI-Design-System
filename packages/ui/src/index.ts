@@ -86,6 +86,13 @@ export {
 } from "./composition";
 export type { DesignRecipe, LayoutPattern } from "./composition";
 export { useToast } from "./toast";
+export { default as UiMotionSurface } from "./UiMotionSurface.vue";
+export { default as UiTextScramble } from "./UiTextScramble.vue";
+export { default as UiDesignCase } from "./UiDesignCase.vue";
+export { default as UiViewportFrame } from "./UiViewportFrame.vue";
+export { default as UiSettingsSection } from "./UiSettingsSection.vue";
+export { designCases } from "./design-cases";
+export type { DesignCaseId, DesignCaseDefinition } from "./design-cases";
 export type { ToastOptions, ToastApi } from "./toast";
 export type {
   UiOption,

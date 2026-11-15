@@ -2,6 +2,31 @@
 export const usage = Object.fromEntries(
   [
     [
+      "UiDesignCase",
+      "独立页面设计语言与交互演绎，虚构数据",
+      "case 案例 Apple Vercel IBM Stripe Spotify Notion Linear Figma Airbnb Shopify Claude Supabase NVIDIA Nike Miro Slack",
+    ],
+    [
+      "UiViewportFrame",
+      "按真实 CSS 视口尺寸预览页面，保留内部状态",
+      "viewport 分辨率 响应式 iframe 网格 预览 手机 平板",
+    ],
+    [
+      "UiSettingsSection",
+      "按决定分组的连续设置表面与自适应对齐",
+      "settings 设置 分组 对齐 留白 表单",
+    ],
+    [
+      "UiMotionSurface",
+      "指针倾斜、磁吸与进入视野显现",
+      "motion tilt magnetic reveal 磁吸 倾斜 动效",
+    ],
+    [
+      "UiTextScramble",
+      "短文字解码动效与减少动态支持",
+      "text scramble 文字 解码 动效",
+    ],
+    [
       "UiStudioAvatar",
       "原创圆角机器人角色与状态",
       "avatar 角色 空间 原创 studio",

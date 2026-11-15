@@ -1,6 +1,12 @@
 # Interaction craft
 
+Use the [layout/disclosure reference](layout-and-disclosure.md) for settings, menu transitions and responsive review. Tutorial motion and application motion have different jobs: camera zooms, spotlight tours and 3D photo reels may fit a product video, while frequent product actions need short, interruptible feedback. Learn the mechanism without automatically installing the video's tool or adding its scene to the case library.
+
 Give each transition a trigger, meaning, final state and interruption path. Reuse motion tokens. Approximate starting ranges: press 80–140ms, hover 120–180ms, selection 160–220ms, dialog entry 200–260ms and faster exit. These are design starting points, not fixed rules or performance measurements.
+
+Choose the curve by movement: linear fits steady continuous travel; ease-out gives direct response and settles an entrance; ease-in can accelerate a short exit; ease-in-out connects two visible positions. Springs suit optional playful release feedback, not every form or menu. When requesting an effect, name its trigger, moving part, direction, duration and reverse path. `UiMotionSurface` supplies tilt, magnetic and reveal behavior; `UiTextScramble` supplies a bounded text-decode effect. Its final text reserves layout and remains the accessible/copyable source.
+
+A like burst, elastic switch or button morph is an optional accent on the existing control, not a separate business flow. Separate pressed, pending, confirmed and failed states. A hold-to-confirm interaction must cancel on release, pointer cancellation and focus loss, with a keyboard alternative; it does not replace the host's real authorization or consequential-action confirmation. Do not add a new control just to reproduce every tutorial effect.
 
 Fast repeated input must retarget instead of queue. Use one presence/focus owner for overlays; Reka already owns Vue overlays. Closed content cannot keep focus, intercept input or leave scroll locked. Reduced motion must reach the same usable state without relying on animationend. Dispose timers/listeners/frames, pause decorative renderers when hidden, and preserve user-controlled play/pause.
 

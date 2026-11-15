@@ -4,6 +4,20 @@ Vue 入口 `@ai-design-system/ui`，React 入口 `@ai-design-system/react`，分
 
 ## 0.3 布局、材质、文字与等待
 
+### 新增可复用组件
+
+| 导出 | 接口与边界 |
+| --- | --- |
+| UiDesignCase | `caseId` 为 `designCases` 的16种ID，`theme` 可覆写主题，`preview` 为缩略呈现；`action` 事件。虚构内容和浏览器模拟，用于设计研究，不包含业务后端。 |
+| UiViewportFrame | `src`、`title`；独立 iframe 保留页面状态，支持390/768/1366/1440/1920预设、自定义宽高、连续宽度、方向、网格和适应/原尺寸。消费方传可信演示URL；不是DPR或原生设备模拟器。 |
+| UiSettingsSection | `title`、可选 `description`、默认插槽；短设置行对齐、分组和留白。宿主负责字段、保存、错误与草稿。 |
+| UiMotionSurface | `effect: tilt / magnetic / reveal`、`disabled`、默认插槽；稳定外层命中范围，内部展示层变化，支持减少动态及清理。 |
+| UiTextScramble | `text`、`replay`、`duration`；字素分段、短时解码、完整无障碍文本，减少动态直接显示最终值。不要用于金额、错误或日志正文。 |
+
+`UiLayout` 导航插槽的链接/按钮可加 `ui-nav-link`，按语言选择方形连续行、药丸分组或等宽工具导航。不附带业务路由。
+
+### 既有布局与动效
+
 | 导出 / 契约 | 关键接口 | 已实现行为 |
 | --- | --- | --- |
 | UiLayout | pattern: sidebar / topbar / master-detail / workbench / editorial / bento / settings / split / focused / conversation；label；header/navigation/default/aside/footer slots | 容器响应布局；插槽内容保持挂载，aside 不隐藏；conversation 独立滚动、底部输入slot；不提供路由或业务数据 |
@@ -139,7 +153,7 @@ conversation 的默认桌面高度为680px，可在布局元素覆盖 `--ui-layo
 
 ## 0.4 新增可复用组件
 
-当前总数62个Vue、18个React。同名接口有框架差异，完整props/events/slots由 [机器索引](../registry/manifest.json) 提取；先用 `npm run ui -- show --framework vue UiTaskLog` 查询，不能把Vue的字段直接传给React。
+0.4 的基线为62个Vue、18个React；0.5 增至67个Vue。同名接口有框架差异，完整props/events/slots由 [机器索引](../registry/manifest.json) 提取；先用 `npm run ui -- show --framework vue UiTaskLog` 查询，不能把Vue的字段直接传给React。
 
 | 组件 | 用途 / 重要入口 |
 | --- | --- |

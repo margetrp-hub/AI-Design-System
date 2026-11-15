@@ -6,7 +6,11 @@ A personal design workshop made reusable: Vue and React components, complete vis
 
 ![Original studio scene](docs/screenshots/studio.png)
 
-62 Vue and 18 React components share tokens, CSS and visual effects. Compose 12 visual languages with independent palettes, fonts, materials, transparency and density. Vue includes 14 page layouts and original studio scene components. Explore animation, in-page AI, suggestion review, and macOS / Windows task-log appearances.
+67 Vue and 18 React components share tokens, CSS and visual effects. Compose 12 visual languages with independent palettes, fonts, materials, transparency and density. Vue includes 14 page layouts and original studio scene components. Explore animation, in-page AI, suggestion review, and macOS / Windows task-log appearances.
+
+The [case library](https://margetrp-hub.github.io/AI-Design-System/#cases) contains 16 original interactive page interpretations inspired by brand design analyses. A real iframe viewport supports presets, custom dimensions, rotation and a grid overlay while preserving page state. Tutorial videos feed component details and skill guidance, rather than automatically becoming page cases.
+
+![Interactive page cases](docs/screenshots/cases.jpg)
 
 The [asset workshop](https://margetrp-hub.github.io/AI-Design-System/#assets) separates a centered administrator login with a four-plane scanning tunnel, the original OHLAOO five-shape particle field, and the split character login. Layouts, effects and console-form recipe styles ship for both Vue and React.
 

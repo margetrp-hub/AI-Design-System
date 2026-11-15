@@ -360,6 +360,7 @@ onMounted(() => {
             <template #navigation
               ><div class="sample-navigation">
                 <button
+                  class="ui-nav-link"
                   v-for="(item, index) in ['品牌更新', '组件研究', '素材整理']"
                   :key="item"
                   :aria-current="selectedRecord === item ? 'page' : undefined"

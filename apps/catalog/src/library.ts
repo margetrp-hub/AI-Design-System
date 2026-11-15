@@ -9,7 +9,26 @@ export const palettes = [
   { value: "black-gold", label: "黑金" },
   { value: "neutral-black", label: "中性黑" },
 ];
+export const navigationSections = [
+  { label: "开始设计", ids: ["overview", "cases", "compose"] },
+  {
+    label: "基础组件",
+    ids: ["forms", "navigation", "overlays", "feedback", "data"],
+  },
+  { label: "视觉与交互", ids: ["themes", "motion", "assets", "studio"] },
+  { label: "AI 与任务", ids: ["ai", "logs"] },
+  { label: "开发接入", ids: ["install"] },
+];
 export const groups = [
+  {
+    id: "cases",
+    label: "案例库",
+    title: "同样的工具，不同的设计表达。",
+    description:
+      "完整页面、真实交互与多分辨率预览。吸收设计关系，用自己的内容与实现。",
+    short: "16 个独立页面与设计语言",
+    count: 16,
+  },
   {
     id: "logs",
     label: "SSE 任务日志",
@@ -23,7 +42,8 @@ export const groups = [
     id: "ai",
     label: "页面内 AI",
     title: "对话、建议与行动，留在当前页面。",
-    description: "提问输入、上下文、修改审阅、工具状态与流式交互的浏览器设计实例。",
+    description:
+      "提问输入、上下文、修改审阅、工具状态与流式交互的浏览器设计实例。",
     short: "页面助手与 SSE",
     count: 3,
   },
@@ -68,7 +88,7 @@ export const groups = [
     title: "输入顺手，反馈明确。",
     description: "标签、错误、禁用、保存与复制，构成完整的输入体验。",
     short: "输入、文件、验证码与数值",
-    count: 13,
+    count: 14,
   },
   {
     id: "navigation",
@@ -117,7 +137,7 @@ export const groups = [
     title: "每一次变化，都有来由。",
     description: "文字、数字、互动表面、页面切换、加载与重试，都可以直接操作。",
     short: "文字、光斑、流动、切页与等待",
-    count: 6,
+    count: 8,
   },
   {
     id: "install",
@@ -129,6 +149,24 @@ export const groups = [
   },
 ];
 export const components = [
+  {
+    name: "UiSettingsSection",
+    group: "forms",
+    api: "title / description / default slot",
+    detail: "设置分组、短字段同行对齐、窄容器自动上下排列",
+  },
+  {
+    name: "UiMotionSurface",
+    group: "motion",
+    api: "effect / disabled / default slot",
+    detail: "倾斜、磁吸与揭示表面；触控和减少动态保持直接可用",
+  },
+  {
+    name: "UiTextScramble",
+    group: "motion",
+    api: "text / replay / duration",
+    detail: "按字素解码文字；完整文本可读、可复制",
+  },
   {
     name: "UiTextReveal",
     group: "motion",

@@ -53,6 +53,8 @@ import DesignComposer from "./DesignComposer.vue";
 import AssetExamples from "./AssetExamples.vue";
 import AiExamples from "./AiExamples.vue";
 import TaskLogExamples from "./TaskLogExamples.vue";
+import "./cases.css";
+const CaseExamples = defineAsyncComponent(() => import("./CaseExamples.vue"));
 import "./assets.css";
 const StudioExamples = defineAsyncComponent(
   () => import("./StudioExamples.vue"),
@@ -60,7 +62,7 @@ const StudioExamples = defineAsyncComponent(
 import LanguagePicker from "./LanguagePicker.vue";
 import DemoCard from "./DemoCard.vue";
 import { skins } from "./data";
-import { components, palettes, groups } from "./library";
+import { components, palettes, groups, navigationSections } from "./library";
 const initialView = () =>
   groups.some((g) => g.id === location.hash.slice(1))
     ? location.hash.slice(1)
@@ -118,6 +120,7 @@ function applyAppearance(next: Theme) {
   appearance.value = visual;
 }
 const icons = {
+  cases: Layers,
   overview: Component,
   forms: TextCursorInput,
   navigation: ListFilter,
@@ -149,7 +152,7 @@ const themeCode = computed(
   () =>
     `const theme = ${JSON.stringify({ ...appearance.value, skin: skin.value, palette: palette.value, mode: mode.value, density: density.value, scale: Number(scale.value) }, null, 2)}\n\n<UiTheme v-bind="theme">\n  <UiButton variant="primary">保存设置</UiButton>\n</UiTheme>`,
 );
-const installCode = `npm install ./ai-design-system-tokens-0.4.0.tgz ./ai-design-system-styles-0.4.0.tgz ./ai-design-system-effects-0.1.0.tgz ./ai-design-system-stream-0.1.0.tgz ./ai-design-system-ui-0.4.0.tgz\n\nimport { UiTheme, UiButton, UiLayout } from '@ai-design-system/ui'\nimport '@ai-design-system/ui/style.css'`;
+const installCode = `npm install ./ai-design-system-tokens-0.4.0.tgz ./ai-design-system-styles-0.5.0.tgz ./ai-design-system-effects-0.1.1.tgz ./ai-design-system-stream-0.1.0.tgz ./ai-design-system-ui-0.5.0.tgz\n\nimport { UiTheme, UiButton, UiLayout } from '@ai-design-system/ui'\nimport '@ai-design-system/ui/style.css'`;
 onMounted(() => {
   try {
     const p = JSON.parse(
@@ -201,23 +204,28 @@ watch(view, () => {
       <a class="studio-brand" href="#" @click.prevent="view = 'overview'"
         ><span class="brand-mark">ai</span
         ><span
-          ><strong>AI Design System</strong><small>YOUR DESIGN WORKSHOP</small></span
+          ><strong>AI Design System</strong
+          ><small>YOUR DESIGN WORKSHOP</small></span
         ></a
       >
-      <div class="sidebar-section">构建你的界面</div>
       <nav aria-label="组件库导航">
-        <button
-          v-for="group in groups"
-          :key="group.id"
-          :aria-current="view === group.id ? 'page' : undefined"
-          @click="view = group.id"
-        >
-          <component
-            :is="icons[group.id as keyof typeof icons]"
-            :data-ui-color="groupColors[group.id]"
-          /><span>{{ group.label }}</span
-          ><small v-if="group.count">{{ group.count }}</small>
-        </button>
+        <template v-for="section in navigationSections" :key="section.label">
+          <span class="sidebar-section">{{ section.label }}</span>
+          <button
+            v-for="group in section.ids.map((id) =>
+              groups.find((item) => item.id === id)!,
+            )"
+            :key="group.id"
+            :aria-current="view === group.id ? 'page' : undefined"
+            @click="view = group.id"
+          >
+            <component
+              :is="icons[group.id as keyof typeof icons]"
+              :data-ui-color="groupColors[group.id]"
+            /><span>{{ group.label }}</span
+            ><small v-if="group.count">{{ group.count }}</small>
+          </button>
+        </template>
       </nav>
       <div class="sidebar-note">
         <span class="sidebar-section">同一个起点</span>
@@ -227,17 +235,20 @@ watch(view, () => {
       </div>
       <div class="sidebar-bottom">
         <span class="local-indicator" /><span
-          >开源设计工坊<small>v0.4.0</small></span
+          >开源设计工坊<small>v0.5.0</small></span
         ><Code2 :size="18" />
       </div>
     </aside>
     <div class="studio-body">
       <header class="studio-topbar">
         <UiBreadcrumbs
-          :items="[{ label: 'AI Design System' }, { label: currentGroup.label }]"
+          :items="[
+            { label: 'AI Design System' },
+            { label: currentGroup.label },
+          ]"
         />
         <div class="ui-actions">
-          <span class="topbar-version">Vue / React · 0.4</span
+          <span class="topbar-version">Vue / React · 0.5</span
           ><UiTooltip text="独立切换深浅色"
             ><UiButton
               variant="ghost"
@@ -253,24 +264,23 @@ watch(view, () => {
       <main id="main-content">
         <div class="page-heading">
           <div>
-            <span class="eyebrow">AI DESIGN SYSTEM / {{ view.toUpperCase() }}</span>
+            <span class="eyebrow"
+              >AI DESIGN SYSTEM / {{ view.toUpperCase() }}</span
+            >
             <h1>{{ currentGroup.title }}</h1>
             <p>{{ currentGroup.description }}</p>
           </div>
           <span class="edition-mark"
-            >{{ view === "overview" ? "62 VUE · 18 REACT" : currentGroup.label
+            >{{ view === "overview" ? "67 VUE · 18 REACT" : currentGroup.label
             }}<small>可以操作，也可以直接使用</small></span
           >
         </div>
         <div
-          v-if="view !== 'compose' && view !== 'studio'"
+          v-if="view !== 'compose' && view !== 'studio' && view !== 'cases'"
           class="theme-toolbar"
           aria-label="演示主题设置"
         >
-          <LanguagePicker
-            v-model="visualLanguage"
-            @studio="view = 'studio'"
-          />
+          <LanguagePicker v-model="visualLanguage" @studio="view = 'studio'" />
           <UiSelect
             v-model="palette"
             label="配色"
@@ -343,8 +353,9 @@ watch(view, () => {
           class="component-stage"
           :class="{ 'ui-scene': view !== 'compose' }"
         >
+          <CaseExamples v-if="view === 'cases'" />
           <DesignComposer
-            v-if="view === 'compose'"
+            v-else-if="view === 'compose'"
             @apply="applyAppearance"
             @studio="view = 'studio'"
           />

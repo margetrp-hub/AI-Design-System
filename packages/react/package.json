@@ -1,6 +1,6 @@
 {
   "name": "@ai-design-system/react",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "type": "module",
   "description": "Owned React primitives using the same CSS and tokens as the Vue library",
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@ai-design-system/tokens": "0.4.0",
-    "@ai-design-system/styles": "0.4.1",
+    "@ai-design-system/styles": "0.5.0",
     "@ai-design-system/effects": "0.1.1",
     "@radix-ui/react-slot": "1.2.4",
     "@ai-design-system/stream": "0.1.0"

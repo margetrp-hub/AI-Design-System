@@ -1,4 +1,24 @@
 /* Interpretations of inspected brand design languages, not official brand components. */
+/* Shared content and palette retain distinct navigation and surface grammar. */
+.ui-layout[data-language="geist"] > .ui-layout-header { min-height:84px; background:linear-gradient(90deg,transparent calc(100% - 1px),var(--ui-border) 0) 0 0 / 72px 100%,var(--ui-surface); }
+.ui-layout[data-language="geist"] > .ui-layout-navigation { font-family:var(--ui-font-mono); font-size:12px; border-right:1px dashed var(--ui-border); }
+.ui-layout[data-language="geist"] .ui-nav-link { border-radius:0; border-bottom:1px solid var(--ui-border); }
+.ui-layout[data-language="carbon"] > .ui-layout-header { background:#161616; color:#f4f4f4; min-height:56px; padding:14px 24px; }
+.ui-layout[data-language="carbon"] > .ui-layout-header :is(h1,h2,h3,p,small,span) { color:inherit; }
+.ui-layout[data-language="carbon"] > .ui-layout-navigation { padding:0; background:var(--ui-soft); }
+.ui-layout[data-language="carbon"] .ui-nav-link { min-height:46px; border-radius:0; padding:12px 18px; margin:0; border-bottom:1px solid var(--ui-border); }
+.ui-layout[data-language="carbon"] .ui-nav-link[aria-current] { box-shadow:inset 3px 0 var(--ui-accent); }
+.ui-layout[data-language="carbon"] .ui-section-heading h2 { font-weight:300; }
+.ui-layout[data-language="spectrum"] { gap:10px; padding:10px; border:0; background:var(--ui-canvas); }
+.ui-layout[data-language="spectrum"] > :is(.ui-layout-header,.ui-layout-navigation,.ui-layout-content,.ui-layout-aside,.ui-layout-footer) { border:0; border-radius:12px; background:var(--ui-surface); }
+.ui-layout[data-language="spectrum"] .ui-section-heading h2 { font-weight:850; letter-spacing:-.045em; }
+.ui-layout[data-language="material"] > .ui-layout-navigation { padding:16px 10px; border:0; }
+.ui-layout[data-language="material"] .ui-nav-link { border-radius:24px; margin-bottom:8px; padding:14px 22px; }
+.ui-layout[data-language="material"] > .ui-layout-content { border-radius:28px; background:var(--ui-surface); margin:12px; }
+.ui-layout[data-language="atelier"] > .ui-layout-header { padding-block:32px; border:0; }
+.ui-layout[data-language="atelier"] > .ui-layout-content { padding:38px; }
+.ui-layout[data-language="atelier"] .ui-section-heading h2 { font-weight:450; line-height:1.15; }
+.ui-layout[data-language="industrial"] .ui-nav-link { border-radius:0; font-family:var(--ui-font-mono); text-transform:uppercase; letter-spacing:.03em; border-bottom:1px solid var(--ui-border); padding-block:14px; }
 .ui-theme[data-ui-design="geist"] {
   --ui-heading-size: 3.5em;
   --ui-heading-tracking: -0.055em;

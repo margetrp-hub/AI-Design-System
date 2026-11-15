@@ -43,6 +43,7 @@ import {
 } from "@lucide/vue";
 import DemoCard from "./DemoCard.vue";
 import AdditionalExamples from "./AdditionalExamples.vue";
+import SettingsExamples from "./SettingsExamples.vue";
 defineProps<{ view: string }>();
 const emit = defineEmits<{ navigate: [view: string] }>();
 const name = ref("同源工作空间"),
@@ -264,6 +265,13 @@ function applyDraft() {
     </div>
     <div v-else-if="view === 'forms'" class="demo-grid">
       <DemoCard
+        class="settings-demo-card"
+        title="分组设置：对齐、去框、留白"
+        names="UiSettingsSection"
+        code='<UiSettingsSection title="阅读" description="常用阅读偏好"><UiSelect v-model="font" label="字体" :options="fonts" /><UiSwitch v-model="sync" label="同步标注" /></UiSettingsSection>'
+        ><SettingsExamples
+      /></DemoCard>
+      <DemoCard
         title="输入与表单"
         names="UiInput · UiTextarea · UiField"
         :code="`<UiInput v-model=&quot;name&quot; label=&quot;名称&quot; :error=&quot;error&quot; />\n<UiTextarea v-model=&quot;description&quot; label=&quot;说明&quot; />\n<UiField label=&quot;日期&quot; v-slot=&quot;field&quot;>\n  <input :id=&quot;field.id&quot; type=&quot;date&quot; class=&quot;ui-input&quot; />\n</UiField>`"
@@ -316,7 +324,8 @@ function applyDraft() {
           </div>
           <UiSeparator label="复制成功后才显示反馈" />
           <div class="copy-example">
-            <code>@ai-design-system/ui</code><UiCopyButton text="@ai-design-system/ui" />
+            <code>@ai-design-system/ui</code
+            ><UiCopyButton text="@ai-design-system/ui" />
           </div></div
       ></DemoCard>
       <DemoCard

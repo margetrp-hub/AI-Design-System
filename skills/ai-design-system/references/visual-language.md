@@ -24,6 +24,8 @@ Choose a skeleton by task: sidebar/topbar for navigation; master-detail for revi
 
 Color has different roles: neutral surfaces, brand/action, semantic result/risk, category/identity. Keep success/error meanings stable across palettes. Category colors should follow object identity, not sorted row index. More color can come from objects, images and purposeful group accents; do not add a colored stripe to every card as generic decoration.
 
+Check foreground/background pairs in real controls and both modes. A good-looking swatch is not proof of readable text, selected state or input boundaries. Dark mode changes role-specific foregrounds, borders and surfaces together. In data-heavy work, make the principal value larger, keep units/time ranges nearby and give charts a consistent series identity; leave supporting information quieter. Effect-library previews demonstrate an option, not its license, performance or suitability for a dense app.
+
 Use a shared inset and stronger gaps between groups than within them. Tables compare records on a continuous surface; unequal importance does not need equal metric cards. Plan the narrow-screen reading order and scroll owner. Avoid stranded toolbar buttons, chopped sidebar backgrounds and artificial equal heights with empty filler.
 
 Available type choices include system, Geist, Noto Sans/Serif SC, IBM Plex Mono, Manrope, Space Grotesk, Fraunces and LXGW WenKai. Confirm the actual font is loaded, preserve CJK fallback, use tabular numbers for changing counts, and distinguish text scaling from density. Production imports only chosen families/weights and retains font licenses.
