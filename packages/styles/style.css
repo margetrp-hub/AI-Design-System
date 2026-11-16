@@ -5,6 +5,8 @@
 @import "./assets.css";
 @import "./auth-console.css";
 @import "./languages.css";
+@import "./astryx.css";
+@import "./choice-controls.css";
 @import "./showcase.css";
 @import "./ai.css";
 @import "./task-log.css";

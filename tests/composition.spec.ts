@@ -53,8 +53,8 @@ test('layouts preserve fields and all content stays reachable at small container
 })
 test('languages change geometry and hierarchy with the same palette, and local overrides stay local',async({page})=>{
  await page.goto('/#compose');const forms=[]
- for(const design of ['base','brutalist','industrial','glass','editorial','soft','kinetic','geist','carbon','spectrum','atelier','material']){
-  const labels:Record<string,string>={base:'静序 · 清晰工作台',brutalist:'硬线 · 新粗犷',industrial:'工造 · 工业仪器',glass:'流璃 · 液态玻璃',editorial:'书页 · 编辑排版',soft:'云塑 · 柔塑拟物',kinetic:'光域 · 数字光场',geist:'墨界 · Vercel 启发',carbon:'格构 · IBM 启发',spectrum:'声场 · Spotify 启发',atelier:'织光 · Stripe 启发',material:'彩阶 · Material 启发'}
+ for(const design of ['base','brutalist','industrial','glass','editorial','soft','kinetic','geist','carbon','spectrum','atelier','material','astryx']){
+  const labels:Record<string,string>={base:'静序 · 清晰工作台',brutalist:'硬线 · 新粗犷',industrial:'工造 · 工业仪器',glass:'流璃 · 液态玻璃',editorial:'书页 · 编辑排版',soft:'云塑 · 柔塑拟物',kinetic:'光域 · 数字光场',geist:'墨界 · Vercel 启发',carbon:'格构 · IBM 启发',spectrum:'声场 · Spotify 启发',atelier:'织光 · Stripe 启发',material:'彩阶 · Material 启发',astryx:'素构 · Astryx 启发'}
   await page.getByRole('group',{name:'视觉语言'}).getByRole('button',{name:labels[design],exact:true}).click()
   forms.push(await page.locator(preview).evaluate(e=>{const s=getComputedStyle(e),h=getComputedStyle(e.querySelector('.ui-surface h2')!);return [s.getPropertyValue('--ui-radius'),s.getPropertyValue('--ui-stroke'),h.fontSize,h.fontWeight].join('/')}))
   await expect(page.getByRole('combobox',{name:'配色方案'})).toHaveValue('cobalt')

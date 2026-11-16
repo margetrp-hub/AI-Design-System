@@ -6,7 +6,11 @@ A personal design workshop made reusable: Vue and React components, complete vis
 
 ![Original studio scene](docs/screenshots/studio.png)
 
-67 Vue and 18 React components share tokens, CSS and visual effects. Compose 12 visual languages with independent palettes, fonts, materials, transparency and density. Vue includes 14 page layouts and original studio scene components. Explore animation, in-page AI, suggestion review, and macOS / Windows task-log appearances.
+69 Vue and 18 React components share tokens, CSS and visual effects. Compose 13 visual languages with independent palettes, fonts, materials, transparency and density. Vue includes 14 page layouts and original studio scene components. Explore animation, in-page AI, suggestion review, and macOS / Windows task-log appearances.
+
+The Astryx-inspired direction adds flat inset surfaces, deliberate type and rounded actions. Original Vue controls include a localized number stepper, semantic metadata lists, and card/segmented variants of the existing radio group. [Try the controls](https://margetrp-hub.github.io/AI-Design-System/#forms). No Astryx code, branding or images are bundled; React receives the shared visual language, not the new Vue controls.
+
+![Astryx-inspired controls](docs/screenshots/astryx.jpg)
 
 The [case library](https://margetrp-hub.github.io/AI-Design-System/#cases) contains 16 original interactive page interpretations inspired by brand design analyses. A real iframe viewport supports presets, custom dimensions, rotation and a grid overlay while preserving page state. Tutorial videos feed component details and skill guidance, rather than automatically becoming page cases.
 

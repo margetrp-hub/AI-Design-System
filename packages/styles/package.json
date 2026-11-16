@@ -1,6 +1,6 @@
 {
   "name": "@ai-design-system/styles",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "type": "module",
   "description": "Shared web component CSS for the owned Vue and React adapters",
@@ -17,7 +17,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@ai-design-system/tokens": "0.4.0"
+    "@ai-design-system/tokens": "0.5.0"
   },
   "sideEffects": [
     "*.css"

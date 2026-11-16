@@ -2,6 +2,13 @@
   "schemaVersion": 1,
   "tasks": [
     {
+      "id": "configuration-summary",
+      "frameworks": ["vue"],
+      "components": ["UiNumberInput", "UiRadioGroup", "UiMetadataList"],
+      "example": "apps/catalog/src/ChoiceExamples.vue",
+      "note": "Astryx-inspired original controls. Choose a value with cards/segments, edit quantity, then review facts. Demo estimates do not create orders; host owns validation and submission."
+    },
+    {
       "id": "responsive-case",
       "frameworks": ["vue"],
       "components": ["UiDesignCase", "UiViewportFrame"],

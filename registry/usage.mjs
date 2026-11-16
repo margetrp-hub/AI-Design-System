@@ -1,6 +1,8 @@
 // Human-owned purpose/limits only. Exports and API types come from the built declarations.
 export const usage = Object.fromEntries(
   [
+    ["UiNumberInput", "带步进、上下限和本地化格式的数值输入", "number stepper 数值 数量 席位 额度 小数 Astryx 素构"],
+    ["UiMetadataList", "资源、订单或 AI 结果的语义信息摘要", "metadata 摘要 信息 键值 属性 Astryx 素构"],
     [
       "UiDesignCase",
       "独立页面设计语言与交互演绎，虚构数据",
@@ -57,7 +59,7 @@ export const usage = Object.fromEntries(
     ["UiTextarea", "多行文本输入", "textarea 输入 长文本 描述"],
     ["UiSelect", "有限选项的原生下拉选择", "select 选择 下拉 表单"],
     ["UiCheckbox", "复选与半选", "checkbox 复选 多选"],
-    ["UiRadioGroup", "一组互斥选项", "radio 单选"],
+    ["UiRadioGroup", "列表、卡片和分段式互斥选项", "radio 单选 selectable card segmented 方案 卡片 分段 Astryx 素构"],
     ["UiSwitch", "布尔开关", "switch 开关 设置"],
     ["UiField", "自定义输入的标签、描述与错误关联", "field 表单 标签 校验"],
     ["UiCopyButton", "复制文字并处理剪贴板失败", "copy 复制 剪贴板 重试"],

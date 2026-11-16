@@ -4,10 +4,10 @@
 
 更新本地 tgz 后，若已经运行的 Vite 仍展示旧接口，用 `vite --force` 重启消费方以刷新依赖预构建；单纯刷新浏览器不会保证清掉旧依赖缓存。打包应在构建完成后执行，避免读取正在生成的声明文件。
 
-Vue 需要 tokens 0.4.0、styles 0.5.0、effects 0.1.1、stream 0.1.0、ui 0.5.0 五包；React 将 ui 换为 react 0.2.2。在放有这些包的目录执行：
+Vue 需要 tokens 0.5.0、styles 0.6.0、effects 0.1.1、stream 0.1.0、ui 0.6.0 五包；React 将 ui 换为 react 0.2.3。在放有这些包的目录执行：
 
 ```sh
-npm install ./ai-design-system-tokens-0.4.0.tgz ./ai-design-system-styles-0.5.0.tgz ./ai-design-system-effects-0.1.1.tgz ./ai-design-system-stream-0.1.0.tgz ./ai-design-system-ui-0.5.0.tgz
+npm install ./ai-design-system-tokens-0.5.0.tgz ./ai-design-system-styles-0.6.0.tgz ./ai-design-system-effects-0.1.1.tgz ./ai-design-system-stream-0.1.0.tgz ./ai-design-system-ui-0.6.0.tgz
 ```
 
 ```vue

@@ -29,6 +29,7 @@ export type DesignStyle =
   | "carbon"
   | "spectrum"
   | "atelier"
+  | "astryx"
   | "material";
 export type FontFamily =
   | "system"

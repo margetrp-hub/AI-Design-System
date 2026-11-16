@@ -1,0 +1,82 @@
+/* Original interpretation of Astryx Neutral's shape and surface relationships. */
+.ui-theme[data-ui-design="astryx"] {
+  --ui-heading-size: 3.2em;
+  --ui-heading-tracking: -0.045em;
+  --ui-heading-rule: 0px;
+  --ui-badge-radius: 99px;
+  --ui-section-padding: 28px;
+  --ui-section-border: 0px;
+  --ui-control-shadow: none;
+  --ui-table-heading: var(--ui-soft);
+}
+.ui-theme[data-ui-design="astryx"][data-ui-material="solid"] {
+  --ui-section-fill: var(--ui-surface);
+  --ui-rail-fill: transparent;
+  --ui-panel-fill: var(--ui-surface);
+  --ui-secondary-fill: var(--ui-soft);
+  --ui-secondary-border: transparent;
+}
+.ui-layout[data-language="astryx"] {
+  padding: 12px;
+  gap: 12px;
+  border: 0;
+  background: var(--ui-soft);
+}
+.ui-layout[data-language="astryx"] > .ui-layout-header {
+  min-height: 72px;
+  border: 0;
+  background: transparent;
+  padding: 14px 20px;
+}
+.ui-layout[data-language="astryx"] > .ui-layout-navigation {
+  background: transparent;
+  border: 0;
+  padding: 8px;
+}
+.ui-layout[data-language="astryx"] .ui-nav-link {
+  border-radius: 99px;
+  padding: 10px 18px;
+}
+.ui-layout[data-language="astryx"] .ui-nav-link[aria-current] {
+  background: var(--ui-surface);
+  color: var(--ui-text);
+}
+.ui-layout[data-language="astryx"] > :is(.ui-layout-content, .ui-layout-aside) {
+  border: 0;
+  border-radius: 20px;
+  background: var(--ui-section-fill);
+}
+/* Stop at nested themes so a local visual-language override stays independent. */
+@scope (.ui-theme[data-ui-design="astryx"]) to (.ui-theme) {
+  .ui-button {
+    border-radius: 99px;
+    padding-inline: 20px;
+    font-weight: 600;
+  }
+  .ui-panel {
+    border-color: transparent;
+  }
+  .ui-panel-header {
+    border: 0;
+    padding-bottom: 8px;
+  }
+  .ui-panel-header h3 {
+    font-size: 1.35em;
+    letter-spacing: -0.035em;
+  }
+  .ui-dialog {
+    border-radius: 22px;
+    padding: 28px;
+  }
+  .ui-tabs[data-variant="segment"] .ui-tabs-list {
+    border-radius: 12px;
+    background: var(--ui-soft);
+    padding: 4px;
+  }
+  .ui-tabs[data-variant="segment"] .ui-tab {
+    border-radius: 9px;
+  }
+  .ui-table :is(th, td) {
+    padding-block: 16px;
+  }
+}

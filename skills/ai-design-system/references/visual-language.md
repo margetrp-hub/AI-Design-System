@@ -16,9 +16,10 @@ The six independent decisions are layout, language, palette, type, material and 
 | 声场 / spectrum | Strong titles, separate panels, rounded action groups | Media and content |
 | 织光 / atelier | Large type, gentle color fields, lightweight panels | Brand/product introduction |
 | 彩阶 / material | Tonal containers, shaped groups, stateful feedback | Consumer and collaboration apps |
+| 素构 / astryx | Neutral inset canvas, solid work surfaces, strong plain type, pill actions and compact selected segments | Team configuration, checkout and readable tool interfaces |
 | 栖间 / original scene | Warm space, original geometric companions, selectable stations | Playful studio/agent overview, not dense tables |
 
-The first twelve are theme recipes. 栖间 is a separately composed scene in the Vue package, not a fake thirteenth global CSS theme. Brand-inspired names describe independent implementations, not official kits.
+The first thirteen are theme recipes. 栖间 is a separately composed scene in the Vue package, not another global CSS theme. Brand-inspired names describe independent implementations, not official kits. 素构 draws on Astryx Neutral's surface and shape relationships; its palette remains independent, and it does not install Astryx or StyleX.
 
 Choose a skeleton by task: sidebar/topbar for navigation; master-detail for review; workbench/studio for resource + task + properties; editorial for reading; bento/showcase for uneven emphasis; settings for grouped decisions; split/focused for short entry flows; conversation for independent messages and composer; board for stage work; command-center for relationships. Current skeleton implementations are Vue-specific.
 

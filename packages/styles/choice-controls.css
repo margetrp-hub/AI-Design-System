@@ -1,0 +1,170 @@
+/* Numeric, choice and metadata primitives work with every visual language. */
+.ui-number-input {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+  border: var(--ui-stroke) solid var(--ui-input-border);
+  border-radius: var(--ui-radius);
+  background: var(--ui-input-fill);
+  color: var(--ui-text);
+}
+.ui-number-input:focus-within {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 2px;
+}
+.ui-number-input[data-invalid] {
+  border-color: var(--ui-danger);
+}
+.ui-number-input[data-disabled] {
+  opacity: 0.5;
+}
+.ui-number-value {
+  min-width: 0;
+  width: 100%;
+  min-height: max(40px, var(--ui-control));
+  padding: 8px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.ui-theme .ui-number-value:focus-visible {
+  outline: 0;
+}
+.ui-number-unit {
+  flex: none;
+  color: var(--ui-muted);
+  font-size: 0.86em;
+  padding-inline-end: 8px;
+}
+.ui-number-step {
+  flex: none;
+  min-width: 40px;
+  min-height: max(40px, var(--ui-control));
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.ui-number-step:hover:not(:disabled) {
+  background: var(--ui-soft);
+}
+.ui-number-step:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.ui-fieldset[data-choice="cards"] .ui-radio-group {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+}
+.ui-fieldset[data-choice="cards"] .ui-radio-option {
+  position: relative;
+  border: 1px solid var(--ui-input-border);
+  border-radius: var(--ui-panel-radius);
+  background: var(--ui-input-fill);
+  padding: 16px;
+  transition:
+    background-color var(--ui-fast),
+    border-color var(--ui-fast);
+}
+.ui-fieldset[data-choice="cards"] .ui-radio-option:hover:not([data-disabled]) {
+  border-color: var(--ui-accent);
+}
+.ui-fieldset[data-choice="cards"] .ui-radio-option[data-selected] {
+  border-color: var(--ui-accent);
+  box-shadow: inset 0 0 0 1px var(--ui-accent);
+  background: var(--ui-accent-soft);
+}
+.ui-fieldset[data-choice="cards"] label::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.ui-fieldset[data-choice="cards"] .ui-radio-option:has(:focus-visible) {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 3px;
+}
+.ui-fieldset[data-choice="segment"] .ui-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--ui-panel-radius);
+  background: var(--ui-soft);
+}
+.ui-fieldset[data-choice="segment"] .ui-radio-option {
+  position: relative;
+  min-width: 0;
+  flex: 1 1 100px;
+}
+.ui-fieldset[data-choice="segment"] .ui-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.ui-fieldset[data-choice="segment"] label {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 9px 14px;
+  border-radius: var(--ui-radius);
+  text-align: center;
+}
+.ui-fieldset[data-choice="segment"] .ui-radio:checked + label {
+  background: var(--ui-surface);
+  box-shadow: 0 1px 3px #0002;
+}
+.ui-fieldset[data-choice="segment"] .ui-radio:focus-visible + label {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 2px;
+}
+.ui-fieldset[data-choice] .ui-radio-option[data-disabled] label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.ui-metadata-list {
+  container-type: inline-size;
+  margin: 0;
+}
+.ui-metadata-list > div {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--ui-border);
+}
+.ui-metadata-list > div:last-child {
+  border-bottom: 0;
+}
+.ui-metadata-list dt {
+  color: var(--ui-muted);
+}
+.ui-metadata-list dd {
+  margin: 0;
+  text-align: end;
+  overflow-wrap: anywhere;
+  font-weight: 500;
+}
+.ui-metadata-list dt {
+  overflow-wrap: anywhere;
+}
+@media (forced-colors: active) {
+  .ui-fieldset[data-choice="segment"] .ui-radio:checked + label {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+}
+@container (max-width: 240px) {
+  .ui-metadata-list > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .ui-metadata-list dd {
+    text-align: start;
+  }
+}

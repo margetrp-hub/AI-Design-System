@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import reactPackage from "../packages/react/package.json" with { type: "json" };
 
 test("case discovery, preview state and copy recovery form one usable journey", async ({
   page,
@@ -123,7 +124,7 @@ test("mobile navigation dismisses and reaches the real React installation guide"
     .getByRole("button", { name: "React 18 个组件", exact: true })
     .click();
   await expect(page.locator(".install-command")).toContainText(
-    "ai-design-system-react-0.2.2.tgz",
+    `ai-design-system-react-${reactPackage.version}.tgz`,
   );
   await expect(page.locator(".install-guide")).toContainText("theme={{");
   for (const width of [320, 390, 768, 801, 1280]) {

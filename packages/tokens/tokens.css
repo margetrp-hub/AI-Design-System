@@ -522,6 +522,17 @@
   --ui-button-shadow:0 2px 4px #00377012;
   --ui-button-travel:1px;
 }
+.ui-theme[data-ui-design='astryx'] {
+  --ui-radius:10px;
+  --ui-panel-radius:20px;
+  --ui-stroke:1px;
+  --ui-frame:var(--ui-border);
+  --ui-heading-weight:650;
+  --ui-shadow:none;
+  --ui-overlay-shadow:0 12px 40px #0002;
+  --ui-button-shadow:none;
+  --ui-button-travel:1px;
+}
 .ui-theme[data-ui-design='material'] {
   --ui-radius:999px;
   --ui-panel-radius:28px;

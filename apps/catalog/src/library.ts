@@ -88,7 +88,7 @@ export const groups = [
     title: "输入与表单",
     description: "标签、错误、禁用、保存与复制，构成完整的输入体验。",
     short: "输入、文件、验证码与数值",
-    count: 14,
+    count: 15,
   },
   {
     id: "navigation",
@@ -116,11 +116,11 @@ export const groups = [
   },
   {
     id: "data",
-    label: "表格与分页",
-    title: "表格与分页",
-    description: "搜索、排序、跨页选择与异常恢复，共用一张工作表。",
-    short: "表格、分页与可调整工作面",
-    count: 4,
+    label: "数据与摘要",
+    title: "数据与摘要",
+    description: "信息摘要、搜索、排序、跨页选择与异常恢复。",
+    short: "摘要、表格、分页与可调整工作面",
+    count: 5,
   },
   {
     id: "themes",
@@ -149,6 +149,18 @@ export const groups = [
   },
 ];
 export const components = [
+  {
+    name: "UiNumberInput",
+    group: "forms",
+    api: "v-model<number | undefined> / min / max / step / unit / locale / formatOptions",
+    detail: "数量步进、键盘、空值、格式化与只读/错误状态；滚轮不改值",
+  },
+  {
+    name: "UiMetadataList",
+    group: "data",
+    api: "items / label / emptyText / item.id slot",
+    detail: "语义摘要、保留零值、缺失占位与窄容器重排",
+  },
   {
     name: "UiSettingsSection",
     group: "forms",
@@ -284,8 +296,8 @@ export const components = [
   {
     name: "UiRadioGroup",
     group: "forms",
-    api: "v-model / options / name / required",
-    detail: "互斥选择、方向键、表单语义与禁用项",
+    api: "v-model / options / variant: list | cards | segment / name / required",
+    detail: "列表、整卡和分段互斥选择，共用方向键、表单语义与禁用项",
   },
   {
     name: "UiCheckbox",

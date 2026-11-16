@@ -131,7 +131,7 @@ test("command search executes only enabled result and returns focus", async ({
 test("resizable keyboard, pointer and reset preserve content when stacked", async ({
   page,
 }) => {
-  await nav(page, "表格与分页");
+  await nav(page, "数据与摘要");
   const handle = page.getByRole("separator", { name: "调整编辑与预览" });
   await handle.scrollIntoViewIfNeeded();
   const before = Number(await handle.getAttribute("aria-valuenow"));

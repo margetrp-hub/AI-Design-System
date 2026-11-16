@@ -36,7 +36,7 @@ const example = computed(() =>
   <section class="install-guide">
     <div class="install-frameworks" role="group" aria-label="选择接入框架">
       <button :aria-pressed="framework === 'vue'" @click="framework = 'vue'">
-        Vue 3 <span>67 个组件</span></button
+        Vue 3 <span>69 个组件</span></button
       ><button
         :aria-pressed="framework === 'react'"
         @click="framework = 'react'"

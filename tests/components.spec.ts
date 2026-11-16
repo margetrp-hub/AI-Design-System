@@ -205,7 +205,7 @@ test("drawer, bottom sheet, popover and tooltip open and return focus", async ({
 test("data table keeps ID selection through sorting, filtering, pagination and failed refresh", async ({
   page,
 }) => {
-  await nav(page, "表格与分页");
+  await nav(page, "数据与摘要");
   const table = page.getByRole("region", { name: "演示空间列表" });
   await table
     .getByRole("checkbox", { name: "选择 WS-001", exact: true })
@@ -321,7 +321,7 @@ test("all sections fit narrow screens at largest text and reduced motion", async
     "选择与导航",
     "浮层与面板",
     "状态与反馈",
-    "表格与分页",
+    "数据与摘要",
     "主题与配色",
     "动效与过渡",
     "安装与接入",

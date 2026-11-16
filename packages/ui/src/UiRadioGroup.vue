@@ -8,17 +8,20 @@ defineProps<{
   name?: string;
   disabled?: boolean;
   required?: boolean;
+  variant?: "list" | "cards" | "segment";
 }>();
 const id = useId();
 </script>
 <template>
-  <fieldset class="ui-fieldset" :disabled="disabled">
+  <fieldset class="ui-fieldset" :disabled="disabled" :data-choice="variant || 'list'">
     <legend>{{ label }}</legend>
     <div class="ui-radio-group">
       <div
         v-for="(option, index) in options"
         :key="option.value"
         class="ui-radio-option"
+        :data-selected="model === option.value || undefined"
+        :data-disabled="disabled || option.disabled || undefined"
       >
         <input
           :id="id + '-' + index"

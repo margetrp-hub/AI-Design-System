@@ -1,6 +1,16 @@
-# AI Design System 组件接口 · 0.4
+# AI Design System 组件接口 · 0.6
 
-Vue 入口 `@ai-design-system/ui`，React 入口 `@ai-design-system/react`，分别导入包的 `style.css`。当前67个Vue、18个React组件导出，共用 `@ai-design-system/styles`；API表和可操作示例见[在线工坊](https://margetrp-hub.github.io/AI-Design-System/)。源码维护在 `packages/ui/src` 与 `packages/react/src`，示例直接使用包组件。React只支持其实际导出，下面早期Vue控件不自动成为React接口。
+Vue 入口 `@ai-design-system/ui`，React 入口 `@ai-design-system/react`，分别导入包的 `style.css`。当前69个Vue、18个React组件导出，共用 `@ai-design-system/styles`；API表和可操作示例见[在线工坊](https://margetrp-hub.github.io/AI-Design-System/)。源码维护在 `packages/ui/src` 与 `packages/react/src`，示例直接使用包组件。React只支持其实际导出，下面Vue控件不自动成为React接口。
+
+## 0.6 数值、选择与摘要
+
+| 导出 | 接口与边界 |
+| --- | --- |
+| UiNumberInput | `v-model: number \| undefined`，`label/hint/error/required`，`min/max/step`，`unit/locale/formatOptions`，`name/disabled/readonly`；Reka NumberField 提供键盘和步进语义。输入在失焦或 Enter 时解析、夹到上下限并对齐步长；清空保留 undefined。滚轮不修改值。单位纳入可访问描述；应用仍负责业务校验。 |
+| UiRadioGroup | 新增 `variant="cards"` 和 `variant="segment"`，默认 `list` 不变。卡片整面可选，方向键选择并跳过禁用项，沿用原生 radio/name/required；分段用于选值，切换内容页继续用 UiTabs。 |
+| UiMetadataList | `label`、`items: {id,label,value}[]`、`emptyText`（默认未提供）；语义 dl/dt/dd，0 显示为 0，null/undefined/空字符串显示占位。以 item.id 命名的插槽可放 Badge、链接等；窄容器改为上下排列。 |
+
+组合示例：[ChoiceExamples.vue](../apps/catalog/src/ChoiceExamples.vue)。通过 `npm run ui -- show --framework vue UiNumberInput` 查询声明；关键词“席位”“卡片”“摘要”可找到组件。上述控件能随全局语言切换，非 Astryx 专用。`design="astryx"` 的共享语言也可用于现有 React 控件。
 
 ## 0.3 布局、材质、文字与等待
 
@@ -28,7 +38,7 @@ Vue 入口 `@ai-design-system/ui`，React 入口 `@ai-design-system/react`，分
 | UiMarquee | items: readonly string[]；label；v-model:paused（默认true）；duration；reverse | 播放/暂停、悬停/聚焦暂停；重复轨道隐藏读屏且 inert；减少动态展开静态文本 |
 | UiAsyncState | status: idle / pending / refreshing / success / error / cancelled；label；message；progress；retainContent；cancellable；@cancel / @retry；default/loading/error slots | 等待骨架和未知/已知进度，刷新保留内容，失败/取消提供重试；宿主拥有请求和回执 |
 
-UiTheme 新增 `design`、`font`、`headingFont`、`material`、`glassVariant`（clear清透 / regular柔透，默认regular）、`transparency`（0–100）、`decoration`、`buttonFeel`、`motion`，全部通过注入与 portal 外壳传播。`design` 当前十二种视觉语言取值见 `compositionChoices`；可独立组合，完整初始方案由 `designRecipes` 导出。旧 `skin` 仅兼容，工作台不再提供项目预设选择。
+UiTheme 新增 `design`、`font`、`headingFont`、`material`、`glassVariant`（clear清透 / regular柔透，默认regular）、`transparency`（0–100）、`decoration`、`buttonFeel`、`motion`，全部通过注入与 portal 外壳传播。`design` 当前十三种视觉语言取值见 `compositionChoices`；可独立组合，完整初始方案由 `designRecipes` 导出。旧 `skin` 仅兼容，工作台不再提供项目预设选择。
 
 `DesignRecipe = {version:1,name,layout,theme,override}`；`parseDesignRecipe(objectOrJson)`验证字段、枚举、字号1–1.2、透明度0–100与名称，返回规范配置，出错抛异常，不接受任意CSS/HTML。局部使用 `<UiTheme v-bind="{...recipe.theme,...recipe.override}">`。`layoutGuides` 给出任务建议和来源。
 

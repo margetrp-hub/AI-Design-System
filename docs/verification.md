@@ -1,5 +1,21 @@
 # Verification
 
+## Release · 0.6.0 · 2026-11-17
+
+Added the original Astryx-inspired visual language, Vue number input and metadata list, and card/segmented variants of the existing radio group. Shared CSS/tokens also serve the existing React controls. Totals: 69 Vue / 18 React exports and 13 visual languages.
+
+| Check | Result |
+| --- | --- |
+| Source | Registry generation, typecheck, 20 local Node checks (13 public), Vue/React and example production builds passed |
+| Browser regression | 40 of 41 passed in the full run. The remaining test pinned the previous React tarball version; it now checks the current package version. All seven affected catalog/choice journeys passed on rerun |
+| Controls | Quantity boundaries, clamped input, empty/error recovery, disabled/readonly, German decimal format, wheel stability, native required validity, radio keyboard selection, disabled choices, summary/preview agreement, Escape and focus return |
+| Composition | Palette remains independent; nested local language overrides retain their geometry. Dark mode, 120% text, reduced motion, 320/390/768/1280px layouts and dialog bounds checked; missing metadata differs from zero |
+| Visual review | Actual light controls and a 390px dark enlarged-type page inspected; summary stacks in narrow containers. Screenshot in the README comes from the running workshop |
+| Distribution | Six tarballs independently installed and compared file by file, with Vue/React typecheck and production builds. The Vue consumer imports both new controls and card choices; the React consumer uses the shared Astryx language |
+| Skill | Existing visual-language and interaction references updated; structure validator passed |
+
+The new numeric/choice/metadata interfaces are Vue-only. They do not install Astryx, StyleX or its assets. Browser checks use Chromium/Edge; they do not establish Safari/Firefox or native/Next.js/Electron runtime support. Configuration prices are labeled demo estimates, with no payment or order creation.
+
 ## Catalog and Skill update · 2026-11-17
 
 This update changes the workshop, reuse guidance and portable Skill. The six published component packages retain their 0.5.0-release versions and APIs; the latest Skill is in `skills/ai-design-system` on main, while the v0.5.0 release ZIP remains that release's snapshot.

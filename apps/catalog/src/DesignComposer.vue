@@ -30,6 +30,7 @@ import { palettes } from "./library";
 import "./composer.css";
 import LanguagePicker from "./LanguagePicker.vue";
 import GlassExamples from "./GlassExamples.vue";
+import ChoiceExamples from "./ChoiceExamples.vue";
 const emit = defineEmits<{ apply: [theme: Theme]; studio: [] }>();
 const fresh = () => parseDesignRecipe(JSON.stringify(designRecipes[0]));
 const draft = ref<DesignRecipe>(fresh()),
@@ -227,8 +228,7 @@ onMounted(() => {
       <div class="ui-actions">
         <UiButton @click="focused = !focused">{{
           focused ? "显示搭配选项" : "展开预览"
-        }}</UiButton
-        ><UiButton @click="emit('apply', { ...draft.theme })"
+        }}</UiButton><UiButton @click="emit('apply', { ...draft.theme })"
           >应用到全部组件</UiButton
         >
       </div>
@@ -340,8 +340,7 @@ onMounted(() => {
         <div class="composer-scenario">
           <strong>{{
             options("layout").find((o) => o.value === draft.layout)?.label
-          }}</strong
-          ><span>{{ guide.use }}</span
+          }}</strong><span>{{ guide.use }}</span
           ><a :href="guide.url" target="_blank" rel="noreferrer">布局依据 ↗</a>
         </div>
         <UiTheme
@@ -405,8 +404,7 @@ onMounted(() => {
                 class="sample-board-column"
               >
                 <header>
-                  <strong>{{ stage }}</strong
-                  ><span>{{
+                  <strong>{{ stage }}</strong><span>{{
                     board.filter((item) => item.stage === index).length
                   }}</span>
                 </header>
@@ -626,6 +624,10 @@ onMounted(() => {
               ></template
             >
           </UiLayout>
+          <ChoiceExamples
+            v-if="draft.theme.design === 'astryx'"
+            class="composer-choice-example"
+          />
           <UiDialog
             v-model:open="dialog"
             title="编辑工作室"
@@ -677,3 +679,11 @@ onMounted(() => {
     </p>
   </section>
 </template>
+<style scoped>
+.composer-choice-example {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--ui-panel-radius);
+  background: var(--ui-surface);
+}
+</style>

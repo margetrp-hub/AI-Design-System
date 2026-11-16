@@ -14,6 +14,8 @@ import {
   UiTextarea,
   UiCheckbox,
   UiRadioGroup,
+  UiNumberInput,
+  UiMetadataList,
   UiCombobox,
   UiTabs,
   UiAccordion,
@@ -44,6 +46,7 @@ import {
 import DemoCard from "./DemoCard.vue";
 import AdditionalExamples from "./AdditionalExamples.vue";
 import SettingsExamples from "./SettingsExamples.vue";
+import ChoiceExamples from "./ChoiceExamples.vue";
 defineProps<{ view: string }>();
 const emit = defineEmits<{ navigate: [view: string] }>();
 const buttonLocale = ref("de"),
@@ -55,6 +58,19 @@ const buttonTranslations: Record<string, { cancel: string; action: string }> = {
   de: { cancel: "Abbrechen", action: "Alle Dateien herunterladen" },
 };
 const buttonLabels = computed(() => buttonTranslations[buttonLocale.value]);
+const duration = ref<number | undefined>(1.5);
+const choiceCode = `<script setup lang="ts">
+import { ref } from "vue";
+import { UiNumberInput, UiRadioGroup, UiMetadataList } from "@ai-design-system/ui";
+const seats = ref<number | undefined>(6), plan = ref("team"), period = ref("month");
+const plans = [{ value: "personal", label: "个人", description: "独立创作" }, { value: "team", label: "团队", description: "共享资源" }];
+<\/script>
+<template>
+  <UiRadioGroup v-model="plan" label="方案" :options="plans" variant="cards" />
+  <UiRadioGroup v-model="period" label="周期" :options="[{ value: 'month', label: '按月' }, { value: 'year', label: '按年' }]" variant="segment" />
+  <UiNumberInput v-model="seats" label="成员席位" :min="1" :max="50" unit="人" :error="seats === undefined ? '请填写席位' : undefined" />
+  <UiMetadataList label="配置摘要" :items="[{ id: 'seats', label: '席位', value: seats }, { id: 'fee', label: '服务费', value: 0 }]" />
+</template>`;
 const name = ref("同源工作空间"),
   bio = ref("把日常使用的细节做好，留给下一个项目。"),
   choice = ref("team"),
@@ -276,6 +292,45 @@ function applyDraft() {
     <div v-else-if="view === 'forms'" class="demo-grid">
       <DemoCard
         class="settings-demo-card"
+        title="数量与方案选择"
+        names="UiNumberInput · UiRadioGroup · UiMetadataList"
+        :code="choiceCode"
+        ><ChoiceExamples
+      /></DemoCard>
+      <DemoCard
+        title="数值输入的状态"
+        names="UiNumberInput"
+        code='<UiNumberInput v-model="hours" label="预计时长" :min="0" :max="4" :step="0.25" locale="de-DE" unit="小时" />'
+      >
+        <div class="form-stack">
+          <UiNumberInput
+            v-model="duration"
+            label="预计时长"
+            :min="0"
+            :max="4"
+            :step="0.25"
+            locale="de-DE"
+            unit="小时"
+            hint="德语小数格式；每步 0.25，范围 0–4"
+          />
+          <UiNumberInput
+            :model-value="12"
+            label="已分配席位"
+            unit="人"
+            readonly
+            hint="只读；可聚焦并复制"
+          />
+          <UiNumberInput
+            :model-value="0"
+            label="追加席位"
+            unit="人"
+            disabled
+            hint="当前方案不可追加"
+          />
+        </div>
+      </DemoCard>
+      <DemoCard
+        class="settings-demo-card"
         title="分组设置：对齐、去框、留白"
         names="UiSettingsSection"
         code='<UiSettingsSection title="阅读" description="常用阅读偏好"><UiSelect v-model="font" label="字体" :options="fonts" /><UiSwitch v-model="sync" label="同步标注" /></UiSettingsSection>'
@@ -356,8 +411,7 @@ function applyDraft() {
             <div class="translation-actions">
               <UiButton @click="actionFeedback = '已取消演示操作'">{{
                 buttonLabels.cancel
-              }}</UiButton
-              ><UiButton
+              }}</UiButton><UiButton
                 variant="primary"
                 @click="actionFeedback = '已触发演示操作，不下载文件'"
                 >{{ buttonLabels.action }}</UiButton
@@ -672,6 +726,27 @@ function applyDraft() {
       ></DemoCard>
     </div>
     <template v-else-if="view === 'data'">
+      <DemoCard
+        title="信息摘要"
+        names="UiMetadataList"
+        code='<UiMetadataList label="任务信息" :items="facts"><template #status><UiBadge tone="success">已完成</UiBadge></template></UiMetadataList>'
+      >
+        <UiMetadataList
+          label="任务信息"
+          :items="[
+            {
+              id: 'name',
+              label: '任务',
+              value: '跨团队的设计组件与多语言界面可用性检查',
+            },
+            { id: 'status', label: '状态', value: '已完成' },
+            { id: 'errors', label: '错误', value: 0 },
+            { id: 'owner', label: '复核人', value: null },
+          ]"
+        >
+          <template #status><UiBadge tone="success">已完成</UiBadge></template>
+        </UiMetadataList>
+      </DemoCard>
       <DemoCard
         title="一张可工作的表格"
         names="UiDataTable · UiTable · UiPagination"

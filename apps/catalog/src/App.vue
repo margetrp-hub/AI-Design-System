@@ -64,6 +64,7 @@ import CatalogNavigation from "./CatalogNavigation.vue";
 import InstallGuide from "./InstallGuide.vue";
 import { skins } from "./data";
 import { components, palettes, groups } from "./library";
+import release from "../../../package.json";
 const initialView = () => {
   const path = location.hash.slice(1).split(/[/?]/)[0];
   return groups.some((g) => g.id === path) ? path : "overview";
@@ -233,7 +234,7 @@ watch(view, () => {
       </div>
       <div class="sidebar-bottom">
         <span class="local-indicator" /><span
-          >开源设计工坊<small>v0.5.0</small></span
+          >开源设计工坊<small>v{{ release.version }}</small></span
         ><Code2 :size="18" />
       </div>
     </aside>
@@ -260,7 +261,7 @@ watch(view, () => {
           ]"
         />
         <div class="ui-actions">
-          <span class="topbar-version">Vue / React · 0.5</span
+          <span class="topbar-version">UI · v{{ release.version }}</span
           ><UiTooltip text="独立切换深浅色"
             ><UiButton
               variant="ghost"
@@ -283,7 +284,7 @@ watch(view, () => {
             <p>{{ currentGroup.description }}</p>
           </div>
           <span v-if="view === 'overview'" class="edition-mark"
-            >67 VUE · 18 REACT</span
+            >69 VUE · 18 REACT</span
           >
         </div>
         <div

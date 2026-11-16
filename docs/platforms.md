@@ -4,8 +4,8 @@
 
 | 层级 | 唯一维护位置 | 当前状态 |
 | --- | --- | --- |
-| 设计值 | `packages/tokens/tokens.json` | 十二种视觉语言、八套指定配色及默认配色、字体/动效、深浅色和密度；CSS / JS 自动生成 |
-| Web 基础控件 | `packages/ui` | Vue / 原生控件 / Reka，67个组件导出；实际检查见 verification.md |
+| 设计值 | `packages/tokens/tokens.json` | 十三种视觉语言、八套指定配色及默认配色、字体/动效、深浅色和密度；CSS / JS 自动生成 |
+| Web 基础控件 | `packages/ui` | Vue / 原生控件 / Reka，69个组件导出；实际检查见 verification.md |
 | Web 共用 CSS | `packages/styles` | Vue/React 共用组件、组合与动效样式，旧 Vue CSS 路径保留 import 入口 |
 | React 控件 | `packages/react` | 0.2.2：18个组件，含角色动效、页面内AI和任务日志；Next.js SSR 尚未运行 |
 | 共享传输与动效 | packages/stream、packages/effects | SSE framing / 可选任务客户端、Web动效生命周期；不等于原生组件 |

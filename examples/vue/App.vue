@@ -11,9 +11,12 @@ import {
   UiAuthCharacters,
   UiCommandDock,
   UiDesignCase, UiSettingsSection, UiMotionSurface, UiTextScramble,
+  UiNumberInput, UiMetadataList, UiRadioGroup,
 } from "@ai-design-system/ui";
 import { defaults, readSettings, saveSettings } from "../shared/settings";
 const key = "ai-design-system-integration-vue-v1",
+  seats = ref<number | undefined>(3),
+  plan = ref("team"),
   draft = ref({ ...defaults }),
   status = ref("idle"),
   message = ref(""),
@@ -161,7 +164,10 @@ onMounted(load);
       ></UiAuthLayout
     ></UiTheme
   >
-  <UiTheme skin="console" mode="light" class="integration-extra">
+  <UiTheme skin="console" design="astryx" palette="neutral-black" mode="light" class="integration-extra">
+    <UiRadioGroup v-model="plan" label="接入方案" variant="cards" :options="[{ value: 'personal', label: '个人' }, { value: 'team', label: '团队' }]" />
+    <UiNumberInput v-model="seats" label="接入席位" :min="1" :max="10" unit="人" />
+    <UiMetadataList label="接入摘要" :items="[{ id: 'seats', label: '席位', value: seats }, { id: 'fee', label: '服务费', value: 0 }]" />
     <UiSettingsSection title="复用设置分组"><UiInput v-model="draft.name" label="分组内名称" /></UiSettingsSection>
     <UiMotionSurface effect="tilt"><UiTextScramble text="REUSABLE BY DESIGN" /></UiMotionSurface>
     <UiDesignCase case-id="vercel" />

@@ -56,6 +56,8 @@ UiWordSwitch 和 UiFoldedNote 分别吸收文字切换、纸张折角与渐进�
 | [小石谈记：前端更优雅](https://v.douyin.com/JXfl5dmzFkg/) | 107秒视频抽样及关键规范画面：去掉重复标签、口号和无用解释，仍保留可访问名称与危险操作后果。工坊标题改成明确类别，案例详情按预览/接入分层，清理旧平台声明。综合规则写进布局 Skill；没有执行画面中的 AGENTS 指令，也没有照搬“所有说明都放 tooltip”的做法。 |
 | [Astryx 官方](https://astryx.atmeta.com/)、[meta/astryx](https://github.com/meta/astryx)、[CLI](https://astryx.atmeta.com/docs/cli)、[Themes](https://astryx.atmeta.com/themes)、[Templates](https://astryx.atmeta.com/templates) | 用户新增视频引导检索，本轮直接核对官方资料，未将该视频标题当完整观看证据。官方站点为 React 19+/StyleX、Beta、MIT，官网组件数量已超过早期视频的150。吸收组件/主题/页面组合分层，以及人和 AI 共用文档与接口的组织方式；融入现有 registry 查询和案例 AI 接入说明。未导入 Astryx 代码、CLI、主题或图片，不宣称已经支持其组件。 |
 
+0.6进一步按用户要求，将 [Astryx Themes](https://astryx.atmeta.com/themes) 和 [Components](https://astryx.atmeta.com/components) 的可见处理方式融入自有实现：素构视觉语言、`UiNumberInput`、`UiMetadataList`、`UiRadioGroup` 的 cards/segment 变体。官方 [NumberInput](https://astryx.atmeta.com/components/NumberInput) 的单位、边界、格式与状态实践，经本库的 Reka/原生语义实现。使用我们的 token、CSS、Vue 接口和示例，不引入 Astryx 源码或图片；React共享语言，尚无这批新增控件。同一组合在表单与设计组合器演示，不新建视频案例。
+
 这些学习材料用于现有资产的改进，未按视频新增完整案例。视频画面留在私有学习区，公开仓库只保留来源与综合结论。
 
 ## 完整页面案例

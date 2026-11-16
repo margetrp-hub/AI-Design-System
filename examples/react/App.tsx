@@ -30,7 +30,7 @@ export default function App() {
     returnFocus = useRef<HTMLElement | null>(null);
   const theme: UiThemeOptions = {
     skin: "console",
-    design: "geist",
+    design: "astryx",
     palette: "cobalt",
     mode: dark ? "dark" : "light",
   };
