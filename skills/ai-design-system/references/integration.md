@@ -6,6 +6,10 @@ Build with npm run build:registry. For Vue run npm run pack:ui, for React pack:r
 
 Use the source-generated registry before writing props. Vue and React are not API-identical: Vue input labels and v-model do not transfer to React native inputs; React UiAiComposer uses value/onValueChange and UiTaskLog uses callbacks. React currently lacks UiDialog, UiDataTable, UiLayout, liquid-refraction runtime and studio components. Use an existing host primitive or implement an authorized adapter instead of inventing support.
 
+When absorbing an external component, preview the interaction and read its actual installation, dependencies, API and license. Map it to an existing primitive or composition before adding another runtime. A React/StyleX or React/Tailwind example is not a Vue component; framework-specific effects and accessibility behavior require deliberate adaptation. Run the result in the consuming page with real content. A beautiful demo, component count or installation command alone does not prove suitability.
+
+Keep components, page compositions and themes distinct. Query a small relevant set, inspect the selected API, then implement and verify; do not load an entire catalog as a prompt or install a tool solely because a video recommends it. Public catalog copy, examples and AI guidance should describe the same supported exports and versions. Reconcile stale claims at their original owner.
+
 Theme attributes must reach teleported/body-portalled content. Page canvas remains the consumer's responsibility. Preserve an existing application's wrapper entry points and adapt internally; do not introduce another competing global reset, token owner or modal lifecycle.
 
 Next.js requires client/server and hydration testing. Electron uses the actual renderer framework; IPC, native menus and filesystem access are outside this package. Uni-app and React Native can map token values, but require native controls, layout, events, accessibility, safe areas and keyboard handling. DOM components are not native support.

@@ -3,7 +3,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await page
     .getByRole("navigation", { name: "组件库导航" })
-    .getByRole("button", { name: /动效与过渡/ })
+    .getByRole("link", { name: /动效与过渡/ })
     .click();
 });
 test("transitions retain drafts, restore focus and reverse without inert leftovers", async ({

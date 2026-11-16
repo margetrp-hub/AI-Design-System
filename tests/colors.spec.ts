@@ -6,7 +6,7 @@ test("component color recipes preserve object labels, status meaning and dark po
   await page.goto("/");
   await page
     .getByRole("navigation", { name: "组件库导航" })
-    .getByRole("button", { name: "主题与配色" })
+    .getByRole("link", { name: "主题与配色" })
     .click();
   const lab = page.getByRole("region", { name: "组件配色实验室" });
   const panels = lab.locator(".color-project-grid > .ui-panel");

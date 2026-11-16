@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import {
   UiButton,
   UiInput,
@@ -46,6 +46,15 @@ import AdditionalExamples from "./AdditionalExamples.vue";
 import SettingsExamples from "./SettingsExamples.vue";
 defineProps<{ view: string }>();
 const emit = defineEmits<{ navigate: [view: string] }>();
+const buttonLocale = ref("de"),
+  compactActions = ref(false),
+  actionFeedback = ref("");
+const buttonTranslations: Record<string, { cancel: string; action: string }> = {
+  zh: { cancel: "取消", action: "下载全部文件" },
+  en: { cancel: "Cancel", action: "Download all files" },
+  de: { cancel: "Abbrechen", action: "Alle Dateien herunterladen" },
+};
+const buttonLabels = computed(() => buttonTranslations[buttonLocale.value]);
 const name = ref("同源工作空间"),
   bio = ref("把日常使用的细节做好，留给下一个项目。"),
   choice = ref("team"),
@@ -123,7 +132,8 @@ const accordionItems = [
   {
     value: "platform",
     title: "哪些平台现在可以直接用？",
-    description: "当前是 Vue 3 Web 组件；其他框架共享设计值，组件需对应实现。",
+    description:
+      "Vue 和 React 分别提供组件包，覆盖范围不同。Next.js、Electron 需验证宿主；Uni-app、React Native 目前共享设计值。",
   },
 ];
 const badgeTones = [
@@ -326,8 +336,39 @@ function applyDraft() {
           <div class="copy-example">
             <code>@ai-design-system/ui</code
             ><UiCopyButton text="@ai-design-system/ui" />
-          </div></div
-      ></DemoCard>
+          </div>
+          <UiSeparator label="长译文与窄容器" />
+          <UiSelect
+            v-model="buttonLocale"
+            label="按钮文案语言"
+            :options="[
+              { value: 'zh', label: '中文' },
+              { value: 'en', label: 'English' },
+              { value: 'de', label: 'Deutsch' },
+            ]"
+          />
+          <UiSwitch v-model="compactActions" label="窄容器预览" />
+          <div
+            class="translation-example"
+            :class="{ 'is-narrow': compactActions }"
+            :lang="buttonLocale"
+          >
+            <div class="translation-actions">
+              <UiButton @click="actionFeedback = '已取消演示操作'">{{
+                buttonLabels.cancel
+              }}</UiButton
+              ><UiButton
+                variant="primary"
+                @click="actionFeedback = '已触发演示操作，不下载文件'"
+                >{{ buttonLabels.action }}</UiButton
+              >
+            </div>
+          </div>
+          <span v-if="actionFeedback" class="small muted" role="status">{{
+            actionFeedback
+          }}</span>
+        </div></DemoCard
+      >
       <DemoCard
         title="勾选与偏好"
         names="UiCheckbox · UiSwitch"

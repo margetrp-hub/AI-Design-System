@@ -25,9 +25,11 @@
 
 [案例库](https://margetrp-hub.github.io/AI-Design-System/#cases) 将产品画廊、部署工作台、资源表、媒体、文档、创作画布和 AI 等场景做成可操作页面。预览在 iframe 中真正改变 CSS 视口，切换尺寸保留输入与选择。品牌分析来自 awesome-design-md，案例均为独立演绎。
 
+可以按场景、交互或组件搜索，每个案例有独立链接；返回时保留筛选和浏览位置。详情中切换交互预览与接入说明、复制 Vue 代码或 AI 设计指令，预览草稿不丢失。手机使用分组导航抽屉。[安装页](https://margetrp-hub.github.io/AI-Design-System/#install) 分别提供 Vue / React 接入方式和实际支持范围。
+
 ![完整页面案例与分组导航](docs/screenshots/cases.jpg)
 
-教程视频用于吸收技巧：设置对齐与留白进入表单组件，渐进式披露和导航细节进入设计 Skill，文字解码、磁吸和倾斜进入动效组件。不会按视频条数生成案例。[吸收记录](docs/design-absorption.md)
+教程视频用于吸收技巧：设置对齐与留白进入表单组件，渐进式披露、导航、长译文适配和克制文案进入设计 Skill，文字解码、磁吸和倾斜进入动效组件。按钮演示可切换中英德文与窄容器，检查内容变长后的布局。不会按视频条数生成案例。[吸收记录](docs/design-absorption.md)
 
 [场景与交互资产](https://margetrp-hub.github.io/AI-Design-System/#assets) 提供独立的管理员登录、企业首页粒子和左右分屏登录。深网保留四面扫描隧道与中央暗卡；星序保留旧 OHLAOO.COM 首页的流带、球体、螺旋、环阵、星系及连续变形。背景和居中布局供 Vue / React 共用，管理员表单配方样式随包分发。
 

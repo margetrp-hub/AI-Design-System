@@ -11,16 +11,14 @@ import {
   UiTheme,
   UiButton,
   UiSelect,
-  UiPanel,
   UiBadge,
   UiPopover,
   UiSwitch,
   UiTable,
-  UiAlert,
-  UiCopyButton,
   UiBreadcrumbs,
   UiTooltip,
   UiSlider,
+  UiDrawer,
   type Skin,
   type Palette,
   type Mode,
@@ -45,6 +43,7 @@ import {
   Code2,
   Waves,
   SlidersHorizontal,
+  Menu,
 } from "@lucide/vue";
 import ComponentExamples from "./ComponentExamples.vue";
 import ColorExamples from "./ColorExamples.vue";
@@ -61,12 +60,18 @@ const StudioExamples = defineAsyncComponent(
 );
 import LanguagePicker from "./LanguagePicker.vue";
 import DemoCard from "./DemoCard.vue";
+import CatalogNavigation from "./CatalogNavigation.vue";
+import InstallGuide from "./InstallGuide.vue";
 import { skins } from "./data";
-import { components, palettes, groups, navigationSections } from "./library";
-const initialView = () =>
-  groups.some((g) => g.id === location.hash.slice(1))
-    ? location.hash.slice(1)
-    : "overview";
+import { components, palettes, groups } from "./library";
+const initialView = () => {
+  const path = location.hash.slice(1).split(/[/?]/)[0];
+  return groups.some((g) => g.id === path) ? path : "overview";
+};
+const navigationOpen = ref(false);
+function focusMain() {
+  document.getElementById("main-content")?.focus();
+}
 const view = ref(initialView()),
   skin = ref<Skin>("console"),
   palette = ref<Palette>("default"),
@@ -152,7 +157,6 @@ const themeCode = computed(
   () =>
     `const theme = ${JSON.stringify({ ...appearance.value, skin: skin.value, palette: palette.value, mode: mode.value, density: density.value, scale: Number(scale.value) }, null, 2)}\n\n<UiTheme v-bind="theme">\n  <UiButton variant="primary">保存设置</UiButton>\n</UiTheme>`,
 );
-const installCode = `npm install ./ai-design-system-tokens-0.4.0.tgz ./ai-design-system-styles-0.5.0.tgz ./ai-design-system-effects-0.1.1.tgz ./ai-design-system-stream-0.1.0.tgz ./ai-design-system-ui-0.5.0.tgz\n\nimport { UiTheme, UiButton, UiLayout } from '@ai-design-system/ui'\nimport '@ai-design-system/ui/style.css'`;
 onMounted(() => {
   try {
     const p = JSON.parse(
@@ -194,12 +198,16 @@ watch(
   { deep: true },
 );
 watch(view, () => {
-  history.replaceState(null, "", "#" + view.value);
+  if (initialView() !== view.value) location.hash = view.value;
+  navigationOpen.value = false;
   window.scrollTo({ top: 0 });
 });
 </script>
 <template>
   <UiTheme skin="console" :mode="mode" class="studio-shell">
+    <a href="#main-content" class="catalog-skip" @click.prevent="focusMain"
+      >跳至内容</a
+    >
     <aside class="studio-sidebar">
       <a class="studio-brand" href="#" @click.prevent="view = 'overview'"
         ><span class="brand-mark">ai</span
@@ -208,25 +216,15 @@ watch(view, () => {
           ><small>YOUR DESIGN WORKSHOP</small></span
         ></a
       >
-      <nav aria-label="组件库导航">
-        <template v-for="section in navigationSections" :key="section.label">
-          <span class="sidebar-section">{{ section.label }}</span>
-          <button
-            v-for="group in section.ids.map((id) =>
-              groups.find((item) => item.id === id)!,
-            )"
-            :key="group.id"
-            :aria-current="view === group.id ? 'page' : undefined"
-            @click="view = group.id"
-          >
-            <component
-              :is="icons[group.id as keyof typeof icons]"
-              :data-ui-color="groupColors[group.id]"
-            /><span>{{ group.label }}</span
-            ><small v-if="group.count">{{ group.count }}</small>
-          </button>
-        </template>
-      </nav>
+      <button
+        class="catalog-menu-toggle"
+        aria-label="打开导航"
+        :aria-expanded="navigationOpen"
+        @click="navigationOpen = true"
+      >
+        <Menu :size="17" />导航
+      </button>
+      <CatalogNavigation :active="view" :icons="icons" :colors="groupColors" />
       <div class="sidebar-note">
         <span class="sidebar-section">同一个起点</span>
         <p>组件共用，<br />表达自由。</p>
@@ -239,6 +237,20 @@ watch(view, () => {
         ><Code2 :size="18" />
       </div>
     </aside>
+    <UiDrawer
+      v-model:open="navigationOpen"
+      title="浏览设计库"
+      description="组件、案例与接入指南"
+      side="right"
+    >
+      <CatalogNavigation
+        class="catalog-mobile-nav"
+        :active="view"
+        :icons="icons"
+        :colors="groupColors"
+        @navigate="navigationOpen = false"
+      />
+    </UiDrawer>
     <div class="studio-body">
       <header class="studio-topbar">
         <UiBreadcrumbs
@@ -261,8 +273,8 @@ watch(view, () => {
           /></UiButton>
         </div>
       </header>
-      <main id="main-content">
-        <div class="page-heading">
+      <main id="main-content" tabindex="-1">
+        <div v-if="view !== 'cases'" class="page-heading">
           <div>
             <span class="eyebrow"
               >AI DESIGN SYSTEM / {{ view.toUpperCase() }}</span
@@ -270,13 +282,12 @@ watch(view, () => {
             <h1>{{ currentGroup.title }}</h1>
             <p>{{ currentGroup.description }}</p>
           </div>
-          <span class="edition-mark"
-            >{{ view === "overview" ? "67 VUE · 18 REACT" : currentGroup.label
-            }}<small>可以操作，也可以直接使用</small></span
+          <span v-if="view === 'overview'" class="edition-mark"
+            >67 VUE · 18 REACT</span
           >
         </div>
         <div
-          v-if="view !== 'compose' && view !== 'studio' && view !== 'cases'"
+          v-if="!['compose', 'studio', 'cases', 'install'].includes(view)"
           class="theme-toolbar"
           aria-label="演示主题设置"
         >
@@ -415,26 +426,7 @@ watch(view, () => {
                     ><UiSwitch v-model="enabled" label="活动提醒" /></div
                 ></UiPopover></div></DemoCard
           ></template>
-          <template v-else-if="view === 'install'"
-            ><UiPanel
-              title="安装包，导入组件，开始组合"
-              description="两个本地 npm 包：设计值与 Vue 组件。"
-              ><div class="form-stack">
-                <pre class="code-block"><code>{{installCode}}</code></pre>
-                <UiCopyButton :text="installCode" label="复制安装示例" />
-                <pre class="code-block"><code>{{themeCode}}</code></pre>
-                <UiCopyButton :text="themeCode" label="复制主题示例" /></div
-            ></UiPanel>
-            <div class="integration-facts">
-              <UiAlert
-                title="Vue 3 / Web"
-                description="45 个导出组件，包含页面骨架、液态玻璃、文字动画和加载反馈；不要求 Tailwind。"
-                tone="success"
-              /><UiAlert
-                title="其他框架"
-                description="React、Next.js、Uni-app、React Native 目前只共享设计值。Vue 组件不能直接在这些运行时使用。Electron 需按渲染层选型。"
-              /></div
-          ></template>
+          <InstallGuide v-else-if="view === 'install'" />
           <MotionExamples v-else-if="view === 'motion'" />
           <ComponentExamples v-else :view="view" @navigate="view = $event" />
         </UiTheme>

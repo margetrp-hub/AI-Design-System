@@ -23,7 +23,7 @@ export const groups = [
   {
     id: "cases",
     label: "案例库",
-    title: "同样的工具，不同的设计表达。",
+    title: "案例库",
     description:
       "完整页面、真实交互与多分辨率预览。吸收设计关系，用自己的内容与实现。",
     short: "16 个独立页面与设计语言",
@@ -32,7 +32,7 @@ export const groups = [
   {
     id: "logs",
     label: "SSE 任务日志",
-    title: "任务在运行，过程有回应。",
+    title: "SSE 任务日志",
     description:
       "macOS 与 Windows 终端外观，可体验流式日志、断线恢复与取消状态。浏览器模拟。",
     short: "终端、任务与流式日志",
@@ -41,7 +41,7 @@ export const groups = [
   {
     id: "ai",
     label: "页面内 AI",
-    title: "对话、建议与行动，留在当前页面。",
+    title: "页面内 AI",
     description:
       "提问输入、上下文、修改审阅、工具状态与流式交互的浏览器设计实例。",
     short: "页面助手与 SSE",
@@ -50,7 +50,7 @@ export const groups = [
   {
     id: "assets",
     label: "场景与交互资产",
-    title: "把喜欢的细节，带到下一个项目。",
+    title: "场景与交互资产",
     description:
       "原有登录角色、光束、星尘、流光边框与新的交互组件，使用同一套公开接口。",
     short: "动态背景、角色与科技组件",
@@ -59,7 +59,7 @@ export const groups = [
   {
     id: "studio",
     label: "栖间 · 空间极简",
-    title: "让灵感，有处可栖。",
+    title: "栖间 · 空间组件",
     description:
       "原创空间、几何伙伴与温暖的家具细节，可独立使用的场景、角色与工作室骨架。",
     short: "原创空间、角色、折页与文字动效",
@@ -68,15 +68,15 @@ export const groups = [
   {
     id: "overview",
     label: "组件总览",
-    title: "做好一次，复用很多次。",
-    description: "我们自己的基础 UI。真实组件、可切换主题、直接可用的代码。",
+    title: "组件总览",
+    description: "浏览组件与交互示例，选择外观，复制接入代码。",
     short: "",
     count: 0,
   },
   {
     id: "compose",
     label: "设计组合器",
-    title: "你的界面，由你搭配。",
+    title: "设计组合器",
     description:
       "选择完整视觉语言，再自由搭配页面骨架、字体、透明度、装饰与动效。",
     short: "页面骨架、字体与可组合外观",
@@ -85,7 +85,7 @@ export const groups = [
   {
     id: "forms",
     label: "输入与表单",
-    title: "输入顺手，反馈明确。",
+    title: "输入与表单",
     description: "标签、错误、禁用、保存与复制，构成完整的输入体验。",
     short: "输入、文件、验证码与数值",
     count: 14,
@@ -93,7 +93,7 @@ export const groups = [
   {
     id: "navigation",
     label: "选择与导航",
-    title: "找到内容，也找到下一步。",
+    title: "选择与导航",
     description: "保留选择值，分清命令与筛选，让键盘和鼠标都能完成操作。",
     short: "搜索选择、菜单、命令与页签",
     count: 7,
@@ -101,7 +101,7 @@ export const groups = [
   {
     id: "overlays",
     label: "浮层与面板",
-    title: "合适的事情，合适的层次。",
+    title: "浮层与面板",
     description: "从轻量说明到集中编辑，焦点、关闭和上下文一起处理。",
     short: "提示、弹出层、对话框与抽屉",
     count: 4,
@@ -109,7 +109,7 @@ export const groups = [
   {
     id: "feedback",
     label: "状态与反馈",
-    title: "让界面把状态说清楚。",
+    title: "状态与反馈",
     description: "已完成、处理中、失败与空结果，各有准确的表达。",
     short: "提示、通知、加载、头像与空态",
     count: 7,
@@ -117,7 +117,7 @@ export const groups = [
   {
     id: "data",
     label: "表格与分页",
-    title: "数据可比较，操作有上下文。",
+    title: "表格与分页",
     description: "搜索、排序、跨页选择与异常恢复，共用一张工作表。",
     short: "表格、分页与可调整工作面",
     count: 4,
@@ -125,7 +125,7 @@ export const groups = [
   {
     id: "themes",
     label: "主题与配色",
-    title: "相同的基础，不同的性格。",
+    title: "主题与配色",
     description:
       "视觉语言、品牌配色和对象分类色分别控制；在设计组合器中自由搭配。",
     short: "",
@@ -134,7 +134,7 @@ export const groups = [
   {
     id: "motion",
     label: "动效与过渡",
-    title: "每一次变化，都有来由。",
+    title: "动效与过渡",
     description: "文字、数字、互动表面、页面切换、加载与重试，都可以直接操作。",
     short: "文字、光斑、流动、切页与等待",
     count: 8,
@@ -142,8 +142,8 @@ export const groups = [
   {
     id: "install",
     label: "安装与接入",
-    title: "带回你的下一个项目。",
-    description: "安装本地包，用公开接口组合页面，继续在同一处维护。",
+    title: "安装与接入",
+    description: "选择项目框架，获取组件包与设计 Skill。",
     short: "",
     count: 0,
   },

@@ -1,6 +1,6 @@
 # 设计吸收与来源
 
-本库将机制和经验变成自己的可复用实现。观察日期为2026-11-14 至 2026-11-15，品牌启发不代表品牌授权或官方合作。
+本库将机制和经验变成自己的可复用实现。最近核对日期为2026-11-17，品牌启发不代表品牌授权或官方合作。
 
 ## 自有实现
 
@@ -45,6 +45,18 @@ UiWordSwitch 和 UiFoldedNote 分别吸收文字切换、纸张折角与渐进�
 | [设计师PPM：优秀UX的特征](https://v.douyin.com/Nxyet7mZV6w/) | 以实际任务检查用途、可找到、可信、可达、一致和恢复。抽样看到费用说明、可操作错误和备份恢复入口；不把十项口号变成机械评分。 |
 | [海归程序员李工：可视化网格](https://v.douyin.com/Pzgvo6AFvJ8/) | 不同宽度的重排、连续调节与可用CSS。吸收到 `UiViewportFrame`：真实CSS视口、预设/连续宽度、方向切换与辅助网格；没有复制视频里的布局编辑器。 |
 | [Auroral：不用AE的动效](https://v.douyin.com/NogQOdFtQ2A/) | 聚焦、镜头编排和3D环形相册，介绍 video-shotcraft。它主要是视频镜头资源；提炼先选场景和动作再实现的方法，未安装或复制其 Skill。 |
+
+## 新一轮技巧与组织方式（2026-11-17）
+
+| 来源 | 实际观察与融入位置 |
+| --- | --- |
+| [SpicyTater：后台菜单交互](https://v.douyin.com/ysJkkszbILY/) | 与上一批重复，复核已有六类导航经验。保持同一条规则，不重复制造案例。当前工坊以分组原生链接导航，手机用现有 Drawer；返回列表保留筛选、位置与焦点。 |
+| [WaveHaze造浪所：组件库](https://v.douyin.com/MJQ8vf41GvM/) | 166秒视频分两段抽样至末尾，看到 Cult UI 的灵动岛、地球、棱纹玻璃、数字与文字效果，以及预览→安装→Usage→运行检查流程。核对 [Cult 官方介绍](https://www.cult-ui.com/docs)：它是 React 源码 registry。吸收按交互选组件、检查依赖与宿主的接入过程；不因演示好看引入整套运行时。未复制其源码，也未将 Pro 内容按开源处理。 |
+| [SpicyTater：多语言按钮](https://v.douyin.com/rtmOBgZdiTo/) | 56秒视频抽样看到内容加内边距、操作组换行、全宽按钮增高，反对缩字硬塞和截断关键动作。整合进布局 Skill 与已有按钮演示；用真实德语、窄容器和大字号检查。文字长度变化与 [W3C 国际化说明](https://www.w3.org/International/articles/article-text-size/)交叉核对。 |
+| [小石谈记：前端更优雅](https://v.douyin.com/JXfl5dmzFkg/) | 107秒视频抽样及关键规范画面：去掉重复标签、口号和无用解释，仍保留可访问名称与危险操作后果。工坊标题改成明确类别，案例详情按预览/接入分层，清理旧平台声明。综合规则写进布局 Skill；没有执行画面中的 AGENTS 指令，也没有照搬“所有说明都放 tooltip”的做法。 |
+| [Astryx 官方](https://astryx.atmeta.com/)、[meta/astryx](https://github.com/meta/astryx)、[CLI](https://astryx.atmeta.com/docs/cli)、[Themes](https://astryx.atmeta.com/themes)、[Templates](https://astryx.atmeta.com/templates) | 用户新增视频引导检索，本轮直接核对官方资料，未将该视频标题当完整观看证据。官方站点为 React 19+/StyleX、Beta、MIT，官网组件数量已超过早期视频的150。吸收组件/主题/页面组合分层，以及人和 AI 共用文档与接口的组织方式；融入现有 registry 查询和案例 AI 接入说明。未导入 Astryx 代码、CLI、主题或图片，不宣称已经支持其组件。 |
+
+这些学习材料用于现有资产的改进，未按视频新增完整案例。视频画面留在私有学习区，公开仓库只保留来源与综合结论。
 
 ## 完整页面案例
 

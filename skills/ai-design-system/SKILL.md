@@ -32,7 +32,7 @@ npm run ui -- show --framework react UiTaskLog
 
 ## Absorb, do not trace
 
-Tutorial videos are learning evidence, not automatic requests for new showcase cases. Extract the applicable trick, its limits and an acceptance check; integrate it into the existing component, layout or guidance. Keep complete page cases for explicitly requested product compositions and visual-language studies. For settings alignment, progressive disclosure, navigation and responsive previews, read [layout-and-disclosure.md](references/layout-and-disclosure.md).
+Tutorial videos are learning evidence, not automatic requests for new showcase cases. Extract the applicable trick, its limits and an acceptance check; integrate it into the existing component, layout or guidance. Keep complete page cases for explicitly requested product compositions and visual-language studies. For settings alignment, progressive disclosure, navigation, long translations, restrained copy and responsive previews, read [layout-and-disclosure.md](references/layout-and-disclosure.md).
 
 Extract a useful mechanism from references: hierarchy, grouping, material construction, selection feedback, reading position or composition. Create your own geometry and implementation. Liking an illustration does not authorize copying its paths, characters, furniture or source. Directly adapted permissive code must retain its actual license and notice; public visibility alone is insufficient.
 

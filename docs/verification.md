@@ -1,4 +1,22 @@
-# Release verification · 0.5.0
+# Verification
+
+## Catalog and Skill update · 2026-11-17
+
+This update changes the workshop, reuse guidance and portable Skill. The six published component packages retain their 0.5.0-release versions and APIs; the latest Skill is in `skills/ai-design-system` on main, while the v0.5.0 release ZIP remains that release's snapshot.
+
+| Check | Result |
+| --- | --- |
+| Source and production build | `npm run build:registry` and `npm run check` passed: typecheck, 20 local Node tests (13 public and seven private historical checks), Vue/React/example builds and registry fingerprints. `ui doctor` reports ready with 67 Vue / 18 React exports |
+| Browser regression | 38 scenarios covered: 36 passed in the full run. Two old selectors assumed visible desktop navigation and a single portal; updated them for the mobile drawer and the named dialog, then both passed on targeted rerun |
+| Case journey | Search by interaction/component, category filtering, direct detail URL, refresh and browser history; returning retains list position, filters and focus. No-results and missing-entry views have working recovery |
+| Preview and reuse | Switching preview/code preserves iframe drafts and selected viewport. Clipboard rejection exposes retry; successful retry copies the actual Vue case code |
+| Mobile and text growth | Drawer selection, Escape and focus return; installation page checked at 320/390/768/801/1280px without page overflow. Long German actions at 120% type retain full labels and click behavior at 390/768/1280px |
+| Visual review | Actual 390px grouped navigation, dark React installation guide and enlarged long-label buttons inspected. README case image recaptured from the running workshop |
+| Portable Skill | Structure validator and relative-link checks passed. Layout rules now cover translations, concise functional copy and asset browsing; integration guidance requires actual framework/API/dependency inspection |
+
+The workshop's case compositions remain Vue-only, and case actions remain browser simulations. Package consumption evidence below is from the unchanged 0.5.0 packages; this catalog update does not claim new native, Next.js or Electron host validation.
+
+## Release · 0.5.0
 
 Verified locally on 2026-11-15. Tutorial videos supply interaction and layout lessons; they are not gallery entries. The separate case library contains 16 original page compositions informed by the pinned awesome-design-md revision.
 

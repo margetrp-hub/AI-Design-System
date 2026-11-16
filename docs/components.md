@@ -1,6 +1,6 @@
 # AI Design System 组件接口 · 0.4
 
-Vue 入口 `@ai-design-system/ui`，React 入口 `@ai-design-system/react`，分别导入包的 `style.css`。当前62个Vue、18个React导出，共用 `@ai-design-system/styles`；API表和可操作示例见[在线工坊](https://margetrp-hub.github.io/AI-Design-System/)。源码维护在 `packages/ui/src` 与 `packages/react/src`，示例直接使用包组件。React只支持其实际导出，下面早期Vue控件不自动成为React接口。
+Vue 入口 `@ai-design-system/ui`，React 入口 `@ai-design-system/react`，分别导入包的 `style.css`。当前67个Vue、18个React组件导出，共用 `@ai-design-system/styles`；API表和可操作示例见[在线工坊](https://margetrp-hub.github.io/AI-Design-System/)。源码维护在 `packages/ui/src` 与 `packages/react/src`，示例直接使用包组件。React只支持其实际导出，下面早期Vue控件不自动成为React接口。
 
 ## 0.3 布局、材质、文字与等待
 

@@ -10,6 +10,8 @@ A personal design workshop made reusable: Vue and React components, complete vis
 
 The [case library](https://margetrp-hub.github.io/AI-Design-System/#cases) contains 16 original interactive page interpretations inspired by brand design analyses. A real iframe viewport supports presets, custom dimensions, rotation and a grid overlay while preserving page state. Tutorial videos feed component details and skill guidance, rather than automatically becoming page cases.
 
+Search by task, interaction or component, open a direct case link, and return with filters and reading position intact. Preview and integration views retain drafts; copy Vue usage or an AI design brief from each detail. Mobile uses grouped drawer navigation. The [installation guide](https://margetrp-hub.github.io/AI-Design-System/#install) separates Vue and React APIs and supported capabilities. Button demos include Chinese, English and German labels in a narrow container.
+
 ![Interactive page cases](docs/screenshots/cases.jpg)
 
 The [asset workshop](https://margetrp-hub.github.io/AI-Design-System/#assets) separates a centered administrator login with a four-plane scanning tunnel, the original OHLAOO five-shape particle field, and the split character login. Layouts, effects and console-form recipe styles ship for both Vue and React.

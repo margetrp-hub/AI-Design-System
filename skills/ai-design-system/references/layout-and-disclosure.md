@@ -35,7 +35,25 @@ For reusable grids, let content importance determine spans and DOM reading order
 
 For dashboards, a dominant module plus smaller supporting facts suits one main decision. Full-width bands suit a summary → trend → detail reading sequence. A main area with a narrow sticky aside suits a long review with persistent context. A full-bleed canvas with floating tools suits spatial manipulation. Choose by the task; tutorial column ratios and gaps are starting examples, not universal constraints. A 3D map or model is useful only when spatial relationships matter, and must not hide exact chart values or controls.
 
-## Evidence and usefulness
+## Text growth is a layout input
+
+Use content width plus padding for short actions, with a minimum touch target rather than a fixed text box. When a group runs out of room, deliberately wrap the action group, stack its actions, or let a full-width button grow in height. Retain label meaning, readable type size and icon separation. Ellipsis is unsuitable when it hides what an action will do; shortening a translation requires preserving the action and object.
+
+Test actual translations, not character-count guesses: Chinese, a longer German phrase and mixed-language names expose different constraints. Check the host's largest type setting, narrow and intermediate container widths, and pending/error labels. Keep `min-width: 0` on shrinking text containers, allow word wrapping where appropriate, and keep icons from shrinking. Avoid globally forcing every button to wrap or every toolbar to stay on one line; make that choice in its owning layout.
+
+## Let the interface explain the task
+
+Use a page heading for orientation and an action label for its result. Remove slogans, repeated category captions and paragraphs that merely narrate visible UI. In an asset library, framework support, installation commands and API examples are useful product content; implementation commentary in an ordinary business workflow usually is not.
+
+Keep visible labels, limitations that affect a choice, error recovery, unsaved state and consequential-action explanations. Tooltips can hold optional short help, but cannot become the only way to understand a control. After editing copy, a first-time user should still be able to identify the next action and its outcome.
+
+## Browsing reusable assets
+
+Keep the gallery, interactive example and reuse instructions connected. Search should match the task, interaction and component names as well as the visual title. Expose the useful operation before the preview; offer an independent page, exact framework-specific code and a concise AI handoff alongside it. A copied prompt is not an implemented integration.
+
+Give each detail a stable URL. Opening from a list should reach the detail heading; returning should retain filters, position and a sensible focus target. A preview must survive switching to its code panel and back. Test refresh, browser back/forward, a missing entry and no matching results. Treat a compact gallery thumbnail as a preview, not a replacement for a real responsive viewport.
+
+## Verify the actual journey
 
 Review one actual task from entry through completion and recovery. Check discoverability, meaningful feedback, consistency, readable text at larger sizes, keyboard/touch access and interruption. Do not convert a video's rounded list of principles into a mandatory score or claim that it establishes formal conformance.
 

@@ -2,7 +2,7 @@ import { test, expect, type Page } from "@playwright/test";
 const nav = (page: Page, name: string) =>
   page
     .getByRole("navigation", { name: "组件库导航" })
-    .getByRole("button", { name: new RegExp(name) })
+    .getByRole("link", { name: new RegExp(name) })
     .click();
 test.beforeEach(async ({ page }) => {
   await page.goto("/");

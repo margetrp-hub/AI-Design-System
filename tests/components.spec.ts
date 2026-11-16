@@ -1,13 +1,16 @@
 import { test, expect, type Page } from "@playwright/test";
-const nav = (page: Page, name: string) =>
-  page
+const nav = async (page: Page, name: string) => {
+  const menu = page.getByRole("button", { name: "打开导航", exact: true });
+  if (await menu.isVisible()) await menu.click();
+  await page
     .getByRole("navigation", { name: "组件库导航" })
-    .getByRole("button", { name: new RegExp(name) })
+    .getByRole("link", { name: new RegExp(name) })
     .click();
+};
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "做好一次，复用很多次。" }),
+    page.getByRole("heading", { name: "组件总览", exact: true }),
   ).toBeVisible();
 });
 

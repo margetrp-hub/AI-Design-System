@@ -4,6 +4,11 @@
   font-weight: 400;
   color: var(--ui-muted);
 }
+.translation-example { container: translation-actions / inline-size; max-width:100%; padding:16px; border:1px solid var(--ui-border); border-radius:8px; }
+.translation-example.is-narrow { width:240px; }
+.translation-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.translation-actions > .ui-button { max-width:100%; }
+@container translation-actions (max-width:260px) { .translation-actions { flex-direction:column; align-items:stretch; } }
 .topbar-version {
   color: var(--ui-muted);
   font-size: 11px;

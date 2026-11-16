@@ -83,7 +83,7 @@ test('liquid transparency changes surfaces and portals, with refraction and acce
  await page.getByRole('combobox',{name:'玻璃质感'}).selectOption('clear');await expect(page.locator('.ui-layout-content .ui-lens')).toHaveCSS('backdrop-filter',/blur\(1.5px\)/)
  await page.getByRole('group',{name:'玻璃导航示例'}).getByRole('button',{name:'作品',exact:true}).click();await expect(page.locator('.glass-study-caption strong')).toContainText('作品')
  const background=page.getByRole('slider',{name:'背景位置'});await background.focus();await background.press('End');await expect(background).toHaveAttribute('aria-valuenow','100')
- await page.getByRole('button',{name:'编辑工作室',exact:true}).click();await expect(page.locator('.ui-portal')).toHaveAttribute('data-ui-material','liquid');await page.keyboard.press('Escape')
+ await page.getByRole('button',{name:'编辑工作室',exact:true}).click();await expect(page.locator('.ui-portal').filter({has:page.getByRole('dialog',{name:'编辑工作室',exact:true})})).toHaveAttribute('data-ui-material','liquid');await page.keyboard.press('Escape')
  await page.emulateMedia({reducedMotion:'reduce'});await slider.focus();await slider.press('End')
  const cdp=await page.context().newCDPSession(page);await cdp.send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-transparency',value:'reduce'}]})
  await expect(page.locator('.ui-lens').first()).toHaveCSS('display','none');await expect(page.locator('.sample-local-override .ui-panel')).toHaveCSS('background-color','rgb(253, 254, 254)')
