@@ -23,19 +23,19 @@
 
 ![视觉语言与页面组合器](docs/screenshots/composer.png)
 
-「素构」吸收 [Astryx](https://astryx.atmeta.com/themes) 的平实层级、内嵌底面与圆润操作，以自己的代码实现。新增数值步进输入、信息摘要，扩展卡片式/分段式单选；在[输入与表单](https://margetrp-hub.github.io/AI-Design-System/#forms)可直接试用、切换视觉语言和复制代码。控件支持空值、边界、键盘与本地化格式，配色仍独立可选。
+「素构」吸收 [Astryx](https://astryx.atmeta.com/themes) 的平实层级、内嵌底面与圆润操作，以自己的代码实现。新增数值步进输入、信息摘要，扩展卡片式/分段式单选；在[按钮与表单](https://margetrp-hub.github.io/AI-Design-System/#forms)可直接试用、切换视觉语言和复制代码。控件支持空值、边界、键盘与本地化格式，配色仍独立可选。
 
 ![素构：方案选择、数值输入与信息摘要](docs/screenshots/astryx.jpg)
 
 [案例库](https://margetrp-hub.github.io/AI-Design-System/#cases) 将产品画廊、部署工作台、资源表、媒体、文档、创作画布和 AI 等场景做成可操作页面。预览在 iframe 中真正改变 CSS 视口，切换尺寸保留输入与选择。品牌分析来自 awesome-design-md，案例均为独立演绎。
 
-可以按场景、交互或组件搜索，每个案例有独立链接；返回时保留筛选和浏览位置。详情中切换交互预览与接入说明、复制 Vue 代码或 AI 设计指令，预览草稿不丢失。手机使用分组导航抽屉。[安装页](https://margetrp-hub.github.io/AI-Design-System/#install) 分别提供 Vue / React 接入方式和实际支持范围。
+可以按场景、交互或组件搜索，每个案例有独立链接；返回时保留筛选和浏览位置。详情中切换交互预览与接入说明、复制 Vue 代码或 AI 设计指令，预览草稿不丢失。导航以资产总览和页面案例为入口，分为通用组件、AI 组件、视觉设计、动效与场景；安装固定在桌面导航底部，手机共用相同分类。[安装页](https://margetrp-hub.github.io/AI-Design-System/#install) 分别提供 Vue / React 接入方式和实际支持范围。
 
 ![完整页面案例与分组导航](docs/screenshots/cases.jpg)
 
 教程视频用于吸收技巧：设置对齐与留白进入表单组件，渐进式披露、导航、长译文适配和克制文案进入设计 Skill，文字解码、磁吸和倾斜进入动效组件。按钮演示可切换中英德文与窄容器，检查内容变长后的布局。不会按视频条数生成案例。[吸收记录](docs/design-absorption.md)
 
-[场景与交互资产](https://margetrp-hub.github.io/AI-Design-System/#assets) 提供独立的管理员登录、企业首页粒子和左右分屏登录。深网保留四面扫描隧道与中央暗卡；星序保留旧 OHLAOO.COM 首页的流带、球体、螺旋、环阵、星系及连续变形。背景和居中布局供 Vue / React 共用，管理员表单配方样式随包分发。
+[背景与场景特效](https://margetrp-hub.github.io/AI-Design-System/#assets) 提供独立的管理员登录、企业首页粒子和左右分屏登录。深网保留四面扫描隧道与中央暗卡；星序保留旧 OHLAOO.COM 首页的流带、球体、螺旋、环阵、星系及连续变形。背景和居中布局供 Vue / React 共用，管理员表单配方样式随包分发。
 
 ![深网：四面扫描隧道与居中管理员入口](docs/screenshots/admin-login.png)
 ![星序：企业首页五形态粒子背景](docs/screenshots/particle-home.png)

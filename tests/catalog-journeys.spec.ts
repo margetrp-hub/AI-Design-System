@@ -104,6 +104,50 @@ test("return restores list position; empty and missing entries have reachable re
   await expect(page.getByRole("link", { name: /^体验案例/ })).toHaveCount(16);
 });
 
+test("navigation retains orientation through collapse, history and short windows", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 600 });
+  await page.goto("/#themes");
+  const navigation = page.getByRole("navigation", { name: "组件库导航" });
+  const visual = navigation.getByRole("button", {
+    name: "视觉设计",
+    exact: true,
+  });
+  const colors = navigation.getByRole("link", {
+    name: "配色与语义色",
+    exact: true,
+  });
+  await expect(visual).toHaveAttribute("aria-expanded", "true");
+  await expect(colors).toHaveAttribute("aria-current", "page");
+  await visual.focus();
+  await visual.press("Enter");
+  await expect(colors).toBeHidden();
+  const current = navigation.getByRole("button", {
+    name: "视觉设计 当前",
+    exact: true,
+  });
+  await expect(current).toBeFocused();
+  await expect(current).toHaveAttribute("aria-expanded", "false");
+  await navigation.getByRole("link", { name: "页面案例", exact: true }).click();
+  await page.goBack();
+  await expect(colors).toBeVisible();
+  await expect(colors).toHaveAttribute("aria-current", "page");
+  for (const name of ["通用组件", "AI 组件", "动效与场景"])
+    await navigation.getByRole("button", { name, exact: true }).click();
+  const install = navigation.getByRole("link", {
+    name: "安装与接入",
+    exact: true,
+  });
+  const bounds = await install.boundingBox();
+  expect(bounds!.y).toBeGreaterThan(0);
+  expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(600);
+  await install.click();
+  await expect(
+    page.getByRole("heading", { name: "安装与接入", exact: true }),
+  ).toBeVisible();
+});
+
 test("mobile navigation dismisses and reaches the real React installation guide", async ({
   page,
 }) => {

@@ -218,7 +218,7 @@ onUnmounted(() => window.removeEventListener("hashchange", readRoute));
     <header class="case-gallery-heading">
       <div>
         <h1>
-          案例库 <span>{{ designCases.length }}</span>
+          页面案例 <span>{{ designCases.length }}</span>
         </h1>
         <p>按场景挑选，体验交互，再带进你的项目。</p>
       </div>

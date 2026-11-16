@@ -44,6 +44,11 @@ import {
   Waves,
   SlidersHorizontal,
   Menu,
+  Palette as PaletteIcon,
+  Sparkles,
+  Bot,
+  MessageSquare,
+  Terminal,
 } from "@lucide/vue";
 import ComponentExamples from "./ComponentExamples.vue";
 import ColorExamples from "./ColorExamples.vue";
@@ -133,14 +138,14 @@ const icons = {
   overlays: PanelRight,
   feedback: Bell,
   data: Table2,
-  themes: Layers,
+  themes: PaletteIcon,
   install: Code2,
   motion: Waves,
   compose: SlidersHorizontal,
-  assets: Waves,
-  studio: Layers,
-  ai: Component,
-  logs: Code2,
+  assets: Sparkles,
+  studio: Bot,
+  ai: MessageSquare,
+  logs: Terminal,
 };
 const groupColors: Record<string, string> = {
   forms: "blue",
@@ -226,12 +231,6 @@ watch(view, () => {
         <Menu :size="17" />导航
       </button>
       <CatalogNavigation :active="view" :icons="icons" :colors="groupColors" />
-      <div class="sidebar-note">
-        <span class="sidebar-section">同一个起点</span>
-        <p>组件共用，<br />表达自由。</p>
-        <div class="sidebar-rule" />
-        <small>Vue 3 / 自有 CSS / Reka UI<br />独立包 · 可组合 · 可换肤</small>
-      </div>
       <div class="sidebar-bottom">
         <span class="local-indicator" /><span
           >开源设计工坊<small>v{{ release.version }}</small></span

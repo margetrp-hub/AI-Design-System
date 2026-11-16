@@ -248,9 +248,9 @@ function applyDraft() {
           ></UiDropdownMenu>
         </div>
         <div class="metric-row">
-          <span class="metric-number">45<span>个</span></span>
+          <span class="metric-number">69<span>个</span></span>
           <div>
-            <UiBadge tone="success">真实导出</UiBadge>
+            <UiBadge tone="success">Vue 导出</UiBadge>
             <p class="muted small">包含主题与通知提供器</p>
           </div>
         </div>

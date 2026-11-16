@@ -10,20 +10,20 @@ export const palettes = [
   { value: "neutral-black", label: "中性黑" },
 ];
 export const navigationSections = [
-  { label: "开始设计", ids: ["overview", "cases", "compose"] },
+  { label: "", ids: ["overview", "cases"] },
   {
-    label: "基础组件",
-    ids: ["forms", "navigation", "overlays", "feedback", "data"],
+    label: "通用组件",
+    ids: ["forms", "navigation", "data", "overlays", "feedback"],
   },
-  { label: "视觉与交互", ids: ["themes", "motion", "assets", "studio"] },
-  { label: "AI 与任务", ids: ["ai", "logs"] },
-  { label: "开发接入", ids: ["install"] },
+  { label: "AI 组件", ids: ["ai", "logs"] },
+  { label: "视觉设计", ids: ["compose", "themes"] },
+  { label: "动效与场景", ids: ["motion", "assets", "studio"] },
 ];
 export const groups = [
   {
     id: "cases",
-    label: "案例库",
-    title: "案例库",
+    label: "页面案例",
+    title: "页面案例",
     description:
       "完整页面、真实交互与多分辨率预览。吸收设计关系，用自己的内容与实现。",
     short: "16 个独立页面与设计语言",
@@ -31,7 +31,7 @@ export const groups = [
   },
   {
     id: "logs",
-    label: "SSE 任务日志",
+    label: "终端与任务日志",
     title: "SSE 任务日志",
     description:
       "macOS 与 Windows 终端外观，可体验流式日志、断线恢复与取消状态。浏览器模拟。",
@@ -40,7 +40,7 @@ export const groups = [
   },
   {
     id: "ai",
-    label: "页面内 AI",
+    label: "AI 对话与助手",
     title: "页面内 AI",
     description:
       "提问输入、上下文、修改审阅、工具状态与流式交互的浏览器设计实例。",
@@ -49,8 +49,8 @@ export const groups = [
   },
   {
     id: "assets",
-    label: "场景与交互资产",
-    title: "场景与交互资产",
+    label: "背景与场景特效",
+    title: "背景与场景特效",
     description:
       "原有登录角色、光束、星尘、流光边框与新的交互组件，使用同一套公开接口。",
     short: "动态背景、角色与科技组件",
@@ -58,7 +58,7 @@ export const groups = [
   },
   {
     id: "studio",
-    label: "栖间 · 空间极简",
+    label: "空间与角色",
     title: "栖间 · 空间组件",
     description:
       "原创空间、几何伙伴与温暖的家具细节，可独立使用的场景、角色与工作室骨架。",
@@ -67,15 +67,15 @@ export const groups = [
   },
   {
     id: "overview",
-    label: "组件总览",
-    title: "组件总览",
-    description: "浏览组件与交互示例，选择外观，复制接入代码。",
+    label: "资产总览",
+    title: "资产总览",
+    description: "组件、视觉语言、动态场景与完整页面，按需组合到项目。",
     short: "",
     count: 0,
   },
   {
     id: "compose",
-    label: "设计组合器",
+    label: "视觉语言与布局",
     title: "设计组合器",
     description:
       "选择完整视觉语言，再自由搭配页面骨架、字体、透明度、装饰与动效。",
@@ -84,8 +84,8 @@ export const groups = [
   },
   {
     id: "forms",
-    label: "输入与表单",
-    title: "输入与表单",
+    label: "按钮与表单",
+    title: "按钮与表单",
     description: "标签、错误、禁用、保存与复制，构成完整的输入体验。",
     short: "输入、文件、验证码与数值",
     count: 15,
@@ -124,8 +124,8 @@ export const groups = [
   },
   {
     id: "themes",
-    label: "主题与配色",
-    title: "主题与配色",
+    label: "配色与语义色",
+    title: "配色与语义色",
     description:
       "视觉语言、品牌配色和对象分类色分别控制；在设计组合器中自由搭配。",
     short: "",

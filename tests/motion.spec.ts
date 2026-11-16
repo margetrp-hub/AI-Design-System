@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: "动效与场景", exact: true }).click();
   await page
     .getByRole("navigation", { name: "组件库导航" })
     .getByRole("link", { name: /动效与过渡/ })

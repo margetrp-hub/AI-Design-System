@@ -1,14 +1,26 @@
 import { test, expect, type Page } from "@playwright/test";
-const nav = (page: Page, name: string) =>
-  page
-    .getByRole("navigation", { name: "组件库导航" })
-    .getByRole("link", { name: new RegExp(name) })
-    .click();
+const nav = async (page: Page, name: string) => {
+  const navigation = page.getByRole("navigation", { name: "组件库导航" });
+  await expect(navigation).toBeVisible();
+  const destination = navigation.getByRole("link", { name: new RegExp(name) });
+  if (!(await destination.isVisible()))
+    await navigation
+      .getByRole("group")
+      .filter({
+        has: page.getByRole("link", {
+          name: new RegExp(name),
+          includeHidden: true,
+        }),
+      })
+      .getByRole("button")
+      .click();
+  await destination.click();
+};
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
 });
 test("slider keyboard updates values and range endpoints", async ({ page }) => {
-  await nav(page, "输入与表单");
+  await nav(page, "按钮与表单");
   const slider = page.getByRole("slider", { name: "音量", exact: true });
   await slider.focus();
   await slider.press("ArrowRight");
@@ -26,7 +38,7 @@ test("slider keyboard updates values and range endpoints", async ({ page }) => {
   ).toHaveAttribute("aria-valuenow", "80");
 });
 test("PIN preserves leading zero, completion and reset", async ({ page }) => {
-  await nav(page, "输入与表单");
+  await nav(page, "按钮与表单");
   await page
     .getByRole("textbox", { name: "验证码，第1位" })
     .pressSequentially("012345");
@@ -48,7 +60,7 @@ test("PIN preserves leading zero, completion and reset", async ({ page }) => {
 test("tags add, reject duplicates and remove without submitting", async ({
   page,
 }) => {
-  await nav(page, "输入与表单");
+  await nav(page, "按钮与表单");
   const tags = page.getByRole("textbox", { name: "项目标签" });
   await tags.fill("复用");
   await tags.press("Enter");
@@ -69,7 +81,7 @@ test("tags add, reject duplicates and remove without submitting", async ({
 test("file picker rejects invalid and oversized files, retains selection and retries", async ({
   page,
 }) => {
-  await nav(page, "输入与表单");
+  await nav(page, "按钮与表单");
   const picker = page
     .getByRole("group", { name: "项目附件", exact: true })
     .locator('input[type="file"]');

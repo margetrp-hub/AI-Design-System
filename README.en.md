@@ -14,7 +14,7 @@ The Astryx-inspired direction adds flat inset surfaces, deliberate type and roun
 
 The [case library](https://margetrp-hub.github.io/AI-Design-System/#cases) contains 16 original interactive page interpretations inspired by brand design analyses. A real iframe viewport supports presets, custom dimensions, rotation and a grid overlay while preserving page state. Tutorial videos feed component details and skill guidance, rather than automatically becoming page cases.
 
-Search by task, interaction or component, open a direct case link, and return with filters and reading position intact. Preview and integration views retain drafts; copy Vue usage or an AI design brief from each detail. Mobile uses grouped drawer navigation. The [installation guide](https://margetrp-hub.github.io/AI-Design-System/#install) separates Vue and React APIs and supported capabilities. Button demos include Chinese, English and German labels in a narrow container.
+Search by task, interaction or component, open a direct case link, and return with filters and reading position intact. Preview and integration views retain drafts; copy Vue usage or an AI design brief from each detail. The overview and page cases lead into four collapsible navigation groups: general components, AI components, visual design, and motion/scenes. The current group opens automatically, and installation stays in the desktop footer. Mobile shares the same categories in a drawer. The [installation guide](https://margetrp-hub.github.io/AI-Design-System/#install) separates Vue and React APIs and supported capabilities. Button demos include Chinese, English and German labels in a narrow container.
 
 ![Interactive page cases](docs/screenshots/cases.jpg)
 

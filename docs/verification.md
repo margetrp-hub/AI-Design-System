@@ -1,5 +1,16 @@
 # Verification
 
+## Navigation update · 2026-11-17
+
+The workshop now uses overview/page-case entries, four collapsible asset categories and a separate installation footer. Desktop and mobile use the same component and route map; existing hash links remain valid. Packages, versions and release assets are unchanged.
+
+- `npm run check` passed, including typecheck, 20 local Node checks, production/example builds and registry validation. Source fingerprints were rechecked after browser review.
+- Seven affected catalog journeys passed, including keyboard collapse/current-group indication, history reopening, a 600px-high desktop, mobile drawer dismissal/focus return, enlarged type, reduced motion, color examples and retained case state. The narrow-screen test's selector needed correction to find links inside a collapsed group; its rerun passed.
+- Eight additional component/motion journeys passed. Their navigation helper now waits for the rendered menu before deciding whether to expand a category, avoiding an initial-load race that could close the default group.
+- Actual desktop and 390px mobile navigation were visually inspected. Selecting a mobile destination closes the drawer, and reopening expands its current category. No console errors were reported. The README case screenshot was refreshed from the running workshop.
+
+Browser evidence is Chromium/Edge only. These navigation checks do not expand the platform or package-consumption guarantees below.
+
 ## Release · 0.6.0 · 2026-11-17
 
 Added the original Astryx-inspired visual language, Vue number input and metadata list, and card/segmented variants of the existing radio group. Shared CSS/tokens also serve the existing React controls. Totals: 69 Vue / 18 React exports and 13 visual languages.

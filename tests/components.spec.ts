@@ -2,22 +2,33 @@ import { test, expect, type Page } from "@playwright/test";
 const nav = async (page: Page, name: string) => {
   const menu = page.getByRole("button", { name: "打开导航", exact: true });
   if (await menu.isVisible()) await menu.click();
-  await page
-    .getByRole("navigation", { name: "组件库导航" })
-    .getByRole("link", { name: new RegExp(name) })
-    .click();
+  const navigation = page.getByRole("navigation", { name: "组件库导航" });
+  await expect(navigation).toBeVisible();
+  const destination = navigation.getByRole("link", { name: new RegExp(name) });
+  if (!(await destination.isVisible()))
+    await navigation
+      .getByRole("group")
+      .filter({
+        has: page.getByRole("link", {
+          name: new RegExp(name),
+          includeHidden: true,
+        }),
+      })
+      .getByRole("button")
+      .click();
+  await destination.click();
 };
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "组件总览", exact: true }),
+    page.getByRole("heading", { name: "资产总览", exact: true }),
   ).toBeVisible();
 });
 
 test("form validation, failed save and retry retain the user draft", async ({
   page,
 }) => {
-  await nav(page, "输入与表单");
+  await nav(page, "按钮与表单");
   const name = page.getByRole("textbox", { name: "空间名称", exact: true });
   await name.fill("");
   await page.getByRole("button", { name: "保存表单" }).click();
@@ -57,7 +68,7 @@ test("copy reports failure then retries against the clipboard receipt", async ({
   context,
 }) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
-  await nav(page, "输入与表单");
+  await nav(page, "按钮与表单");
   await page.evaluate(() => {
     const original = navigator.clipboard.writeText.bind(navigator.clipboard);
     let first = true;
@@ -315,14 +326,14 @@ test("all sections fit narrow screens at largest text and reduced motion", async
     .getByRole("combobox", { name: "字号", exact: true })
     .selectOption("1.2");
   for (const section of [
-    "组件总览",
-    "设计组合器",
-    "输入与表单",
+    "资产总览",
+    "视觉语言与布局",
+    "按钮与表单",
     "选择与导航",
     "浮层与面板",
     "状态与反馈",
     "数据与摘要",
-    "主题与配色",
+    "配色与语义色",
     "动效与过渡",
     "安装与接入",
   ]) {
